@@ -1,20 +1,21 @@
 Tools:
   - name: Стингрей
     meta:
-      description: "Инструмент, осуществляющий автоматизированный анализ защищенности мобильных приложений IOS и Android с помощью технологий машинного обучения.  Комбинирует динамический (DAST), статический (SAST) и интерактивный (IAST) методы анализа, а также тестирование программных интерфейсов (API ST)."
+      description: "Инструмент, осуществляющий автоматизированный анализ защищенности мобильных приложений iOS и Android с помощью технологий машинного обучения. Комбинирует динамический (DAST), статический (SAST) и интерактивный (IAST) методы анализа, а также тестирование программных интерфейсов (API ST)."
       link_URL: "https://swordfish-security.ru/stingray"
       ver_edition: "2025.5"
       FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Доступен"
-      report_formats: ["PDF","JSON"]
-      detect_metods: ["ОУД4", "OWASP Mobile Top 10", "PCI DSS"]
+      report_formats: ["PDF", "JSON"]
+      detect_methods: ["ОУД4", "OWASP Mobile Top 10", "PCI DSS"]
       OSS: "false"
       division: "AppSec"
       type: "MAST"
       class: "Анализатор MobApp"
-      vendor: 'ООО «Стингрей Технолоджиз»'
-      lic: 'Saas, On-premise'
+      vendor: "ООО «Стингрей Технолоджиз»"
+      lic: "Saas, On-premise"
+
   - name: App-Ray
     meta:
       description: ""
@@ -24,13 +25,14 @@ Tools:
       redaction: []
       RUS_access: "Недоступен"
       report_formats: []
-      detect_metods: []
+      detect_methods: []
       OSS: "false"
       division: "AppSec"
       type: "MAST"
       class: "Анализатор MobApp"
-      vendor: ''
-      lic: ''
+      vendor: ""
+      lic: ""
+
   - name: Codified Security
     meta:
       description: ""
@@ -40,29 +42,31 @@ Tools:
       redaction: []
       RUS_access: "Недоступен"
       report_formats: []
-      detect_metods: []
+      detect_methods: []
       OSS: "false"
       division: "AppSec"
       type: "MAST"
       class: "Анализатор MobApp"
-      vendor: ''
-      lic: ''
+      vendor: ""
+      lic: ""
+
   - name: ImmuniWeb
     meta:
-      description: "Платформа для тестирования безопасности мобильных приложений. Поддерживает статический (SAST) и динамический (DAST) анализ, выявление уязвимостей в iOS и Android приложениях, а также тестирование API и бэкенд-серверов.""
+      description: "Платформа для тестирования безопасности мобильных приложений. Поддерживает статический (SAST) и динамический (DAST) анализ, выявление уязвимостей в iOS и Android приложениях, а также тестирование API и бэкенд-серверов."
       link_URL: "https://www.immuniweb.com/mobile/"
       ver_edition: "Информация не найдена"
       FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: "доступен"
+      RUS_access: "Доступен"
       report_formats: []
-      detect_metods: ["OWASP Mobile Top 10", "GDPR", "PCI DSS"]
+      detect_methods: ["OWASP Mobile Top 10", "GDPR", "PCI DSS"]
       OSS: "false"
       division: "AppSec"
       type: "MAST"
       class: "Анализатор MobApp"
-      vendor: 'ImmuniWeb'
-      lic: ''
+      vendor: "ImmuniWeb"
+      lic: ""
+
   - name: Quixxi
     meta:
       description: "Набор инструментов, который включает в себя Quixxi Scan для комплексной оценки уязвимостей SAST и DAST, Quixxi App Shield для обеспечения полной безопасности приложений и Quixxi App Supervise для удалённого управления приложениями и мониторинга угроз."
@@ -71,11 +75,11 @@ Tools:
       FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Доступен"
-      report_formats: ["PDF", "XML","JSON"]
-      detect_metods: ["OWASP Mobile Top 10", "GDPR", "PCI DSS","NIST", "CVE"]
+      report_formats: ["PDF", "XML", "JSON"]
+      detect_methods: ["OWASP Mobile Top 10", "GDPR", "PCI DSS", "NIST", "CVE"]
       OSS: "false"
       division: "AppSec"
       type: "MAST"
       class: "Анализатор MobApp"
-      vendor: 'Quixxi'
-      lic: ''
+      vendor: "Quixxi"
+      lic: ""

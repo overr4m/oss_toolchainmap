@@ -1,7 +1,3 @@
-{% set data = load_yaml('main.yaml') %}
-
-{{ generate_html_table(data) }}
-
 Виды лицензий:
 
 * [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0);

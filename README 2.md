@@ -200,9 +200,12 @@ pip install mkdocs mkdocs-material mkdocs-macros-plugin
 
 source .venv/bin/activate
 pip install mkdocs mkdocs-material mkdocs-macros-plugin
-.venv/bin/mkdocs serve
-#or
-python -m mkdocs serve
+.venv/bin/mkdocs serve # or python -m mkdocs serve
+# or
+mkdocs serve -a 127.0.0.1:8001 # прямое обозначение адреса
+
+lsof -i :8000
+kill <PID>
 
 
 ***
