@@ -209,6 +209,29 @@ lsof -i :8000
 kill <PID>
 
 
+
+
+	•	job build:
+	•	собирает search JSON: python scripts/build_search_data.py;
+	•	делает mkdocs build — в раннере это создаёт директорию site (артефакт сборки);
+	•	upload-pages-artifact упаковывает site как артефакт. 
+	•	job deploy:
+	•	actions/deploy-pages разворачивает этот артефакт на GitHub Pages.
+
+site создаётся только в раннере. Локально можешь проверить:
+	•	python scripts/build_search_data.py
+	•	mkdocs build
+В корне появится site/
+	
+	•	при каждом push в master/main GitHub сам:
+	•	запустит workflow ci;
+	•	соберёт site;
+	•	задеплоит на Pages — без отдельной ветки gh-pages, всё через Actions.
+
+
+
+
+
 ***
 
 ### Troubleshooting

@@ -45,7 +45,8 @@ logs/
 *.odt
 *.xlsx
 *.xls
-site
+site/
+/site
 
 # Databases
 *.sqlite
