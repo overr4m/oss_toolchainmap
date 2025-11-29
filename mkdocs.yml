@@ -9,6 +9,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/tools-overlay.js
+  - javascripts/tools-search.js
 
 nav:
   - "Главная": index.md
