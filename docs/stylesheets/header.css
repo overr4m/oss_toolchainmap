@@ -11,50 +11,40 @@
   color: #ffffff;
 }
 
-/* Внутри шапки: бургер, текст, логотип в одну линию */
+.md-typeset,
+.md-nav,
+.md-header,
+.md-footer {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
 
 .md-header__inner {
   display: flex;
   align-items: center;
 }
 
-/* Заголовок: текст и логотип в одной линии */
 .md-header .md-header__title {
   display: flex;
   align-items: center;
 }
 
-/* Текст первым */
-.md-header .md-header__title .md-header__topic {
-  order: 0;
-}
-
-/* Логотип после текста, с небольшим отступом */
-.md-header .md-logo {
-  order: 1;
-  margin-left: 8px;
-  display: inline-flex;
-  align-items: center;
-}
-
-/* Размер логотипа */
 .md-header .md-logo img {
-  height: 24px;
+  height: 32px;
   width: auto;
   max-width: 32px;
 }
 
-/* ===== Бургер: чуть больше, белого цвета ===== */
-
+/* Бургер — только размер/цвет, не трогаем логику */
 .md-header .md-header__button {
-  width: 32px;
-  height: 24px;
-  margin-right: 8px;  /* отступ от бургера до текста */
+  width: 20px;
+  height: 12px;
+  margin-right: 8px;
 }
 
 .md-header .md-header__button svg {
-  width: 32px;
-  height: 24px;
+  width: 20px;
+  height: 12px;
 }
 
 .md-header .md-header__button svg path {
@@ -63,22 +53,28 @@
   stroke-linecap: round;
 }
 
-/* Отступы и тень */
 
-.md-main__inner {
-  margin-left: 0;
-}
-
-@media (min-width: 960px) {
-  .md-main__inner {
-    margin-left: 1.5rem;
-  }
-}
-
-.md-footer__meta {
+/* Скрываем служебный текст в футере */
+.md-footer__meta__inner {
   display: none;
 }
 
-.md-header.md-header--shadow {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+@media screen and (min-width: 960px) {
+  .md-header__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .md-header__title {
+    margin-right: auto;
+  }
+
+  .md-header .md-logo {
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+    order: 2;
+    display: flex;
+    align-items: center;
+  }
 }
+

@@ -1,56 +1,65 @@
-.md-nav__title,
-.md-nav--primary .md-nav__title {
-  background-color: #1953ff;
-  color: #ffffff;
+.md-main__inner {
+  margin-left: 0;
 }
 
-.md-nav__title[for="__drawer"] {
-  background-color: #1953ff;
-  color: #ffffff;
+@media screen and (min-width: 1680px) {
+  .md-sidebar--primary {
+    width: 10rem;
+    max-width: 10rem;
+  }
+
+  .md-main__inner {
+    margin-left: 10rem;
+  }
 }
 
-.md-nav__title[for="__drawer"] .md-logo,
-.md-nav__title[for="__drawer"] .md-logo img {
-  background-color: transparent;
+.md-sidebar--primary .md-nav {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 0.55rem;
 }
 
-.md-nav__title[for="__drawer"] .md-ellipsis,
-.md-nav__title[for="__drawer"] a,
-.md-nav__title[for="__drawer"] .md-nav__button {
-  color: #ffffff;
-}
-
-.md-nav__title .md-nav__button,
-.md-nav__title .md-nav__link,
-.md-nav__title .md-ellipsis {
-  color: #ffffff;
-}
-
-.md-nav__item--active > .md-nav__link {
+.md-nav,
+ .md-sidebar__inner {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 0.55rem;
   color: #1953ff;
 }
 
-.md-sidebar--primary .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav__source,
-.md-sidebar--primary .md-nav__item--section > .md-nav__link {
-  background-color: #1953ff;
-  color: #ffffff;
+.md-sidebar--primary .md-nav__link,
+.md-sidebar--primary .md-nav__link:visited {
+  color: #1953ff;
 }
 
-.md-sidebar--primary .md-nav__item--section > .md-nav__link .md-ellipsis {
-  color: #ffffff;
+.md-sidebar--primary .md-nav__item--active > .md-nav__link,
+.md-sidebar--primary .md-nav__link--active {
+  font-weight: 700;
+  color: #1953ff;
 }
 
-.md-sidebar--primary .md-nav__item--section > .md-nav__link .md-nav__button,
-.md-sidebar--primary .md-nav__item--section > .md-nav__link svg {
-  color: #ffffff;
-  fill: #ffffff;
+.md-sidebar--primary .md-nav__item--active > .md-nav__link,
+.md-nav__link--active .md-sidebar--primary {
+  font-weight: 700;
+  color: #1953ff;
 }
 
-.md-nav__title + .md-nav__list {
-  border-top: none;
+.md-content h1,
+.md-content h2,
+.md-content h3 {
+  color: #1953ff;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
 }
 
-.md-sidebar--primary .md-nav__item--section > .md-nav__link {
-  box-shadow: none;
-  border-bottom: none;
+.md-typeset {
+  color: #000000;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.md-typeset {
+  color: #000000;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
 }

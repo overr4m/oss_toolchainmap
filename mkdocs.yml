@@ -15,15 +15,18 @@ extra_javascript:
   - javascripts/tools-search.js
 
 nav:
-  - "FinDevSecOps Community": index.md
   - "Карта инструментов":
       - "Toolchain": research-notes.md
       - "Православные вендора": vendor_rf.md
       - "Зарубежные вендора": external.md
       - "OSS": OSS.md
-  - "Лицензии ПО": licenses.md
   - "Заметки": notes.md
-  - "About": about.md
+  - "Материалы":
+        - "Лицензии ПО": licenses.md
+        - "Дополнительные материалы": materials_iso.md
+  - "О проекте": about.md
+  - "Лидеры сообщества": liders.md
+  - "FinDevSecOps": "https://findevsecops.ru/"
 
 plugins:
   - search
@@ -123,3 +126,7 @@ extra:
       link: https://github.com/geminishkv
 
   favicon: assets/logotype/favicon.ico
+  
+  font:
+    text: Montserrat
+    code: Roboto Mono
