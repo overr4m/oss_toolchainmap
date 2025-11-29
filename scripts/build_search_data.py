@@ -2,13 +2,12 @@ import json
 import pathlib
 import yaml
 
-ROOT = pathlib.Path(__file__).parent
+ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOCS_DIR = ROOT / "docs"
 TOOLS_DIR = DOCS_DIR / "tools"
 OUT_DIR = DOCS_DIR / "assets" / "search"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_FILE = OUT_DIR / "tools.json"
-
 
 def load_tools_from_file(path: pathlib.Path):
     raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
@@ -71,7 +70,6 @@ def load_tools_from_file(path: pathlib.Path):
 def main():
     all_records = []
 
-    # Обходим все YAML под docs/tools/**
     for yaml_path in TOOLS_DIR.rglob("*.yaml"):
         try:
             recs = load_tools_from_file(yaml_path)

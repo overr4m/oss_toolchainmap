@@ -1,4 +1,4 @@
-site_name: Tolchain AppSec map
+site_name: AppSecTA_Toolchain Map
 site_url: "https://geminishkv.github.io/oss_toolchainmap/"
 
 theme:
@@ -12,12 +12,13 @@ extra_javascript:
   - javascripts/tools-search.js
 
 nav:
-  - "Главная": index.md
-  - "Map": research-notes.md
-  - "Инстурменты":
-      - "Вендорские": vendor_rf.md
+  - "FinDevSecOps Community": index.mdd
+  - "Карта инструментов":
+      - "Tolchain": research-notes.m
+      - "Православные вендора": vendor_rf.md
+      - "Зарубежные вендора": external.md
       - "OSS": OSS.md
-      - "Зарубежные": external.md
+  - "Заметки": notes.md
   - "About": about.md
 
 plugins:
