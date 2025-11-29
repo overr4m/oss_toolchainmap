@@ -4,6 +4,12 @@ site_url: "https://geminishkv.github.io/oss_toolchainmap/"
 theme:
   name: material
 
+extra_css:
+  - stylesheets/custom_table.css
+
+extra_javascript:
+  - javascripts/tools-overlay.js
+
 nav:
   - "Главная": index.md
   - "Map": research-notes.md
@@ -13,9 +19,6 @@ nav:
       - "Зарубежные": external.md
   - "About": about.md
 
-extra_css:
-  - stylesheets/custom_table.css
-
 plugins:
   - search
   - macros
@@ -23,6 +26,7 @@ plugins:
 markdown_extensions:
   - def_list
   - md_in_html
+  - attr_list
 
 extra:
   table:

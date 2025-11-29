@@ -1,6 +1,20 @@
+title: "AppSec Toolchain Map"
+
+
 # AppSec Toolchain Map
 
-!!! info "О карте инструментов"
-    Таблица ниже формируется автоматически из YAML-файлов в `docs/tools/...`.
+# [Показать карту инструментов](#){ .show-tools-overlay }
 
-{{ generate_html_table_from_config() }}
+<a href="#" class="show-tools-overlay">Показать карту инструментов</a>
+
+# {{ generate_html_table_from_config() }}
+
+<div id="tools-overlay" class="tools-overlay">
+  <div class="tools-overlay__backdrop"></div>
+  <div class="tools-overlay__content">
+    <button class="tools-overlay__close" aria-label="Закрыть">✕</button>
+    <div class="tools-overlay__table">
+      {{ generate_html_table_from_config() }}
+    </div>
+  </div>
+</div>
