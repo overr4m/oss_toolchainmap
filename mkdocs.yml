@@ -3,21 +3,25 @@ site_url: "https://geminishkv.github.io/oss_toolchainmap/"
 
 theme:
   name: material
+  logo: assets/logotype/logo.png
 
 extra_css:
-  - stylesheets/custom_table.css
+  - stylesheets/table.css
+  - stylesheets/header.css
+  - stylesheets/menu.css
 
 extra_javascript:
   - javascripts/tools-overlay.js
   - javascripts/tools-search.js
 
 nav:
-  - "FinDevSecOps Community": index.mdd
+  - "FinDevSecOps Community": index.md
   - "Карта инструментов":
       - "Toolchain": research-notes.md
       - "Православные вендора": vendor_rf.md
       - "Зарубежные вендора": external.md
       - "OSS": OSS.md
+  - "Лицензии ПО": licenses.md
   - "Заметки": notes.md
   - "About": about.md
 
@@ -113,3 +117,9 @@ extra:
     - division: MLSecOps
       OSS_tools: docs/tools/MLSecOps/OSS_tools.yaml
       PS_tools: docs/tools/MLSecOps/PS_tools.yaml
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/geminishkv
+
+  favicon: assets/logotype/favicon.ico

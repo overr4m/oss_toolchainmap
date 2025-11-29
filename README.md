@@ -195,20 +195,16 @@
 
 python3 -m venv .venv
 source .venv/bin/activate
-pip install mkdocs mkdocs-material mkdocs-macros-plugin
-
-
-source .venv/bin/activate
-pip install mkdocs mkdocs-material mkdocs-macros-plugin
+pip install -r requirements.txt
+pip install mkdocs mkdocs-material mkdocs-macros-plugin # must-have
 python scripts/build_search_data.py
 python -m mkdocs serve
 # or
 mkdocs serve -a 127.0.0.1:8001 # прямое обозначение адреса
 
+rm -rf __pycache__ scripts/__pycache__
 lsof -i :8000
 kill <PID>
-
-
 
 
 	•	job build:

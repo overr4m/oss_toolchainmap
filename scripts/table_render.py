@@ -1,11 +1,11 @@
 from typing import Any, Dict, List
 
-
 def _chunk_tools(tools: List[Dict[str, Any]], size: int = 5) -> List[List[Dict[str, Any]]]:
+    """Разбить список инструментов на чанки фиксированного размера."""
     return [tools[i : i + size] for i in range(0, len(tools), size)]
 
-
-def render_table( Dict[str, Any]) -> str:
+def render_table(data: Dict[str, Any]) -> str:
+    """Построить HTML-таблицу по структуре data['table']."""
     html: List[str] = ['<table border="1" style="border-collapse: collapse;">']
     html.append(
         """<thead>
@@ -20,10 +20,11 @@ def render_table( Dict[str, Any]) -> str:
     )
     html.append("<tbody>")
 
-    for division in data["table"]:
-        div_name = division["division"]
+    for division in data.get("table", []):
+        div_name = division.get("division", "")
         has_types = "type" in division
 
+        # Разделы без вложенных типов/классов
         if not has_types:
             ps_tools = division.get("PS_tools", []) or []
             oss_tools = division.get("OSS_tools", []) or []
@@ -52,13 +53,14 @@ def render_table( Dict[str, Any]) -> str:
 
                 html.append("</tr>")
 
+        # Разделы с type/class
         else:
             type_rows: List[Dict[str, Any]] = []
 
-            for tool_type in division["type"]:
-                type_name = tool_type["name"]
-                for cls in tool_type["class"]:
-                    class_name = cls["name"]
+            for tool_type in division.get("type", []):
+                type_name = tool_type.get("name", "")
+                for cls in tool_type.get("class", []):
+                    class_name = cls.get("name", "")
 
                     ps_tools = cls.get("PS_tools", []) or []
                     oss_tools = cls.get("OSS_tools", []) or []
