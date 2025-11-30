@@ -45,11 +45,7 @@ extra:
       link: https://t.me/shmakovis_appsec
     - icon: fontawesome/regular/envelope
       link: mailto:shmakovis@inbox.ru
-    - icon: fontawesome/regular/address-card
-      link: 
-  
   favicon: assets/logotype/favicon.ico
-  
   font:
     text: Montserrat
     code: Roboto Mono

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
   const input = document.getElementById("tools-search-input");
   const resultsList = document.getElementById("tools-search-results");
 
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((r) => r.json())
     .then((data) => {
       tools = data;
+      console.log("[tools-search] loaded", tools.length, "records");
     })
     .catch((err) => {
       console.error("[tools-search] failed to load tools.json", err);
@@ -19,12 +20,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function renderResults(items) {
     resultsList.innerHTML = "";
-    if (!items.length) {
-      return;
-    }
-    items.slice(0, 30).forEach((tool) => {
+    if (!items.length) return;
+
+    items.slice(0, 50).forEach((tool) => {
       const li = document.createElement("li");
-      li.textContent = `${tool.name} — ${tool.vendor || ""} (${tool.kind})`;
+      li.className = "tool-item";
+
+      const title = document.createElement("div");
+      title.className = "tool-title";
+      title.textContent = tool.name || "Без названия";
+
+      const meta = document.createElement("div");
+      meta.className = "tool-meta";
+      meta.textContent = [
+        tool.vendor,
+        tool.division,
+        tool.type,
+        tool.tool_class,
+        tool.kind === "OSS" ? "OSS" : "PS"
+      ]
+        .filter(Boolean)
+        .join(" · ");
+
+      const desc = document.createElement("div");
+      desc.className = "tool-desc";
+      desc.textContent = tool.description || "";
+
+      if (tool.link_URL) {
+        const url = (tool.link_URL || "").split(",")[0].trim();
+        const link = document.createElement("a");
+        link.href = url;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = "Сайт";
+        link.className = "tool-link";
+        desc.appendChild(document.createTextNode(" "));
+        desc.appendChild(link);
+      }
+
+      li.appendChild(title);
+      if (meta.textContent) li.appendChild(meta);
+      if (desc.textContent) li.appendChild(desc);
+
       resultsList.appendChild(li);
     });
   }
@@ -41,9 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
         t.name,
         t.vendor,
         t.description,
+        t.division,
         t.type,
-        t.toolclass,
-        t.division
+        t.tool_class,
+        t.kind,
+        t.lic
       ]
         .filter(Boolean)
         .join(" ")
@@ -56,4 +95,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   input.addEventListener("input", onSearch);
-});
+})();
