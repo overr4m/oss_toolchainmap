@@ -1,6 +1,6 @@
 title: "AppSec Toolchain Map"
 
-<br>Салют :wave:,</br>
+<br>Салют,</br>
 Отмечу основные моменты:
 
 * Карта инструментов показывает какие есть классы и типы инструментов
@@ -19,7 +19,7 @@ title: "AppSec Toolchain Map"
 
 Карта дает возможность выбрать выгодные для себя инструменты под все необходимые ситуации: когда нет денег, когда не можем интегрировать большой инструмент, когда никого нет и приходится делать все одному и тд.
 
-### AppSec инструменты
+### AppSec классификация инструментов
 > - DAST (Dynamic Application Security Testing)  – динамическое тестирование безопасности приложения, то есть это имитация реальных атак на приложение во время его работы
 > - SAST (Static Application Security Testing) – статический анализ кода без его запуска на наличие ошибок и уязвимостей в исходном коде
 > - SCA (Software Composition Analysis) – анализ состава компонент (зависимостей) ПО
@@ -33,7 +33,9 @@ title: "AppSec Toolchain Map"
 > - CSPM (Cloud Security Posture Management) – контроль конфигураций Kubernetes и облачных сред
 > - SM (Secret Management) – управление секретами
 
-<div align="center"><h2>Stay tuned ;)</h3></div> 
+<div align="center"><h2>Stay tuned ;)</h2></div> 
+
+***
 
 <a href="#" class="show-tools-overlay">Развернуть карту инструментов</a>
 
@@ -49,7 +51,7 @@ title: "AppSec Toolchain Map"
 
 ***
 
-## Поиск описания инструментов
+## Поиск по карте
 
 <div id="tools-search">
   <input

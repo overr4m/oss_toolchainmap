@@ -22,6 +22,7 @@
     filterBlock.id = "tools-search-filters";
     filterBlock.style.marginBottom = "1rem";
 
+    // ===== селектор типа лицензии =====
     var kindWrapper = document.createElement("div");
     kindWrapper.style.marginBottom = "0.5rem";
 
@@ -54,9 +55,23 @@
     kindWrapper.appendChild(kindSelect);
     filterBlock.appendChild(kindWrapper);
 
+    var columnsWrapper = document.createElement("div");
+    columnsWrapper.style.display = "flex";
+    columnsWrapper.style.gap = "2rem";
+
+    var colLeft = document.createElement("div");
+    colLeft.style.flex = "1";
+
+    var colRight = document.createElement("div");
+    colRight.style.flex = "1";
+
+    columnsWrapper.appendChild(colLeft);
+    columnsWrapper.appendChild(colRight);
+    filterBlock.appendChild(columnsWrapper);
+
     var fieldInputs = {};
 
-    function createFieldFilter(id, labelText, placeholder) {
+    function createFieldFilter(parentCol, id, labelText, placeholder) {
       var wrap = document.createElement("div");
       wrap.style.marginBottom = "0.5rem";
 
@@ -69,55 +84,70 @@
       inputEl.type = "search";
       inputEl.id = id;
       inputEl.placeholder = placeholder;
-      inputEl.style.marginLeft = "0.5rem";
-      inputEl.style.width = "60%";
+      inputEl.style.marginTop = "0.25rem";
+      inputEl.style.width = "100%";
 
       wrap.appendChild(label);
+      wrap.appendChild(document.createElement("br"));
       wrap.appendChild(inputEl);
-      filterBlock.appendChild(wrap);
+      parentCol.appendChild(wrap);
 
       return inputEl;
     }
 
     fieldInputs.name = createFieldFilter(
+      colLeft,
       "tools-filter-name",
       "Наименование",
       "Поиск по наименованию"
     );
     fieldInputs.vendor = createFieldFilter(
+      colLeft,
       "tools-filter-vendor",
       "Вендор",
       "Поиск по вендору"
     );
     fieldInputs.division = createFieldFilter(
+      colLeft,
       "tools-filter-division",
       "Раздел карты",
       "Поиск по разделу карты"
     );
     fieldInputs.type = createFieldFilter(
+      colLeft,
       "tools-filter-type",
       "Тип",
       "Поиск по типу"
     );
     fieldInputs.tool_class = createFieldFilter(
+      colRight,
       "tools-filter-class",
       "Класс",
       "Поиск по классу"
     );
     fieldInputs.lic = createFieldFilter(
+      colRight,
       "tools-filter-lic",
       "Лицензия",
       "Поиск по лицензии"
     );
-    fieldInputs.description = createFieldFilter(
-      "tools-filter-description",
-      "Описание",
-      "Поиск по описанию"
+    fieldInputs.FSTEK_cert = createFieldFilter(
+      colRight,
+      "tools-filter-fstek",
+      "Сертификация ФСТЭК",
+      "Поиск по сертификации ФСТЭК"
     );
-    fieldInputs.link_URL = createFieldFilter(
-      "tools-filter-link",
-      "Ссылка",
-      "Поиск по ссылке"
+    fieldInputs.RUS_access = createFieldFilter(
+      colRight,
+      "tools-filter-rus",
+      "Доступность в РФ",
+      "Поиск по доступности в РФ"
+    );
+    fieldInputs.report_formats = createFieldFilter(
+      colRight,
+      "tools-filter-report",
+      "Форматы отчётов",
+      "Поиск по форматам отчётов"
     );
 
     container.insertBefore(filterBlock, input);
@@ -131,7 +161,6 @@
       var kindValue = (kindSelect.value || "").toLowerCase();
       var searchQuery = (input.value || "").trim().toLowerCase();
 
-      // Собираем значения по каждому конкретному полю
       var fieldValues = {};
       Object.keys(fieldInputs).forEach(function (key) {
         fieldValues[key] = (fieldInputs[key].value || "")
@@ -140,75 +169,36 @@
       });
 
       var filtered = allTools.filter(function (t) {
-        if (kindValue && String(t.kind || "").toLowerCase() !== kindValue) {
+        var kind = String(t.kind || "").toLowerCase();
+
+        if (kindValue && kind !== kindValue) {
           return false;
         }
 
-        if (
-          fieldValues.name &&
-          !(t.name || "").toLowerCase().includes(fieldValues.name)
-        ) {
-          return false;
+        function checkField(fieldKey, toolValue) {
+          var fv = fieldValues[fieldKey];
+          if (!fv) return true;
+
+          var tv = toolValue;
+          if (Array.isArray(tv)) {
+            tv = tv.join(" ");
+          }
+          tv = (tv || "").toString().toLowerCase();
+          return tv.includes(fv);
         }
 
-        if (
-          fieldValues.vendor &&
-          !(t.vendor || "").toLowerCase().includes(fieldValues.vendor)
-        ) {
-          return false;
-        }
-
-        if (
-          fieldValues.division &&
-          !(t.division || "")
-            .toLowerCase()
-            .includes(fieldValues.division)
-        ) {
-          return false;
-        }
-
-        if (
-          fieldValues.type &&
-          !(t.type || "").toLowerCase().includes(fieldValues.type)
-        ) {
-          return false;
-        }
-
-        if (
-          fieldValues.tool_class &&
-          !(t.tool_class || "")
-            .toLowerCase()
-            .includes(fieldValues.tool_class)
-        ) {
-          return false;
-        }
-
-        if (
-          fieldValues.lic &&
-          !(t.lic || "").toLowerCase().includes(fieldValues.lic)
-        ) {
-          return false;
-        }
-
-        if (
-          fieldValues.description &&
-          !(t.description || "")
-            .toLowerCase()
-            .includes(fieldValues.description)
-        ) {
-          return false;
-        }
-
-        if (
-          fieldValues.link_URL &&
-          !(t.link_URL || "")
-            .toLowerCase()
-            .includes(fieldValues.link_URL)
-        ) {
-          return false;
-        }
+        if (!checkField("name", t.name)) return false;
+        if (!checkField("vendor", t.vendor)) return false;
+        if (!checkField("division", t.division)) return false;
+        if (!checkField("type", t.type)) return false;
+        if (!checkField("tool_class", t.tool_class)) return false;
+        if (!checkField("lic", t.lic)) return false;
+        if (!checkField("FSTEK_cert", t.FSTEK_cert)) return false;
+        if (!checkField("RUS_access", t.RUS_access)) return false;
+        if (!checkField("report_formats", t.report_formats)) return false;
 
         if (searchQuery) {
+          var detect = t.detect_methods || t.detect_metods || [];
           var searchHaystack = [
             t.name,
             t.vendor,
@@ -218,6 +208,13 @@
             t.lic,
             t.description,
             t.link_URL,
+            t.ver_edition,
+            t.FSTEK_cert,
+            t.redaction,
+            t.RUS_access,
+            t.report_formats,
+            detect,
+            t.OSS,
             t.kind
           ]
             .filter(Boolean)
@@ -243,7 +240,7 @@
     });
     input.addEventListener("input", applyFilterAndSearch);
 
-    if (getToolsData().length) {
+        if (getToolsData().length) {
       applyFilterAndSearch();
     }
 
