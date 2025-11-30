@@ -8,21 +8,31 @@
 
   let tools = [];
 
-  fetch("/assets/search/tools.json")
-    .then((r) => r.json())
-    .then((data) => {
+  const basePath = "/oss_toolchainmap";
+
+  fetch(basePath + "/assets/search/tools.json")
+    .then(function (r) {
+      return r.json();
+    })
+    .then(function (data) {
+      if (!Array.isArray(data)) {
+        console.error("[tools-search] tools.json is not an array");
+        return;
+      }
       tools = data;
       console.log("[tools-search] loaded", tools.length, "records");
     })
-    .catch((err) => {
+    .catch(function (err) {
       console.error("[tools-search] failed to load tools.json", err);
     });
 
   function renderResults(items) {
     resultsList.innerHTML = "";
-    if (!items.length) return;
+    if (!items.length) {
+      return;
+    }
 
-    items.slice(0, 50).forEach((tool) => {
+    items.slice(0, 50).forEach(function (tool) {
       const li = document.createElement("li");
       li.className = "tool-item";
 
@@ -73,7 +83,7 @@
       return;
     }
 
-    const filtered = tools.filter((t) => {
+    const filtered = tools.filter(function (t) {
       const haystack = [
         t.name,
         t.vendor,

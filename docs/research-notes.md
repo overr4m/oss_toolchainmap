@@ -1,7 +1,8 @@
 title: "AppSec Toolchain Map"
----
 
-# AppSec Toolchain Map
+***
+
+## AppSec Toolchain Map
 
 <a href="#" class="show-tools-overlay">Показать карту инструментов</a>
 
@@ -15,12 +16,15 @@ title: "AppSec Toolchain Map"
   </div>
 </div>
 
----
+***
 
-# Поиск по инструментам
+## Поиск по инструментам
 
 <div id="tools-search">
-  <input type="search" id="tools-search-input"
-         placeholder="Поиск по названию, вендору, описанию..." />
+  <input
+    type="search"
+    id="tools-search-input"
+    placeholder="Поиск по карте."
+  />
   <ul id="tools-search-results"></ul>
 </div>

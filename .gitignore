@@ -47,6 +47,7 @@ site/
 docs/assets/search/
 dist/
 build/
+echo/
 
 # Databases
 *.sqlite
