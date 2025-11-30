@@ -15,6 +15,7 @@ extra_javascript:
   - javascripts/tools-search.js
   - javascripts/tools-interpretator.js
   - javascripts/tools-search_style.js
+  - javascripts/tools-search_pagging.js
 
 nav:
   - "Карта инструментов":

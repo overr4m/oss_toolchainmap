@@ -1,14 +1,14 @@
 (function () {
   const labels = {
-    name: "Наименование",
+    name: "Название",
     vendor: "Вендор",
-    division: "Раздел карты",
+    division: "Раздел",
     type: "Тип",
     tool_class: "Класс",
     kind: "Тип лицензии",
     lic: "Лицензия",
     description: "Описание",
-    link_URL: "link"
+    link_URL: "Референс"
   };
 
   function addLine(parent, label, value, isBoldValue) {
@@ -31,20 +31,17 @@
     parent.appendChild(line);
   }
 
-  window.renderToolsSearchResults = function (items, resultsList) {
+  window.renderToolsSearchResultsRaw = function (items, resultsList) {
     resultsList.innerHTML = "";
     if (!items.length) {
       return;
     }
 
-    items.slice(0, 50).forEach(function (tool) {
+    items.forEach(function (tool) {
       const li = document.createElement("li");
       li.className = "tool-item";
 
-      // Название – жирный label и жирное значение
       addLine(li, labels.name, tool.name, true);
-
-      // Остальные поля – жирный только label
       addLine(li, labels.vendor, tool.vendor, false);
       addLine(li, labels.division, tool.division, false);
       addLine(li, labels.type, tool.type, false);
@@ -56,7 +53,6 @@
       addLine(li, labels.lic, tool.lic, false);
       addLine(li, labels.description, tool.description, false);
 
-      // Референс / ссылка
       if (tool.link_URL) {
         const urlContainer = document.createElement("div");
 
@@ -82,11 +78,14 @@
       resultsList.appendChild(li);
 
       const sep = document.createElement("hr");
-      sep.style.margin = "16px 0";
+      sep.style.margin = "12px 0";
       sep.style.border = "none";
       sep.style.borderTop = "1px solid #ccc";
-
       resultsList.appendChild(sep);
     });
+  };
+
+  window.renderToolsSearchResults = function (items, resultsList) {
+    window.renderToolsSearchResultsRaw(items, resultsList);
   };
 })();
