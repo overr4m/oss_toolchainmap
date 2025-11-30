@@ -26,7 +26,7 @@
       console.error("[tools-search] failed to load tools.json", err);
     });
 
-  function renderResults(items) {
+  function defaultRenderResults(items) {
     resultsList.innerHTML = "";
     if (!items.length) {
       return;
@@ -34,46 +34,17 @@
 
     items.slice(0, 50).forEach(function (tool) {
       const li = document.createElement("li");
-      li.className = "tool-item";
-
-      const title = document.createElement("div");
-      title.className = "tool-title";
-      title.textContent = tool.name || "Без названия";
-
-      const meta = document.createElement("div");
-      meta.className = "tool-meta";
-      meta.textContent = [
-        tool.vendor,
-        tool.division,
-        tool.type,
-        tool.tool_class,
-        tool.kind === "OSS" ? "OSS" : "PS"
-      ]
-        .filter(Boolean)
-        .join(" · ");
-
-      const desc = document.createElement("div");
-      desc.className = "tool-desc";
-      desc.textContent = tool.description || "";
-
-      if (tool.link_URL) {
-        const url = (tool.link_URL || "").split(",")[0].trim();
-        const link = document.createElement("a");
-        link.href = url;
-        link.target = "_blank";
-        link.rel = "noopener";
-        link.textContent = "Сайт";
-        link.className = "tool-link";
-        desc.appendChild(document.createTextNode(" "));
-        desc.appendChild(link);
-      }
-
-      li.appendChild(title);
-      if (meta.textContent) li.appendChild(meta);
-      if (desc.textContent) li.appendChild(desc);
-
+      li.textContent = tool.name || "Без названия";
       resultsList.appendChild(li);
     });
+  }
+
+  function renderResults(items) {
+    if (typeof window.renderToolsSearchResults === "function") {
+      window.renderToolsSearchResults(items, resultsList);
+    } else {
+      defaultRenderResults(items);
+    }
   }
 
   function onSearch() {
