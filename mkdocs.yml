@@ -43,6 +43,8 @@ markdown_extensions:
   - attr_list
 
 extra:
+  copyright:
+    text: “© 2025 AppSecTA by geminishkv"
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/geminishkv
@@ -58,9 +60,6 @@ extra:
   font:
     text: Montserrat
     code: Roboto Mono
-  
-  copyright:
-    text: “Elijah S Shmakov"
 
   table:
     - division: AppSec
