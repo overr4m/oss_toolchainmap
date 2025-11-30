@@ -13,8 +13,7 @@
 
 .md-typeset,
 .md-nav,
-.md-header,
-.md-footer {
+.md-header {
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
 }
@@ -35,7 +34,6 @@
   max-width: 32px;
 }
 
-/* Бургер — только размер/цвет, не трогаем логику */
 .md-header .md-header__button {
   width: 20px;
   height: 12px;
@@ -51,12 +49,6 @@
   stroke: #ffffff;
   stroke-width: 3;
   stroke-linecap: round;
-}
-
-
-/* Скрываем служебный текст в футере */
-.md-footer__meta__inner {
-  display: none;
 }
 
 @media screen and (min-width: 960px) {
@@ -76,10 +68,4 @@
     display: flex;
     align-items: center;
   }
-}
-
-.md-footer-meta .md-footer-meta__inner > :first-child::after {
-  content: " · © 2025 AppSecTA by geminishkv";
-  color: #ffffff;
-  font-weight: 400;
 }

@@ -9,6 +9,7 @@ extra_css:
   - stylesheets/table.css
   - stylesheets/header.css
   - stylesheets/menu.css
+  - stylesheets/footer.css
 
 extra_javascript:
   - javascripts/tools-overlay.js
