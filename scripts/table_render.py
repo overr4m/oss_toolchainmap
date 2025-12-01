@@ -1,7 +1,9 @@
 from typing import Any, Dict, List
 
 
-def _chunk_tools(tools: List[Dict[str, Any]], size: int = 5) -> List[List[Dict[str, Any]]]:
+def _chunk_tools(
+    tools: List[Dict[str, Any]], size: int = 5
+) -> List[List[Dict[str, Any]]]:
     return [tools[i : i + size] for i in range(0, len(tools), size)]
 
 
@@ -53,7 +55,9 @@ def render_table(data: Dict[str, Any]) -> str:
 
         if not types:
             ps_tools = division.get("PS_tools", []) or division.get("PStools", []) or []
-            oss_tools = division.get("OSS_tools", []) or division.get("OSStools", []) or []
+            oss_tools = (
+                division.get("OSS_tools", []) or division.get("OSStools", []) or []
+            )
 
             ps_chunks = _chunk_tools(ps_tools, 5)
             oss_chunks = _chunk_tools(oss_tools, 5)
@@ -121,7 +125,7 @@ def render_table(data: Dict[str, Any]) -> str:
                 type_span = sum(1 for r in flat_rows if r["type"] == row["type"])
                 html.append(
                     f'<td rowspan="{type_span}" style="font-weight:700;">'
-                    f'{row["type"]}'
+                    f"{row['type']}"
                     f"</td>"
                 )
 
@@ -129,7 +133,7 @@ def render_table(data: Dict[str, Any]) -> str:
                 class_span = sum(1 for r in flat_rows if r["class"] == row["class"])
                 html.append(
                     f'<td rowspan="{class_span}" style="font-weight:700;">'
-                    f'{row["class"]}'
+                    f"{row['class']}"
                     f"</td>"
                 )
 

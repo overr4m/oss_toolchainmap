@@ -3,17 +3,21 @@ from typing import Any, Dict, List
 
 import yaml
 
+
 def load_table_data(env, table_config: List[Dict[str, Any]]) -> Dict[str, Any]:
     return build_table_data(env, table_config)
 
+
 def get_root_dir(env) -> str:
     return os.path.dirname(env.conf["config_file_path"])
+
 
 def load_yaml_absolute(env, rel_path: str) -> Any:
     root_dir = get_root_dir(env)
     full_path = os.path.join(root_dir, rel_path)
     with open(full_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
+
 
 def _normalize_tools(raw: Any) -> List[Dict[str, Any]]:
     if isinstance(raw, dict):
@@ -24,8 +28,8 @@ def _normalize_tools(raw: Any) -> List[Dict[str, Any]]:
         return raw
     return []
 
-def build_table_data(env, table_config: List[Dict[str, Any]]) -> Dict[str, Any]:
 
+def build_table_data(env, table_config: List[Dict[str, Any]]) -> Dict[str, Any]:
     data: Dict[str, Any] = {"table": []}
 
     for division in table_config:

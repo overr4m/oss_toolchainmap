@@ -12,6 +12,7 @@ OUT_DIR = DOCS_DIR / "assets" / "search"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT_FILE = OUT_DIR / "tools.json"
 
+
 def _build_record(
     path: pathlib.Path,
     tool: Dict[str, Any],
@@ -31,14 +32,13 @@ def _build_record(
         "FSTEK_cert": meta.get("FSTEK_cert", "") or "",
         "RUS_access": meta.get("RUS_access", "") or "",
         "report_formats": meta.get("report_formats", []) or [],
-        "detect_methods": meta.get("detect_methods")
-        or meta.get("detect_metods")
-        or [],
+        "detect_methods": meta.get("detect_methods") or meta.get("detect_metods") or [],
         "OSS": meta.get("OSS", ""),
         "lic": meta.get("lic", "") or "",
         "kind": kind_label,  # OSS / PS
         "file": str(path.relative_to(ROOT)),
     }
+
 
 def load_tools_from_file(path: pathlib.Path) -> List[Dict[str, Any]]:
     raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
@@ -71,6 +71,7 @@ def load_tools_from_file(path: pathlib.Path) -> List[Dict[str, Any]]:
 
     return records
 
+
 def main() -> None:
     all_records: List[Dict[str, Any]] = []
 
@@ -86,6 +87,7 @@ def main() -> None:
         encoding="utf-8",
     )
     print(f"[INFO] Записано {len(all_records)} записей в {OUT_FILE}")
+
 
 if __name__ == "__main__":
     main()
