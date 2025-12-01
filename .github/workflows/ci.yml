@@ -51,6 +51,7 @@ jobs:
         run: |
           flake8 scripts main.py
 
+
       - name: Security scan with bandit
         run: |
           bandit -r scripts -ll
