@@ -43,7 +43,7 @@ logs/
 *.odt
 *.xlsx
 *.xls
-site/
+# site
 docs/assets/search/
 dist/
 build/
