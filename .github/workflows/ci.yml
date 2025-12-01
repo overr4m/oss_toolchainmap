@@ -43,12 +43,9 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Check formatting with ruff
+      - name: Lint and format with ruff
         run: |
-          ruff format --check .
-
-      - name: Check formatting with ruff
-        run: |
+          ruff check .
           ruff format --check .
 
   security:
@@ -75,6 +72,35 @@ jobs:
       - name: Dependency security check with safety
         run: |
           safety check -r requirements.txt || true
+
+  docs-preview:
+    if: github.event_name == 'pull_request'
+    needs:
+      - lint
+      - security
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install types-PyYAML
+      - name: Build MkDocs site (preview)
+        run: |
+          mkdocs build --strict
+        env:
+          PYTHONPATH: .
+      - name: Upload preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview
+          path: site
 
   build:
     needs:
@@ -141,11 +167,29 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Notify Slack
-        if: success()
-        uses: slackapi/slack-github-action@v1
+      - name: Ensure artifact is present # в pages он автоматический
+        run: |
+          if [ ! -d "site" ]; then
+            echo "site directory is missing"; exit 1;
+          fi
+
+# Для доработки под бота
+#      - name: Notify Telegram
+#        if: success()
+#        run: |
+#          TEXT="MkDocs site deployed: ${{ steps.deployment.outputs.page_url }} (commit ${{ github.sha }})"
+#          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+#            -d chat_id="${TELEGRAM_CHAT_ID}" \
+#            --data-urlencode "text=${TEXT}"
+#        env:
+#          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+#          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Create GitHub Deployment
+        uses: chrnorm/deployment-action@v2
         with:
-          payload: |
-            { "text": "MkDocs site deployed to GitHub Pages: ${{ steps.deployment.outputs.page_url }}" }
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: production
+          environment_url: ${{ steps.deployment.outputs.page_url }}
+          transient_environment: false
+          production_environment: true
