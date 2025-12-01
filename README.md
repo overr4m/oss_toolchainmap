@@ -200,8 +200,16 @@ $ kill <PID>
 * Release
 
 ```bash
-$ git tag -a v1.0.0 -m “Основные изменения: …”; git push origin v1.0.0
-# RELEASE_NOTES.md
+$ git tag -a v1.0.0 -m “Основные изменения: …” 
+$ git push origin v1.0.0
+
+# Альтернатива для использования - это RELEASE_NOTES.md
+$ git tag -a v1.0.0 -m "v1.0.0"
+$ git add "Release Notes.md" && git commit -m "Update notes for v1.0.0" 
+
+# текущий релиз
+$ git tag -a v1.1.0 -m "v1.1.0"
+$ git push origin v1.1.0
 ```
 
 ***
