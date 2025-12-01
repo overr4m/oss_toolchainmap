@@ -70,6 +70,7 @@ def load_tools_from_file(path: pathlib.Path) -> List[Dict[str, Any]]:
 
     return records
 
+
 def main() -> None:
     all_records: List[Dict[str, Any]] = []
 
