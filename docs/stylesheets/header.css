@@ -18,34 +18,7 @@
     "Segoe UI", sans-serif;
 }
 
-.md-header__inner {
-  display: flex;
-  align-items: center;
-}
-
 .md-header .md-header__title {
-  display: flex;
-  align-items: center;
-}
-
-.md-header .md-header__button {
-  width: 20px;
-  height: 12px;
-  margin-right: 8px;
-}
-
-.md-header .md-header__button svg {
-  width: 20px;
-  height: 12px;
-}
-
-.md-header .md-header__button svg path {
-  stroke: #ffffff;
-  stroke-width: 3;
-  stroke-linecap: round;
-}
-
-.md-header__inner {
   display: flex;
   align-items: center;
 }
@@ -57,8 +30,8 @@
 }
 
 .md-header .md-logo {
-  margin-left: 0.5rem;
-  margin-right: 2rem;
+  margin-left: 0rem;
+  margin-right: 1,5rem;
   order: 2;
   display: flex;
   align-items: center;

@@ -14,6 +14,7 @@ extra_css:
   - stylesheets/sidebar.css
   - stylesheets/typeset.css
   - stylesheets/tools-overlay.css
+  - stylesheets/burger.css
 
 extra_javascript:
   - javascripts/tools-overlay.js
