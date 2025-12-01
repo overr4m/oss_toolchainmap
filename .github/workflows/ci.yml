@@ -156,6 +156,17 @@ jobs:
         with:
           path: site
 
+      - name: Ensure site directory exists
+        run: |
+          if [ ! -d "site" ]; then
+            echo "site directory is missing"; exit 1;
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
   deploy:
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/master')
     needs:
@@ -166,12 +177,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: Ensure artifact is present # в pages он автоматический
-        run: |
-          if [ ! -d "site" ]; then
-            echo "site directory is missing"; exit 1;
-          fi
 
 # Для доработки под бота
 #      - name: Notify Telegram
