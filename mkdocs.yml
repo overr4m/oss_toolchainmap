@@ -4,6 +4,21 @@ site_url: "https://geminishkv.github.io/oss_toolchainmap/"
 theme:
   name: material
   logo: assets/logotype/site/logo.png
+  favicon: assets/logotype/site/favicon.ico
+  font:
+    text: Montserrat
+    code: Roboto Mono
+  features:
+    - search.highlight
+    - content.code.copy
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - analytics
+    - content.tables
 
 extra_css:
   - stylesheets/table.css
@@ -64,10 +79,6 @@ extra:
       link: mailto:shmakovis@inbox.ru
     - icon: fontawesome/brands/youtube
       link: https://
-  favicon: assets/logotype/site/favicon.ico
-  font:
-    text: Montserrat
-    code: Roboto Mono
 
   table_config:
     - division: AppSec
