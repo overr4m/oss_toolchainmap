@@ -1,17 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
   const trigger = document.querySelector("[data-tools-overlay-trigger]");
   const overlay = document.querySelector("[data-tools-overlay]");
+  const tableContainer = document.getElementById("tools-table-container");
+  const tableWrapper = document.getElementById("tools-table-wrapper");
 
-  if (!trigger || !overlay) {
-    console.warn("[tools-overlay] trigger or overlay not found");
-    return; 
+  if (!trigger || !overlay || !tableContainer || !tableWrapper) {
+    return;
   }
 
   var backdrop = overlay.querySelector(".tools-overlay__backdrop");
   var closeBtn = overlay.querySelector(".tools-overlay__close");
 
+  var isTableCloned = false;
+
+  function ensureTable() {
+    if (isTableCloned) return;
+
+    tableContainer.innerHTML = tableWrapper.innerHTML;
+    isTableCloned = true;
+  }
+
   function openOverlay(evt) {
-    evt.preventDefault();
+    if (evt) evt.preventDefault();
+    ensureTable();
     overlay.classList.add("is-visible");
   }
 
@@ -21,12 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   trigger.addEventListener("click", openOverlay);
-  backdrop.addEventListener("click", closeOverlay);
-  closeBtn.addEventListener("click", closeOverlay);
+
+  if (backdrop) {
+    backdrop.addEventListener("click", closeOverlay);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeOverlay);
+  }
 
   document.addEventListener("keydown", function (evt) {
     if (evt.key === "Escape") {
-      closeOverlay();
+      closeOverlay(evt);
     }
   });
 });

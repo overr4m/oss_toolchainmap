@@ -1,7 +1,9 @@
 from typing import Any, Dict, List
 
+
 def _chunk_tools(tools: List[Dict[str, Any]], size: int = 5) -> List[List[Dict[str, Any]]]:
     return [tools[i : i + size] for i in range(0, len(tools), size)]
+
 
 def _render_ps_cells(tools: List[Dict[str, Any]]) -> str:
     cells: List[str] = []
@@ -13,6 +15,7 @@ def _render_ps_cells(tools: List[Dict[str, Any]]) -> str:
         cells.append(f'<td colspan="{5 - count}"></td>')
     return "".join(cells)
 
+
 def _render_oss_cells(tools: List[Dict[str, Any]]) -> str:
     cells: List[str] = []
     count = min(len(tools), 5)
@@ -22,6 +25,7 @@ def _render_oss_cells(tools: List[Dict[str, Any]]) -> str:
     if count < 5:
         cells.append(f'<td colspan="{5 - count}"></td>')
     return "".join(cells)
+
 
 def render_table(data: Dict[str, Any]) -> str:
     html: List[str] = []
@@ -48,8 +52,8 @@ def render_table(data: Dict[str, Any]) -> str:
         types = division.get("type")
 
         if not types:
-            ps_tools = division.get("PS_tools", []) or []
-            oss_tools = division.get("OSS_tools", []) or []
+            ps_tools = division.get("PS_tools", []) or division.get("PStools", []) or []
+            oss_tools = division.get("OSS_tools", []) or division.get("OSStools", []) or []
 
             ps_chunks = _chunk_tools(ps_tools, 5)
             oss_chunks = _chunk_tools(oss_tools, 5)
@@ -62,7 +66,7 @@ def render_table(data: Dict[str, Any]) -> str:
                     html.append(
                         f'<td rowspan="{max_rows}" colspan="3" '
                         f'style="color:#1953ff; font-weight:700;">'
-                        f'{div_name}'
+                        f"{div_name}"
                         f"</td>"
                     )
 
@@ -83,8 +87,8 @@ def render_table(data: Dict[str, Any]) -> str:
             for cls in t.get("class", []):
                 class_name = cls.get("name", "")
 
-                ps_tools = cls.get("PS_tools", []) or []
-                oss_tools = cls.get("OSS_tools", []) or []
+                ps_tools = cls.get("PS_tools", []) or cls.get("PStools", []) or []
+                oss_tools = cls.get("OSS_tools", []) or cls.get("OSStools", []) or []
 
                 ps_chunks = _chunk_tools(ps_tools, 5)
                 oss_chunks = _chunk_tools(oss_tools, 5)
@@ -109,7 +113,7 @@ def render_table(data: Dict[str, Any]) -> str:
                 html.append(
                     f'<td rowspan="{total_rows}" '
                     f'style="color:#1953ff; font-weight:700;">'
-                    f'{div_name}'
+                    f"{div_name}"
                     f"</td>"
                 )
 
@@ -128,7 +132,6 @@ def render_table(data: Dict[str, Any]) -> str:
                     f'{row["class"]}'
                     f"</td>"
                 )
-
 
             html.append(_render_ps_cells(row["ps"]))
             html.append(_render_oss_cells(row["oss"]))

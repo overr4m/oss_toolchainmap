@@ -230,6 +230,8 @@ echo '[]' > docs/assets/search/tools.json
 
 
 
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" code 404 # игнорируем
+
 
 ***
 

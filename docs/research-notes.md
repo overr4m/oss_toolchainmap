@@ -24,21 +24,29 @@ search:
 
 ***
 
-<a href="#" class="show-tools-overlay">Развернуть карту инструментов</a>
+<div id="tools-table-wrapper" style="display:none;">
+  {{ tools_table() }}
+</div>
 
-<div id="tools-overlay" class="tools-overlay">
+<button type="button" data-tools-overlay-trigger class="tools-overlay__trigger">
+  <h4>Развернуть карту инструментов</h4>
+</button>
+
+<div data-tools-overlay class="tools-overlay">
   <div class="tools-overlay__backdrop"></div>
-  <div class="tools-overlay__content">
-    <button class="tools-overlay__close" aria-label="Закрыть">✕</button>
-    <div class="tools-overlay__table">
-      {{ generate_html_table_from_config() }}
-    </div>
+  <div class="tools-overlay__dialog">
+    <button type="button" class="tools-overlay__close">×</button>
+    <div id="tools-table-container" class="tools-overlay__table"></div>
   </div>
 </div>
 
 ***
 
-## Поиск по карте
+
+
+***
+
+# Поиск по карте
 
 <div id="tools-search">
   <input

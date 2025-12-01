@@ -10,7 +10,7 @@
     description: "Описание",
     link_URL: "link",
     ver_edition: "Версия",
-    FSTEK_cert: "Сертификация ФСТЭК",
+    FSTEK_cert: "Сертификат",
     redaction: "Редакции",
     RUS_access: "Доступность в РФ",
     report_formats: "Форматы отчётов",

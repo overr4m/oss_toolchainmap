@@ -37,59 +37,6 @@ html[data-md-page="research-notes"] .md-typeset table th {
   font-weight: 600;
 }
 
-.tools-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-}
-
-.tools-overlay.is-visible {
-  display: block;
-}
-
-.tools-overlay__backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.tools-overlay__content {
-  position: absolute;
-  inset: 5%;
-  background: #ffffff;
-  border-radius: 4px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-}
-
-.tools-overlay__close {
-  align-self: flex-end;
-  margin: 0.5rem 0.75rem 0;
-  border: none;
-  background: transparent;
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-
-.tools-overlay__table {
-  flex: 1;
-  overflow: auto;
-  padding: 0.5rem 1rem 1rem;
-}
-
-.tools-overlay__table .md-typeset__table {
-  min-width: 100%;
-  overflow: auto;
-}
-
-.tools-overlay__table table {
-  width: 100%;
-  table-layout: auto;
-  white-space: normal;
-}
-
 a.show-tools-overlay {
   display: inline-block;
   margin-bottom: 1rem;

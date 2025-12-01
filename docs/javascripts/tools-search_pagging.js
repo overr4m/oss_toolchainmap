@@ -68,9 +68,17 @@
       renderPage();
     });
 
-    var originalRender = window.renderToolsSearchResults;
+    var originalRender =
+      window.renderToolsSearchResults || window.renderToolsSearchResultsRaw;
 
     window.renderToolsSearchResults = function (items, listEl) {
+      if (listEl && listEl.id !== "tools-search-results") {
+        if (typeof originalRender === "function") {
+          originalRender(items, listEl);
+        }
+        return;
+      }
+
       currentItems = Array.isArray(items) ? items : [];
       currentPage = 1;
       renderPage();

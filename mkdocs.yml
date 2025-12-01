@@ -13,6 +13,7 @@ extra_css:
   - stylesheets/search.css
   - stylesheets/sidebar.css
   - stylesheets/typeset.css
+  - stylesheets/tools-overlay.css
 
 extra_javascript:
   - javascripts/tools-overlay.js
@@ -65,7 +66,7 @@ extra:
     text: Montserrat
     code: Roboto Mono
 
-  table:
+  table_config:
     - division: AppSec
       type:
         - name: SAST

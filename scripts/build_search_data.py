@@ -43,7 +43,6 @@ def load_tools_from_file(path: pathlib.Path) -> List[Dict[str, Any]]:
     raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     records: List[Dict[str, Any]] = []
 
-    # Вариант с ключами OSS / PS
     for kind_key, kind_label in (("OSS", "OSS"), ("PS", "PS")):
         tools = raw.get(kind_key)
         if isinstance(tools, list):

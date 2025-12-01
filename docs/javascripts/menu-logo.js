@@ -14,8 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var menuLogoUrl =
     window.location.origin +
-    basePath +
-    "/assets/logotype/site/logo_menu.png";
+    basePath + "/assets/logotype/site/logo_menu.png";
 
   logoImg.src = menuLogoUrl;
   logoImg.removeAttribute("srcset");
