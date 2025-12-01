@@ -45,7 +45,7 @@ jobs:
 
       - name: Lint Python with ruff
         run: |
-          ruff scripts main.py
+          ruff check scripts main.py
 
       - name: Lint Python with flake8
         run: |
