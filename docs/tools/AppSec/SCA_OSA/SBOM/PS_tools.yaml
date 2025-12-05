@@ -2,7 +2,7 @@ PS:
   - name: Spectral
     meta:
       description: "Платформа для анализа безопасности кода (SCA/OSA), выявляющая утечки секретов, конфиденциальных данных и уязвимости в коде и зависимостях. Поддерживает языки: Java, JavaScript, Python, Go, Ruby, PHP, C/C++, .NET. Интегрируется с CI/CD, обеспечивает автоматизированное сканирование без агентов."
-      link_URL: "https://spectralops.io/, https://github.com/spectralops"
+      link_URL: "https://spectralops.io/"
       ver_edition: "Информация не найдена"
       FSTEK_cert: "Нет"
       redaction: []
@@ -14,7 +14,7 @@ PS:
       type: "SCA/OSA"
       class: "SBOM"
       vendor: "Check Point Software Technologies"
-      lic: ""
+      lic: "Информация не найдена"
 
   - name: Endor Labs
     meta:
@@ -48,7 +48,7 @@ PS:
       type: "SCA/OSA"
       class: "SBOM"
       vendor: "Cybeats Technologies"
-      lic: ""
+      lic: "Trial, Cybeats custom license"
 
   - name: Codenotary
     meta:
@@ -71,11 +71,9 @@ PS:
     meta:
       description: "Инструмент для анализа и управления SBOM в форматах SPDX (2.2, 2.3) и CycloneDX. Интегрируется с Sonatype Lifecycle для анализа уязвимостей и лицензий. Поддерживает языки: Java, JavaScript, .NET, Python, Go, PHP, Ruby. Обеспечивает экспорт отчетов и интеграцию с CI/CD."
       link_URL: "https://www.sonatype.com/products/sonatype-sbom-manager"
-      ver_edition: "1.0"
+      ver_edition: "1.198.0"
       FSTEK_cert: "Нет"
-      redaction:
-        - "1.180.0: улучшена поддержка SPDX 2.3, добавлен экспорт в CycloneDX"
-        - "1.192.0: добавлена поддержка SPDX 2.2, улучшена интеграция с CLI"
+      redaction: []
       RUS_access: "Доступен"
       report_formats: ["SPDX", "CycloneDX", "JSON", "XML"]
       detect_methods: ["CWE", "OWASP Top 10"]
@@ -84,4 +82,4 @@ PS:
       type: "SCA/OSA"
       class: "SBOM"
       vendor: "Sonatype"
-      lic: ""
+      lic: "Информация не найдена"
