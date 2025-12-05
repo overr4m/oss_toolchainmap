@@ -2,7 +2,7 @@ Tools:
   - name: Contrast Security OSS
     meta:
       description: "Gлатформа для тестирования и защиты приложений, которая использует IAST, SAST, RASP\
-       для выявления и предотвращения уязвимостей на всех этапах жизненного цикла разработки ПО. Поддерживает саледующие языки программирования и технлогии: Java, .NET Framework, .NET Core, C#, Node.js, Python, Ruby, Go, PHP"
+       для выявления и предотвращения уязвимостей на всех этапах жизненного цикла разработки ПО. Поддерживает следующие языки программирования и технологии: Java, .NET Framework, .NET Core, C#, Node.js, Python, Ruby, Go, PHP"
       link_URL: "https://github.com/Contrast-Security-OSS"
       ver_edition: "3.12.0 - on-premise, July 15 2025 - hosted customers"
       FSTEK_cert: "Нет"

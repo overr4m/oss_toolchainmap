@@ -15,7 +15,7 @@ Tools:
       division: "AppSec"
       type: "MAST"
       class: "Анализатор MobApp"
-      vendor: ''
+      vendor: 'Mobile security'
       lic: 'GPL-3.0 license'
   - name: MobSF
     meta:

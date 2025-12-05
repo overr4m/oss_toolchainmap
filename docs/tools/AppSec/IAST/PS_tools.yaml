@@ -34,20 +34,20 @@ Tools:
       lic: 'Информация не найдена'
   - name: Hdiv Detection (IAST) 
     meta:
-      description: ""
+      description: "Платформа, предоставляющая подробные отчеты о процессе работы приложения путем встраивания специального агента с целью снятия метрик."
       link_URL: "https://hdivsecurity.com/interactive-application-security-testing-iast"
-      ver_edition: ""
-      FSTEK_cert: ""
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Недоступен"
-      report_formats: []
-      detect_metods: []
+      report_formats: ["Веб-интерфейс"]
+      detect_metods: ["OWASP Top 10","application agent"]
       OSS: "false"
       division: "AppSec"
       type: "IAST"
       class: "Интерактивный анализатор"
-      vendor: ''
-      lic: 'Apache-2.0, '
+      vendor: 'Hdiv security'
+      lic: 'Информация не найдена'
   - name: Contrast Assess
     meta:
       description: "инструмент интерактивного тестирования безопасности приложений (IAST), разработанный компанией Contrast Security.\
@@ -75,7 +75,7 @@ Tools:
       redaction: []
       RUS_access: "Недоступен"
       report_formats: ["Веб-интерфейс", "PDF"]
-      detect_metods: []
+      detect_metods: ["Информация не найдена"]
       OSS: "false"
       division: "AppSec"
       type: "IAST"
@@ -90,8 +90,8 @@ Tools:
       FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Недоступен"
-      report_formats: []
-      detect_metods: []
+      report_formats: ["Веб-интерфейс"]
+      detect_metods: ["Информация не обнаружена"]
       OSS: "True"
       division: "AppSec"
       type: "IAST"
