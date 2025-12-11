@@ -1,20 +1,4 @@
 Tools:
-  - name: OlydDBG # Не найден
-    meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
-      redaction: []
-      RUS_access: ""
-      report_formats: []
-      detect_metods: []
-      OSS: "true"
-      division: "AppSec"
-      type: "DAST"
-      class: "WhiteBox Fuzzing"
-      vendor: ''
-      lic: ''
   - name: Fernflower
     meta:
       description: "Декомпилятор ИЗ Java Bytecode в Java, на текущий момент разрабатываемый и поддерживаемый компанией JetBrains"

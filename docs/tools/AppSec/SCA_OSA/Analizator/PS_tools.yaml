@@ -113,7 +113,7 @@ Tools:
     class: "Анализатор"
     vendor: 'Positive Technologies'
     lic: 'Подписка'
-- name: Spectral
+- name: Spectral Mend SCA
   meta:
     description: "Инструмент для анализа состава ПО и защиты цепочки поставок, с акцентом на DevOps. Поддерживает языки: JavaScript, Python, Go, Java, Ruby. Предоставляет настраиваемые правила и интеграцию с CI/CD."
     link_URL: "https://spectralops.io/sca/"

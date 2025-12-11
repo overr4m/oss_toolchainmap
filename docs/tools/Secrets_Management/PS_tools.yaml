@@ -210,22 +210,6 @@ Tools:
       class: "Password management"
       vendor: 'Applause'
       lic: 'Подписка'
-  - name: Conjur
-    meta:
-      description: "Интерфейс для безопасной аутентификации, контроля и аудита машинного доступа к инструментам, приложениям, контейнерам и облачным средам за счет управления секретами."
-      link_URL: "https://docs.cyberark.com/secrets-manager-sh/13.3/en/content/resources/_topnav/cc_home.htm"
-      ver_edition: ""
-      FSTEK_cert: "Нет"
-      redaction: []
-      RUS_access: "Доступен"
-      report_formats: []
-      detect_metods: []
-      OSS: "false"
-      division: "Secrets Management"
-      type: ""
-      class: ""
-      vendor: 'CyberArk'
-      lic: 'Enterprise, Подписка'
   - name: Yandex Lockbox
     meta:
       description: "Сервис для создания и хранения секретов в инфраструктуре Yandex Cloud. Обеспечивает централизованное хранение, шифрование и разграничение доступа для секретов, а также позволяет управлять секретами через консоль или с помощью API"

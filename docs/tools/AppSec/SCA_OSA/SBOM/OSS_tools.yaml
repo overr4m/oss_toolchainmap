@@ -15,7 +15,22 @@ OSS:
       class: "SBOM"
       vendor: "Aqua security"
       lic: "Apache-2.0 License"
-
+  - name: Syft
+    meta:
+      description: "Инструмент CLI и библиотека Go для создания спецификации программного обеспечения (SBOM) на основе образов контейнеров и файловых систем. Поддерживаемые платформы: Alpine, Bitnami packages, C, C++, Dart, Debian, Dotnet, Objective-C, Elixir, Erlang, Go, Haskell, Java, JavaScript, Jenkins Plugins, Linux kernel archives, Linux kernel modules, Nix, PHP, Python, Red Hat, Ruby, Rust, Swift, Wordpress plugins, Terraform providers."
+      link_URL: "https://github.com/anchore/syft"
+      ver_edition: "1.38.0"
+      FSTEK_cert: "Нет"
+      redaction: [ ]
+      RUS_access: "Доступен"
+      report_formats: [ "json", "text", "xml", "table" ]
+      detect_methods: [ "Информация не найдена" ]
+      OSS: "true"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "SBOM"
+      vendor: "Anchore"
+      lic: "Apache-2.0 license"
   - name: Jit ASPM platform (SBOM)
     meta:
       description: "Платформа для внедрения в GitHub или GitLab, сканирует выбранные репозитории и проекты, также может запускаться автоматически."

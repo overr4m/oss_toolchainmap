@@ -165,7 +165,6 @@ Tools:
       class: "Статический анализатор"
       vendor: 'Osquery'
       lic: 'Apache-2.0 License'
-
   - name: bearer
     meta:
       description: "Платформа для обнаружения уязвимостей и инцидентов в приложениях написанных на языках: Go, Java, JavaScript, TypeScript, PHP, Python, Ruby
@@ -218,7 +217,6 @@ Tools:
       class: "Статический анализатор"
       vendor: 'NodeSecure'
       lic: 'MIT License'
-
   - name: Checkov
     meta:
       description: "сканирует облачную инфраструктуру, подготовленную с использованием Terraform, Terraform plan, Cloudformation, AWS SAM, Kubernetes, Helm charts, Kustomize,\
@@ -237,7 +235,6 @@ Tools:
       class: "Статический анализатор"
       vendor: "PANW AppSec"
       lic: 'Apache-2.0 License'
-
   - name: Semgrep
     meta:
       description: "Semgrep — универсальный SAST‑инструмент с поддержкой правил CWE, OWASPTop10, SANS Top25 и кастомных паттернов."
@@ -254,7 +251,6 @@ Tools:
       class: "Статический анализатор"
       vendor: 'Semgrep Inc'
       lic: 'LGPL-2.1-or-later'
-
   - name: njsscan
     meta:
       description: "njsscan — сканер безопасности Node.js‑проектов, анализирует AST и сопоставляет паттерны с CWE."

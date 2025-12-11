@@ -84,7 +84,7 @@ Tools:
       class: "Анализатор MobApp"
       vendor: 'Reversec Labs'
       lic: 'BSD 3-Clause License'
-  - name: ostorlab
+  - name: Ostorlab
     meta:
       description: "Платформа для автоматизации тестирования безопасности мобильных приложений,\
        объединяющая SAST, DAST и анализ API. Основные функции: сканирование APK, IPA и приложений из магазинов,\

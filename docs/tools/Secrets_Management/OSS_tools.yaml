@@ -176,3 +176,19 @@ Tools:
       class: ""
       vendor: 'Lyft'
       lic: 'Apache-2.0 license'
+  - name: Conjur
+    meta:
+      description: "Интерфейс для безопасной аутентификации, контроля и аудита машинного доступа к инструментам, приложениям, контейнерам и облачным средам за счет управления секретами."
+      link_URL: "https://github.com/cyberark/conjur"
+      ver_edition: "1.24.0"
+      FSTEK_cert: "Нет"
+      redaction: [ ]
+      RUS_access: "Доступен"
+      report_formats: [ ]
+      detect_metods: [ ]
+      OSS: "false"
+      division: "Secrets Management"
+      type: ""
+      class: ""
+      vendor: 'CyberArk'
+      lic: 'GNU LGPL license'

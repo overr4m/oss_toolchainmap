@@ -1,5 +1,16 @@
 # Release Notes
 
+## v1.1.4
+Актуализирована информация по типам некоторых инструментов:
+
+* Procyon - перемещен из OSS в PS tools (BCA)
+* Dynamic SBOM - инструмент также добавлен в категорию SCA/OSA(SBOM)
+* OllyDBG - инструмент не найден (удален)
+* Falco - Перемещен из OSS в PS (RASP)
+* Hdiv - дополнительно добавлен в категорию RASP
+* Syft - перемещен из BCA в SCA/OSA
+* Conjur - перемещен из PS в OSS (Secrets management)
+
 ## v1.1.3
 * Обновлена директория tools
 * Добавлена краткая информация по инструментам в toolchain map

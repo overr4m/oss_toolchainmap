@@ -195,7 +195,7 @@ Tools:
       class: ""
       vendor: 'Palo Alto networks'
       lic: 'SaaS'
-  - name: Aqua Security
+  - name: Aqua Container Security
     meta:
       description: "Платформа для защиты Kubernetes-окружений, управления состоянием безопасности облака (CSPM) и защиты облачных рабочих нагрузок в режиме реального времени (CWPP).
       Решение работает как с установкой, так и без установки агентов с использованием технологии eBPF."

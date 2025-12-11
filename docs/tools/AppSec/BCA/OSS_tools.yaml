@@ -1,21 +1,4 @@
 Tools:
-  - name: Syft
-    meta:
-      description: "Инструмент CLI и библиотека Go для создания спецификации программного обеспечения (SBOM) на основе образов контейнеров и файловых систем. Поддерживаемые платформы: Alpine, Bitnami packages, C, C++, Dart, Debian, Dotnet, Objective-C, Elixir, Erlang, Go, Haskell, Java, JavaScript, Jenkins Plugins, Linux kernel archives, Linux kernel modules, Nix, PHP, Python, Red Hat, Ruby, Rust, Swift, Wordpress plugins, Terraform providers."
-      link_URL: "https://github.com/anchore/syft"
-      ver_edition: "1.38.0"
-      FSTEK_cert: "Нет"
-      redaction: []
-      RUS_access: "Доступен"
-      report_formats: ["json", "text", "xml", "table"]
-      detect_methods: ["Информация не найдена"]
-      OSS: "true"
-      division: "AppSec"
-      type: "BCA"
-      class: "Бинарный анализатор"
-      vendor: "Anchore"
-      lic: "Apache-2.0 license"
-
   - name: BinaryNinja
     meta:
       description: "Платформа для реверс-инжиниринга, предоставляющая интерактивный дизассемблер и декомпилятор для анализа бинарных файлов любых языков, компилируемых в поддерживаемые архитектуры: x86, x86_64, ARM, MIPS, RISC-V и другие. Поддерживает автоматизацию анализа через API на Python, Rust и C++, обеспечивая гибкость для задач безопасности и исследования кода."
@@ -85,8 +68,8 @@ Tools:
       lic: "Personal"
   - name: Procyon
     meta:
-      description: "набор инструментов для метапрограммирования на Java, включающий в себя многофункциональный Reflection API, API для деревьев выражений (Expression Tree API) в стиле LINQ для генерации кода во время выполнения, а также декомпилятор Java."
-      link_URL: "https://github.com/mstrobel/procyon?tab=readme-ov-file, https://bitbucket.org/mstrobel/procyon/downloads/ - указали в статье на хабре, но открыть не удалось"
+      description: "Набор инструментов для метапрограммирования на Java, включающий в себя многофункциональный Reflection API, API для деревьев выражений (Expression Tree API) в стиле LINQ для генерации кода во время выполнения, а также декомпилятор Java."
+      link_URL: "https://www.procyonsr.com/Procyon/enterprise.html"
       ver_edition: "0.6.0"
       FSTEK_cert: "Нет"
       redaction: []
