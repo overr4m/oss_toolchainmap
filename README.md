@@ -1,26 +1,21 @@
 <div align="center">
-  <h1><a id="intro"> DevSecOps Toolchain Map</a><br></h1>
-</div>
-
-<div align="center">
+<h1><a id="intro"> DevSecOps Toolchain Map </a><br></h1>
 <a href="https://docs.github.com/en"><img src="https://img.shields.io/static/v1?logo=github&logoColor=fff&label=&message=Docs&color=36393f&style=flat" alt="GitHub Docs"></a>
-<a href="https://daringfireball.net/projects/markdown"><img src="https://img.shields.io/static/v1?logo=markdown&logoColor=fff&label=&message=Markdown&color=36393f&style=flat" alt="Markdown"></a> 
 <a href="https://symbl.cc/en/unicode-table"><img src="https://img.shields.io/static/v1?logo=unicode&logoColor=fff&label=&message=Unicode&color=36393f&style=flat" alt="Unicode"></a> 
 <a href="https://shields.io"><img src="https://img.shields.io/static/v1?logo=shieldsdotio&logoColor=fff&label=&message=Shields&color=36393f&style=flat" alt="Shields"></a>
-<a href="https://cli.github.com/"><img src="https://img.shields.io/github/repo-size/geminishkv/oss_toolchainmap" alt="GitHub_reposize"></a>
+<a href="https://img.shields.io/badge/Risk_Analyze-2448a2"><img src="https://img.shields.io/badge/Course-Risk_Analysis-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/AppSec-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/Contributor-Шмаков_И._С.-8b9aff" alt="Contributor Badge"></a>
+<img src="https://img.shields.io/badge/git-%23F05033.svg?style=flat-square&logo=git&logoColor=white" alt="Git">
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3670A0.svg?logo=python&logoColor=ffdd54" alt="Python"></a>
+<a href="https://www.mkdocs.org/"><img src="https://img.shields.io/badge/MkDocs-326ce5.svg?logo=MaterialForMkDocs&logoColor=white" alt="MkDocs"></a>
+<a href="https://www.markdownguide.org/"><img src="https://img.shields.io/badge/Markdown-000000.svg?logo=markdown&logoColor=white" alt="Markdown"></a>
+<a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" alt="Ruff"></a>
+<a href="https://github.com/pycqa/flake8"><img src="https://img.shields.io/badge/flake8-code%20style-blue?logo=python&logoColor=white" alt="flake8"></a>
+
 </div>
 
 <div align="center">
 
-![License](https://img.shields.io/github/license/geminishkv/oss_toolchainmap)
-![CI](https://img.shields.io/github/actions/workflow/status/geminishkv/oss_toolchainmap/ci.yml?branch=master)
-![Status](https://img.shields.io/badge/status-active-success)
-![Release](https://img.shields.io/github/v/release/geminishkv/oss_toolchainmap)
-![Contributor Badge](https://img.shields.io/badge/Contributor-%D0%A8%D0%BC%D0%B0%D0%BA%D0%BE%D0%B2_%D0%98._%D0%A1.-8b9aff?style=flat)
-![Contributors](https://img.shields.io/github/contributors/geminishkv/oss_toolchainmap)
-![Open pull requests](https://img.shields.io/github/issues-pr/geminishkv/oss_toolchainmap)
-![Commit Activity](https://img.shields.io/github/commit-activity/m/geminishkv/oss_toolchainmap)
-![Last commit](https://img.shields.io/github/last-commit/geminishkv/oss_toolchainmap)
+![Repo Size](https://img.shields.io/github/repo-size/geminishkv/course_labs)![License](https://img.shields.io/github/license/geminishkv/course_labs)![CI](https://img.shields.io/github/actions/workflow/status/geminishkv/course_labs/ci.yml?branch=develop)![Status](https://img.shields.io/badge/status-active-success)![Release](https://img.shields.io/github/v/release/geminishkv/course_labs)![Contributor Badge](https://img.shields.io/badge/Contributor-%D0%A8%D0%BC%D0%B0%D0%BA%D0%BE%D0%B2_%D0%98._%D0%A1.-8b9aff?style=flat)![Contributors](https://img.shields.io/github/contributors/geminishkv/course_labs)![Open pull requests](https://img.shields.io/github/issues-pr/geminishkv/course_labs)![Commit Activity](https://img.shields.io/github/commit-activity/m/geminishkv/course_labs)![Last commit](https://img.shields.io/github/last-commit/geminishkv/course_labs)
 
 </div>
 
@@ -178,21 +173,19 @@
 $ python3 -m venv .venv
 $ source .venv/bin/activate
 $ pip install -r requirements.txt
-$ pip install mkdocs mkdocs-material mkdocs-macros-plugin # must-have
-$ pip install pyyaml
-$ python scripts/build_search_data.py
-$ ruff format scripts/build_search_data.py
-# or
 $ ruff format .
-$ python -m mkdocs serve
+$ pip install mkdocs-include-markdown-plugin
+$ python -m mkdocs serve --livereload
 # or
 $ mkdocs serve -a 127.0.0.1:8001 # прямое обозначение адреса
+
+$ pip show mkdocs # debug
 ```
 
 * Очистка локального репозитория
 
 ```bash
-$ rm -rf __pycache__ scripts/__pycache__ docs/assets/search/tools.json
+$ rm -rf __pycache__ scripts/__pycache__  # etc.
 $ lsof -i :8000
 $ kill <PID>
 ```
@@ -203,13 +196,47 @@ $ kill <PID>
 $ git tag -a v1.0.0 -m “Основные изменения: …” 
 $ git push origin v1.0.0
 
-# Альтернатива для использования - это RELEASE_NOTES.md
+# Альтернатива для использования - это RELEASE_NOTES
 $ git tag -a v1.0.0 -m "v1.0.0"
 $ git add "Release Notes.md" && git commit -m "Update notes for v1.0.0" 
 
-# текущий релиз
-$ git tag -a v1.1.0 -m "v1.1.0"
+$ git tag -a v1.1.0 -m "v1.1.0" # текущий релиз
 $ git push origin v1.1.0
+$ git tag -d v0.1.0 # удалить локальный тег
+$ git push origin :refs/tags/v0.1.0 # удалить тот же тег на GitHub
+```
+
+* Локальное тестирование ci.yml
+
+```bash
+$ act -l
+$ act -j имя_job #  или общий act push
+$ act push -b -v
+
+$ act push -j build -b
+$ act pull_request -j ххх # конкретный job
+$ act pull_request -j docs-preview -b # docs-preview и все зависимые job
+```
+
+* Тестирование
+
+```bash
+$ abandit -r labs
+$ aruff check .
+
+$ anpx eslint "docs/**/*.js" "javascripts/**/*.js"
+npx stylelint "docs/**/*.css" "stylesheets/**/*.css"
+
+$ agit ls-files '*.sh' \
+  | grep -v 'labs/lab08/dast/zap_scan.sh' \
+  | grep -v 'labs/lab07/sca/dependency-check.sh' \
+  | grep -v 'labs/lab06/audit.sh' \
+  | xargs -r shellcheck -e SC2086,SC1090,SC1091
+
+$ ayamllint .github/workflows mkdocs.yml
+$ anpx markdownlint-cli2 "docs/**/*.md" "labs/**/*.md" "README.md"
+
+$ mkdocs build --strict --clean --config-file mkdocs.yml --site-dir /tmp/mkdocs-check
 ```
 
 ***
