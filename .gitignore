@@ -25,11 +25,12 @@ Temporary Items
 
 # Python
 __pycache__/
+.mypy_cache
+.ruff_cache
+venv/
 *.py[cod]
 *.pyo
 *.pyd
-.ruff_cache
-venv/
 .vscode/
 .idea/
 *.swp
@@ -45,6 +46,7 @@ logs/
 # Build / dist artifacts (site, bundles, etc.)
 dist/
 build/
+pdf_table
 
 # Databases / dumps
 *.sqlite

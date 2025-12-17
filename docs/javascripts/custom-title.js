@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     link.href = "https://t.me/shmakovis_appsec";
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.textContent = "© AppSecTA";
+    link.textContent = "© AppSecTA & FinDevSecOps";
 
     topic.appendChild(link);
   }

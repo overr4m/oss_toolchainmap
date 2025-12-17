@@ -5,7 +5,7 @@ from scripts.table_render import render_table
 
 
 def define_env(env) -> None:
-    table_config: List[Dict[str, Any]] = env.conf["extra"].get("table_config", [])
+    table_config: List[Dict[str, Any]] = env.conf.get("extra", {}).get("tools_table", [])
 
     @env.macro
     def tools_table() -> str:

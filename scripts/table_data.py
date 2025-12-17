@@ -1,7 +1,6 @@
 import os
-from typing import Any, Dict, List
-
 import yaml
+from typing import Any, Dict, List
 
 
 def load_table_data(env, table_config: List[Dict[str, Any]]) -> Dict[str, Any]:
@@ -61,7 +60,6 @@ def build_table_data(env, table_config: List[Dict[str, Any]]) -> Dict[str, Any]:
             div_copy["type"] = new_types
 
         else:
-            # раздел без типов — сразу загружаем списки инструментов
             if "OSS_tools" in div_copy:
                 oss_raw = load_yaml_absolute(env, div_copy["OSS_tools"])
                 div_copy["OSS_tools"] = _normalize_tools(oss_raw)

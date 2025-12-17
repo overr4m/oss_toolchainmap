@@ -173,15 +173,19 @@
 $ python3 -m venv .venv
 $ source .venv/bin/activate
 $ pip install -r requirements.txt
-$ ruff format .
 $ pip install mkdocs-include-markdown-plugin
 $ pip install mkdocs-meta-descriptions-plugin
 $ python scripts/build_search_data.py
+$ ruff format .
 $ python -m mkdocs serve --livereload
 # or
 $ mkdocs serve -a 127.0.0.1:8001 # прямое обозначение адреса
+```
 
-$ pip show mkdocs # debug
+* Генерация карты в PDF
+
+```bash
+$ python -m scripts.export_tools_pdf
 ```
 
 * Очистка локального репозитория
@@ -285,4 +289,4 @@ $ mkdocs build --strict --clean --config-file mkdocs.yml --site-dir /tmp/mkdocs-
 
 Copyright (c) 2025 Elijah S Shmakov
 
-![Логотип](assets/logotype/logotypemd.jpg)
+![Logo](docs/assets/logotype/logotypemd.jpg)

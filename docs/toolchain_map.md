@@ -35,6 +35,11 @@ search:
   <h4>Развернуть карту инструментов</h4>
 </button>
 
+<a href="tools-map.pdf" target="_blank" rel="noopener" class="tools-overlay__trigger">
+  <h4>Открыть карту инструментов в PDF</h4>
+</a>
+
+
 <div data-tools-overlay class="tools-overlay">
   <div class="tools-overlay__backdrop"></div>
   <div class="tools-overlay__dialog">

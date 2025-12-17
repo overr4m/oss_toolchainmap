@@ -213,6 +213,10 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Generate tools map PDF
+        run: |
+          python scripts/export_tools_pdf.py
+
       - name: Validate MkDocs config (preview)
         run: |
           mkdocs build --clean --config-file mkdocs.yml --site-dir /tmp/mkdocs-check
