@@ -7,5 +7,3 @@ description:
 ---
 
 ***
-
-![Логотип](../docs/assets/logotype/logotypemd.jpg)

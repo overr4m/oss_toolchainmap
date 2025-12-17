@@ -54,11 +54,16 @@
   width: 100%;
   table-layout: auto;
   white-space: normal;
+  border-bottom: 2px solid #1953ff;
 }
 
 .tools-overlay__table table,
 .tools-overlay__table table th,
 .tools-overlay__table table td {
-  border: 1.5px solid #1953ff;
+  border: 2px solid #1953ff;
   border-collapse: collapse;
+}
+
+.tools-overlay__table table tr:last-child td {
+  border-bottom-width: 2px;
 }

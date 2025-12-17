@@ -7,4 +7,4 @@ description: Описание изменений для проекта и стр
 
 ***
 
-![Логотип](../docs/assets/logotype/logotypemd.jpg)
+![Логотип](assets/logotype/logotypemd.jpg)

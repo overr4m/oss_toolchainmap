@@ -65,4 +65,4 @@ description: Описание аббревиатур, типов, классов
   </tbody>
 </table>
 
-![Логотип](artifacts/assets/logotypemd.jpg)
+![Логотип](assets/logotype/logotypemd.jpg)

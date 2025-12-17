@@ -69,4 +69,4 @@ description: Описание лицензий и их типов для open-so
   </tbody>
 </table>
 
-![Логотип](artifacts/assets/logotypemd.jpg)
+![Логотип](assets/logotype/logotypemd.jpg)
