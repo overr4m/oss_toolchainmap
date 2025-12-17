@@ -85,6 +85,8 @@ extra_css:
   - stylesheets/burger.css
   - stylesheets/mobile-heder.css
   - stylesheets/mobile-logo.css
+  - stylesheets/clipboard.css
+  - stylesheets/layout.css
 
 extra_javascript:
   - javascripts/tools-overlay.js
@@ -100,7 +102,7 @@ nav:
   - "Карта инструментов":
       - "Toolchain Map": research-notes.md
       - "Православные вендора": vendor_rf.md
-      - "Зарубежные вендора": external.md
+      - "Зарубежные вендора": vendor_external.md
       - "OSS": OSS.md
   - "Материалы":
         - "Лицензии ПО": licenses.md
