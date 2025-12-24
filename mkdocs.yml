@@ -135,6 +135,7 @@ extra:
 #    provider: google
 #    property: G-XXXXXXXXXX
 
+extra:
   table_config:
     - division: AppSec
       type:
@@ -161,7 +162,7 @@ extra:
             - name: "Анализатор"
               OSS_tools: docs/tools/AppSec/SCA_OSA/Analizator/OSS_tools.yaml
               PS_tools: docs/tools/AppSec/SCA_OSA/Analizator/PS_tools.yaml
-            - name: "SBOM"
+            - name: SBOM
               OSS_tools: docs/tools/AppSec/SCA_OSA/SBOM/OSS_tools.yaml
               PS_tools: docs/tools/AppSec/SCA_OSA/SBOM/PS_tools.yaml
 
@@ -173,12 +174,12 @@ extra:
 
         - name: DAST
           class:
-            - name: "Whitebox Fuzzing"
-              OSS_tools: docs/tools/AppSec/DAST/Whitbox_fuzzing/OSS_tools.yaml
-              PS_tools: docs/tools/AppSec/DAST/Whitbox_fuzzing/PS_tools.yaml
             - name: "DAST"
               OSS_tools: docs/tools/AppSec/DAST/DAST/OSS_tools.yaml
               PS_tools: docs/tools/AppSec/DAST/DAST/PS_tools.yaml
+            - name: "Whitebox Fuzzing"
+              OSS_tools: docs/tools/AppSec/DAST/Whitbox_fuzzing/OSS_tools.yaml
+              PS_tools: docs/tools/AppSec/DAST/Whitbox_fuzzing/PS_tools.yaml
 
         - name: MAST
           class:
