@@ -68,7 +68,7 @@ td.auto-section-name {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2mm;
+    gap: 3mm;
     font-size: 8pt;
     padding: 0;
 }
@@ -76,7 +76,7 @@ td.auto-section-name {
 .footer-logos {
     display: flex;
     align-items: center;
-    gap: 2mm;
+    gap: 3mm;
     margin-left: auto;
 }
 

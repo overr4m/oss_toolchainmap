@@ -24,17 +24,24 @@ def main() -> None:
     <title>AppSec Toolchain Map</title>
   </head>
   <body>
+  <h1>DevSecOps Toolchain Map</h1>
       <div class="page-footer">
         <div class="footer-logos">
-          <img src="docs/assets/logotype/site/logo_pdf.png" class="footer-logo" />
-          <img src="docs/assets/logotype/site/FDSO_logo.png" class="footer-logo" />
-          <img src="docs/assets/logotype/site/LANIT_logo.png" class="footer-logo" />
+          <a href="https://geminishkv.github.io/gpages_intro/" target="_blank">
+            <img src="docs/assets/logotype/site/logo_pdf.png" class="footer-logo" />
+          </a>
+          <a href="https://findevsecops.ru" target="_blank">
+            <img src="docs/assets/logotype/site/FDSO_logo.png" class="footer-logo" />
+          </a>
+          <a href="https://lanit.ru" target="_blank">
+            <img src="docs/assets/logotype/site/LANIT_logo.png" class="footer-logo" />
+          </a>
         </div>
       </div>
       <div class="page-footer_copyright">
-        <div class="footer-copyright">© AppSecTA &amp; FinDevSecOps</div>
+        <div class="footer-copyright">© <a href="https://geminishkv.github.io/gpages_intro/" target="_blank">AppSecTA </a> &amp; <a href="https://findevsecops.ru" target="_blank">FinDevSecOps</a>
+</div>
       </div>
-
       {html_content}
   </body>
 </html>
