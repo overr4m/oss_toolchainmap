@@ -133,3 +133,83 @@ Tools:
       class: "Интерактивный анализатор"
       vendor: 'Veracode'
       lic: 'Veracode custom license'
+  - name: Checkmarx IAST
+    meta:
+      description: "Компонент платформы Checkmarx One, реализующий интерактивное тестирование безопасности: агент внедряется в приложение и в реальном времени отслеживает выполнение кода и поток данных, валидируя результаты SAST/DAST и снижая число ложных срабатываний."
+      link_URL: "https://checkmarx.com/platform/interactive-application-security-testing-iast/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "PDF", "JSON", "CSV"]
+      detect_metods: ["OWASP Top 10", "OWASP API Security Top 10", "CVSS"]
+      OSS: "false"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "Checkmarx"
+      lic: "Enterprise, модуль платформы Checkmarx One"
+  - name: Invicti Shark IAST
+    meta:
+      description: "IAST‑сенсор Shark в составе платформы Invicti, работающий внутри рантайма веб‑приложения, который взаимодействует с DAST‑сканером Invicti, подтверждает эксплуатацию уязвимостей и привязывает их к конкретным файлам и строкам кода."
+      link_URL: "https://www.invicti.com/learn/interactive-application-security-testing-iast"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "HTML", "JSON", "CSV"]
+      detect_metods: ["OWASP Top 10", "Proof-based scanning", "Runtime dataflow tracking"]
+      OSS: "false"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "Invicti Security"
+      lic: "SaaS, Enterprise"
+  - name: Acunetix AcuSensor
+    meta:
+      description: "Модуль AcuSensor в составе Acunetix, реализующий пассивный IAST‑подход: датчики встраиваются в код приложения и дополняют DAST‑сканирование данными о выполнении, что позволяет точно указывать строки кода и уменьшать число ложных срабатываний."
+      link_URL: "https://www.acunetix.com/vulnerability-scanner/acusensor-technology/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "HTML", "PDF", "XML"]
+      detect_metods: ["OWASP Top 10", "Code-level vulnerability confirmation"]
+      OSS: "false"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "Acunetix by Invicti"
+      lic: "Подписка, Enterprise"
+  - name: New Relic IAST
+    meta:
+      description: "IAST‑функциональность на базе APM‑агентов New Relic: инструмент анализирует выполнение кода в реальном времени, автоматически выявляет уязвимости в стеке приложения и даёт разработчикам приоритизированный список проблем с контекстом."
+      link_URL: "https://newrelic.com/platform/application-security"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON"]
+      detect_metods: ["Runtime dataflow analysis", "OWASP Top 10 (частично)"]
+      OSS: "false"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "New Relic"
+      lic: "SaaS, подписка"
+  - name: Fortify IAST (Fortify on Demand)
+    meta:
+      description: "Интерактивный анализатор в составе Fortify on Demand, использующий агенты в рантайме для мониторинга исполнения веб‑приложений, корреляции с результатами SAST/DAST и точного указания местоположения уязвимостей в коде."
+      link_URL: "https://www.opentext.com/en-gb/products/application-security-testing"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "PDF", "HTML", "CSV"]
+      detect_metods: ["OWASP Top 10", "CWE", "CVSS-based risk scoring"]
+      OSS: "false"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "OpenText Fortify"
+      lic: "SaaS, Enterprise"

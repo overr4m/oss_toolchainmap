@@ -12,6 +12,7 @@ def _chunk_tools(
     tools: List[Dict[str, Any]],
     size: int = MAX_TOOLS_PER_ROW,
 ) -> List[List[Dict[str, Any]]]:
+    """Разбить список инструментов на чанки для строк."""
     if not tools:
         return []
     return [tools[i : i + size] for i in range(0, len(tools), size)]
@@ -77,7 +78,6 @@ def render_table(data: Dict[str, Any]) -> str:
         div_name: str = division.get("division", "") or ""
         types = division.get("type")
 
-        # кейс без type/class
         if not types:
             ps_tools = division.get("PS_tools") or division.get("PStools") or []
             oss_tools = division.get("OSS_tools") or division.get("OSStools") or []
@@ -91,18 +91,20 @@ def render_table(data: Dict[str, Any]) -> str:
 
                 if idx == 0:
                     html.append(
-                        f'<td rowspan="{max_rows}" colspan="3" '
+                        f'<td rowspan="{max_rows}" '
                         f'style="color:#1953ff; font-weight:700;">'
                         f"{div_name}"
                         f"</td>"
                     )
+
+                html.append("<td></td>")
+                html.append("<td></td>")
 
                 ps_row = ps_chunks[idx] if idx < len(ps_chunks) else []
                 oss_row = oss_chunks[idx] if idx < len(oss_chunks) else []
 
                 html.append(_render_ps_cells(ps_row))
                 html.append(_render_oss_cells(oss_row))
-
                 html.append("</tr>")
 
             continue
@@ -111,7 +113,18 @@ def render_table(data: Dict[str, Any]) -> str:
 
         for t in types or []:
             type_name: str = t.get("name", "") or ""
-            for cls in t.get("class", []) or []:
+            classes = t.get("class")
+
+            if not classes:
+                classes = [
+                    {
+                        "name": "",
+                        "PS_tools": t.get("PS_tools") or t.get("PStools") or [],
+                        "OSS_tools": t.get("OSS_tools") or t.get("OSStools") or [],
+                    }
+                ]
+
+            for cls in classes or []:
                 class_name: str = cls.get("name", "") or ""
 
                 ps_tools = cls.get("PS_tools") or cls.get("PStools") or []
@@ -119,6 +132,7 @@ def render_table(data: Dict[str, Any]) -> str:
 
                 ps_chunks = _chunk_tools(ps_tools, MAX_TOOLS_PER_ROW)
                 oss_chunks = _chunk_tools(oss_tools, MAX_TOOLS_PER_ROW)
+
                 max_rows = max(len(ps_chunks), len(oss_chunks), 1)
 
                 for idx in range(max_rows):
@@ -133,9 +147,10 @@ def render_table(data: Dict[str, Any]) -> str:
 
         total_rows = len(flat_rows) or 1
 
-        for i, row in enumerate(
-            flat_rows or [{"type": "", "class": "", "ps": [], "oss": []}]
-        ):
+        if not flat_rows:
+            flat_rows = [{"type": "", "class": "", "ps": [], "oss": []}]
+
+        for i, row in enumerate(flat_rows):
             html.append("<tr>")
 
             if i == 0:

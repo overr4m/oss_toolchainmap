@@ -137,6 +137,7 @@ extra:
 
 extra:
   table_config:
+
     - division: AppSec
       type:
         - name: SAST
@@ -162,7 +163,10 @@ extra:
             - name: "Анализатор"
               OSS_tools: docs/tools/AppSec/SCA_OSA/Analizator/OSS_tools.yaml
               PS_tools: docs/tools/AppSec/SCA_OSA/Analizator/PS_tools.yaml
-            - name: SBOM
+
+        - name: SBOM
+          class:
+            - name: "SBOM"
               OSS_tools: docs/tools/AppSec/SCA_OSA/SBOM/OSS_tools.yaml
               PS_tools: docs/tools/AppSec/SCA_OSA/SBOM/PS_tools.yaml
 

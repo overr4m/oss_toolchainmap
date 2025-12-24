@@ -15,7 +15,6 @@ Tools:
       class: "Анализатор"
       vendor: "Anchore"
       lic: "Apache-2.0 License"
-
   - name: OpenSCAP
     meta:
       description: "Фреймворк с открытым исходным кодом для проверки соответствия и управления уязвимостями, поддерживает сканирование контейнерных образов и оценку безопасности. Хорошо интегрируется с экосистемой Red Hat и имеет модульную структуру для расширения функциональности."
@@ -32,7 +31,6 @@ Tools:
       class: "Анализатор"
       vendor: "Red Hat"
       lic: "LGPL-2.1"
-
   - name: Dependency Track
     meta:
       description: "Платформа OWASP для анализа компонентов и управления рисками цепочки поставок ПО, использующая SBOM для мониторинга уязвимостей в портфеле приложений. Поддерживает языки: Java, JavaScript, Python, Ruby, .NET, Go, PHP. Обеспечивает визуализацию цепочек зависимостей и управление политиками безопасности."
@@ -49,7 +47,6 @@ Tools:
       class: "Анализатор"
       vendor: "OWASP"
       lic: "Apache-2.0 License"
-
   - name: Debricked
     meta:
       description: "Инструмент анализа состава ПО для сканирования зависимостей с открытым исходным кодом, обнаружения уязвимостей и проверки лицензий с интеграцией в CI/CD. Поддерживает языки: JavaScript, TypeScript, Python, Java, PHP, Ruby, Go, .NET, C, C++, Rust. Предлагает автоматизированное исправление уязвимостей и облачную архитектуру."
@@ -66,7 +63,6 @@ Tools:
       class: "Анализатор"
       vendor: "Debricked"
       lic: "Proprietary"
-
   - name: Dependency Check
     meta:
       description: "Инструмент OWASP для обнаружения уязвимостей в зависимостях приложений, с интеграцией в CI/CD и поддержкой различных типов проектов. Поддерживает языки: Java, JavaScript, .NET, Python, Ruby, PHP. Интегрируется с Maven и Gradle, использует локальное кэширование базы уязвимостей."
@@ -83,7 +79,6 @@ Tools:
       class: "Анализатор"
       vendor: "OWASP"
       lic: "Apache-2.0 License"
-
   - name: Trivy
     meta:
       description: "Комплексный сканер уязвимостей для контейнеров, репозиториев кода и облачных сред, поддерживающий создание SBOM и интеграцию с CI/CD. Поддерживает языки: Go, Java, JavaScript, Python, Ruby, PHP, Rust. Отличается высокой производительностью и поддержкой сканирования инфраструктуры как кода."
@@ -100,3 +95,67 @@ Tools:
       class: "Анализатор"
       vendor: "Aqua security"
       lic: "Apache-2.0 License"
+  - name: Syft
+    meta:
+      description: "CLI‑инструмент и Go‑библиотека для генерации SBOM по контейнерным образам и файловым системам; обнаруживает пакеты и зависимости во множестве экосистем (Docker, OCI, Alpine, Debian, RPM, npm, PyPI, Maven и др.) и экспортирует данные в стандартизированные форматы."
+      link_URL: "https://github.com/anchore/syft"
+      ver_edition: "1.18.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["json", "table", "cyclonedx", "spdx-json", "spdx-tag-value", "syft-json"]
+      detect_methods: ["SBOM (CycloneDX/SPDX)", "CVE (через интеграции)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "Anchore"
+      lic: "Apache-2.0 License"
+  - name: OpenSCA
+    meta:
+      description: "Инструмент анализа состава ПО от xmirrorlab, фокусирующийся на анализе зависимостей и уязвимостей третьих‑сторонних компонентов для проектов на разных языках, с поддержкой сканирования репозиториев и CI/CD."
+      link_URL: "https://github.com/xmirrorsecurity/OpenSCA-cli"
+      ver_edition: "1.5.3"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["json", "html"]
+      detect_methods: ["CVE", "CVSS"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "xmirrorsecurity"
+      lic: "Apache-2.0 License"
+  - name: OpenSCA Web
+    meta:
+      description: "Веб‑платформа на базе OpenSCA‑cli с интерфейсом для управления проектами, просмотром результатов SCA‑сканирования и мониторингом уязвимостей и лицензий по репозиториям."
+      link_URL: "https://github.com/xmirrorsecurity/OpenSCA-web"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["web‑интерфейс", "json"]
+      detect_methods: ["CVE", "CVSS", "license compliance (частично)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "xmirrorsecurity"
+      lic: "Apache-2.0 License"
+  - name: Tern
+    meta:
+      description: "Инструмент анализа Docker/OCI‑образов, строящий SBOM на уровне пакетов и слоёв; помогает понять происхождение компонентов и их лицензии для повышения прозрачности цепочки поставок."
+      link_URL: "https://github.com/tern-tools/tern"
+      ver_edition: "2.14.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["json", "yaml", "spdx", "cyclonedx"]
+      detect_methods: ["SBOM (SPDX/CycloneDX)", "License metadata"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "tern‑tools"
+      lic: "BSD-2-Clause License"

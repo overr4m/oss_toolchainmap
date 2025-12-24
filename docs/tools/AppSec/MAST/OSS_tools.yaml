@@ -102,3 +102,83 @@ Tools:
       class: "Анализатор MobApp"
       vendor: 'Ostorlab'
       lic: 'Apache License, Также есть возможность приобрести пакеты услуг: Community, Access, Business, Enterprise'
+  - name: Needle
+    meta:
+      description: "Модульный фреймворк для тестирования безопасности iOS‑приложений, поддерживающий статический и динамический анализ, внедрение кода, перехват трафика и интеграцию с Frida для глубокой оценки безопасности мобильных приложений."
+      link_URL: "https://github.com/OWASP/needle"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи", "TXT"]
+      detect_metods: ["OWASP MASVS", "MSTG (частично)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "OWASP"
+      lic: "GPL-3.0 license"
+  - name: QARK
+    meta:
+      description: "Quick Android Review Kit — инструмент для анализа Android‑приложений, выполняющий статический анализ APK и исходного кода для выявления типичных ошибок конфигурации, небезопасных разрешений и уязвимостей."
+      link_URL: "https://github.com/linkedin/qark"
+      ver_edition: "2.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["HTML", "TXT"]
+      detect_metods: ["OWASP Mobile Top 10 (частично)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "LinkedIn (community maintained)"
+      lic: "Apache-2.0 license"
+  - name: AndroBugs
+    meta:
+      description: "Фреймворк для анализа безопасности Android‑приложений, который автоматически сканирует APK на наличие небезопасных настроек, слабых криптографических практик и распространённых уязвимостей."
+      link_URL: "https://github.com/AndroBugs/AndroBugs_Framework"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["TXT", "HTML"]
+      detect_metods: ["OWASP Mobile (частично)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "AndroBugs"
+      lic: "GPL-3.0 license"
+  - name: QVMAP (Qiling VM Android Profiling)
+    meta:
+      description: "Инструмент на базе фреймворка эмуляции Qiling, предназначенный для динамического анализа и профилирования поведения Android‑приложений, в том числе для выявления вредоносной активности и нарушений политики безопасности."
+      link_URL: "https://github.com/qilingframework/qiling"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи", "JSON"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "Qiling Framework"
+      lic: "GPL-2.0 license"
+  - name: Frida
+    meta:
+      description: "Инструмент динамической инструментализации, позволяющий внедрять JavaScript‑код в процессы Android и iOS для перехвата вызовов функций, обхода защит и исследования поведения мобильных приложений в рантайме."
+      link_URL: "https://github.com/frida/frida"
+      ver_edition: "16.5.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи", "скрипты"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "Frida Project"
+      lic: "wxWindows Library Licence 3.1"

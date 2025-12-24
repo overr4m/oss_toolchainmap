@@ -193,3 +193,179 @@ Tools:
     class: "Анализатор"
     vendor: 'Sonatype'
     lic: 'Trial, Enterprise'
+  - name: Veracode Software Composition Analysis
+    meta:
+      description: "Модуль SCA в платформе Veracode, выполняющий анализ open‑source компонентов в приложениях и контейнерах, управление лицензиями и генерацию SBOM с приоритизацией уязвимостей по контексту эксплуатации."
+      link_URL: "https://www.veracode.com/products/software-composition-analysis"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Скорее всего недоступен"
+      report_formats: ["Dashboard", "PDF", "JSON", "CSV", "SBOM"]
+      detect_metods: ["CVE", "CVSS", "license compliance", "policy rules"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "Veracode"
+      lic: "SaaS, Enterprise"
+  - name: Sonatype Nexus Lifecycle
+    meta:
+      description: "Флагманское решение Sonatype для SCA и управления OSS‑зависимостями: реализует dependency firewall, сложные политики использования, мониторинг уязвимостей и лицензий на уровне репозиториев и сборок."
+      link_URL: "https://www.sonatype.com/products/nexus-lifecycle"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен ограниченно"
+      report_formats: ["Dashboard", "JSON", "CSV", "SBOM"]
+      detect_metods: ["CVE", "CVSS", "лицензии", "policy enforcement"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "Sonatype"
+      lic: "Enterprise, подписка"
+  - name: FOSSA SCA
+    meta:
+      description: "Коммерческая платформа для SCA и управления лицензиями, ориентированная на прозрачность использования open‑source: поддерживает бинарный анализ, генерацию SBOM и формирование уведомлений для поставщиков и заказчиков."
+      link_URL: "https://fossa.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Скорее всего недоступен"
+      report_formats: ["Dashboard", "PDF", "CSV", "JSON", "SBOM"]
+      detect_metods: ["CVE", "CVSS", "license risk", "policy compliance"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "FOSSA"
+      lic: "SaaS, Enterprise"
+  - name: Jit SCA
+    meta:
+      description: "Модуль SCA в платформе Jit, ориентированный на разработчиков: сканирует зависимости в Git‑репозиториях, CI/CD и контейнерах, уведомляя о уязвимостях и лицензионных рисках через pull‑request и интеграции с тикет‑системами."
+      link_URL: "https://www.jit.io/resources/appsec-tools/10-sca-security-tools-to-protect-your-code-in-2023"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON"]
+      detect_metods: ["CVE", "CVSS", "license checks"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "Jit"
+      lic: "SaaS, подписка"
+  - name: Aikido SCA
+    meta:
+      description: "Компонент SCA в Aikido Security: проводит анализ зависимостей, формирует SBOM и приоритизирует уязвимости с учётом достижимости и контекста (code→cloud), снижая шум и количество ложноположительных срабатываний."
+      link_URL: "https://www.aikido.dev/blog/top-10-software-composition-analysis-sca-tools-in-2025"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "SBOM"]
+      detect_metods: ["CVE", "reachability", "license compliance"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "Aikido Security"
+      lic: "SaaS, подписка"
+  - name: Cycode SCA
+    meta:
+      description: "SCA‑модуль платформы Cycode, использующий Risk Intelligence Graph для корреляции уязвимостей в зависимостях с контекстом репозиториев, CI/CD и облака, предоставляя приоритизацию и SBOM‑отчёты."
+    link_URL: "https://cycode.com/blog/top-enterprise-sca-tools/"
+    ver_edition: "Информация не найдена"
+    FSTEK_cert: "Нет"
+    redaction: []
+    RUS_access: "Недоступен"
+    report_formats: ["Dashboard", "JSON", "CSV", "SBOM"]
+    detect_metods: ["CVE", "CVSS", "supply‑chain risk"]
+    OSS: "false"
+    division: "AppSec"
+    type: "SCA/OSA"
+    class: "Анализатор"
+    vendor: "Cycode"
+    lic: "SaaS, Enterprise"
+  - name: Plexicus ASPM (SCA)
+    meta:
+      description: "Платформа ASPM с сильным SCA‑модулем: выполняет многомодовый поиск зависимостей (по манифестам, бинарям, сниппетам, codeprint), автоматизирует выпуск SBOM и облегчает аудит и обмен данными с поставщиками."
+      link_URL: "https://www.plexicus.ai/blog/review/best-sca-tools-secure-software-supply-chain/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "SBOM", "JSON", "CSV", "PDF"]
+      detect_metods: ["CVE", "CVSS", "license governance"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "Plexicus"
+      lic: "SaaS, Enterprise"
+  - name: GitLab Dependency Scanning
+    meta:
+      description: "Встроенный модуль GitLab Ultimate для анализа зависимостей: сканирует манифесты, контейнерные образы и генерирует SBOM, показывая уязвимые пакеты прямо в Merge Request и pipeline‑отчётах."
+      link_URL: "https://docs.gitlab.com/user/application_security/dependency_scanning/"
+      ver_edition: "18.x (GitLab Ultimate)"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен (санкции)"
+      report_formats: ["JSON", "SBOM", "pipeline reports"]
+      detect_metods: ["CVE", "CVSS", "NVD/OSV источники"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "GitLab"
+      lic: "GitLab Ultimate / Premium с AppSec"
+  - name: Qodana + Mend SCA
+    meta:
+      description: "Интеграция Qodana с Mend.io: добавляет SCA‑проверки прямо в JetBrains‑IDE и пайплайны, объединяя статический анализ кода и анализ зависимостей в едином отчётном формате."
+      link_URL: "https://blog.jetbrains.com/qodana/2025/09/best-software-composition-analysis-tools/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен (JetBrains/Mend)"
+      report_formats: ["Dashboard", "IDE‑репорты", "JSON"]
+      detect_metods: ["CVE", "CVSS", "лицензии"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "JetBrains + Mend.io"
+      lic: "Подписка"
+  - name: Endor Labs
+    meta:
+      description: "Платформа для управления рисками open‑source, фокусирующаяся на анализе достижимости уязвимостей, качестве проектов и зависимости «code→cloud», чтобы отсечь шум и показать действительно опасные зависимости."
+      link_URL: "https://www.aikido.dev/blog/top-10-software-composition-analysis-sca-tools-in-2025"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "SBOM"]
+      detect_metods: ["CVE", "reachability", "maintainability scoring"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "Endor Labs"
+      lic: "SaaS, Enterprise"
+  - name: Arnica SCA
+    meta:
+      description: "DevSecOps‑платформа с SCA‑модулем, ориентированным на CI/CD‑интеграции: обеспечивает быстрый анализ зависимостей в пайплайнах, автоматические политики блокировки и уведомления в чаты и трекеры."
+      link_URL: "https://www.aikido.dev/blog/top-10-software-composition-analysis-sca-tools-in-2025"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON"]
+      detect_metods: ["CVE", "CVSS", "pipeline gating"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: "Arnica"
+      lic: "SaaS, Enterprise"

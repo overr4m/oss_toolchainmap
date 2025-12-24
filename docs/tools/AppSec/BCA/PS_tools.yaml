@@ -1,20 +1,4 @@
 Tools:
-  - name: Dynamic SBOM
-    meta:
-      description: "платформа для управления уязвимостями и программной спецификацией (SBOM), включающая в себя инструменты BCA. Помогает определить, какие из обнаруженных уязвимостей действительно представляют угрозу."
-      link_URL: "https://aws.amazon.com/marketplace/pp/prodview-hlzqud6ccq75m"
-      ver_edition: "Информация не найдена"
-      FSTEK_cert: "Нет"
-      redaction: []
-      RUS_access: "Недоступен"
-      report_formats: ["Интерфейс"]
-      detect_metods: ["Информация не найдена"]
-      OSS: "false"
-      division: "AppSec"
-      type: "BCA"
-      class: "Бинарный анализатор"
-      vendor: 'Rezilion'
-      lic: 'Enterprise'
   - name: IDAPRO
     meta:
       description: "дизассемблер, являющийся отраслевым стандартом для реверс-инжиниринга. Он поддерживает анализ бинарных файлов для множества архитектур (x86, ARM, MIPS и др.)\
@@ -32,3 +16,83 @@ Tools:
       class: "Бинарный анализатор"
       vendor: 'Hex-Rays'
       lic: 'Commercial, non-commercial, education'
+  - name: Dynamic SBOM
+    meta:
+      description: "платформа для управления уязвимостями и программной спецификацией (SBOM), включающая в себя инструменты BCA. Помогает определить, какие из обнаруженных уязвимостей действительно представляют угрозу."
+      link_URL: "https://aws.amazon.com/marketplace/pp/prodview-hlzqud6ccq75m"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "false"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: 'Rezilion'
+      lic: 'Enterprise'
+  - name: CodeSentry
+    meta:
+      description: "Enterprise‑решение Binary Composition Analysis (BCA) для анализа бинарных артефактов, выявления open source‑компонентов, уязвимостей и лицензий, а также генерации SBOM в форматах SPDX и CycloneDX."
+      link_URL: "https://codesecure.com/our-products/codesentry/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["SPDX", "CycloneDX", "JSON", "CSV"]
+      detect_methods: ["Binary Composition Analysis", "VEX/SBOM-based vulnerability detection"]
+      OSS: "false"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: "CodeSecure"
+      lic: "Enterprise"
+  - name: Black Duck Binary Analysis
+    meta:
+      description: "Модуль платформы Black Duck SCA для анализа бинарных файлов, библиотек, контейнеров и прошивок с целью выявления открытого ПО, уязвимостей и лицензионных рисков без доступа к исходному коду."
+      link_URL: "https://www.blackduck.com/software-composition-analysis-tools/binary-analysis.html"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "JSON", "CSV", "SBOM"]
+      detect_methods: ["Binary SCA", "Signature matching", "Heuristic analysis"]
+      OSS: "false"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: "Black Duck (Synopsys)"
+      lic: "Enterprise"
+  - name: BinSide
+    meta:
+      description: "Платформа статического анализа бинарного кода от ИСП РАН для поиска дефектов и уязвимостей в исполняемых файлах и библиотеках, основанная на промежуточном представлении REIL и интеграции с IDA Pro и Ghidra."
+      link_URL: "https://www.ispras.ru/en/technologies/binside/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["PDF", "TXT"]
+      detect_methods: ["Dataflow analysis", "Taint analysis", "Pointer analysis"]
+      OSS: "false"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: "ИСП РАН"
+      lic: "Коммерческая лицензия"
+  - name: Veracode Binary SAST
+    meta:
+      description: "Облачное SAST‑решение Veracode с поддержкой бинарного анализа, позволяющее сканировать приложения без доступа к исходному коду и выявлять уязвимости на уровне скомпилированных артефактов."
+      link_URL: "https://www.veracode.com/products/binary-static-analysis-sast/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "PDF", "CSV"]
+      detect_methods: ["Static binary analysis", "Whole-program analysis"]
+      OSS: "false"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: "Veracode"
+      lic: "SaaS, Enterprise"

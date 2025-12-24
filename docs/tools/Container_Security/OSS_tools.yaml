@@ -1,8 +1,7 @@
 Tools:
   - name: ThreatMapper
     meta:
-      description: "Инструмент поиска угроз в prod платформах и их ранжирования на основе анализа рисков. Позволяет обнаруживать уязвимые программные компоненты, раскрытые секреты (пароли, ключи) и отклонения от лучших практик безопасности.уязвимые программные компоненты, раскрытые секреты (пароли, ключи) и отклонения от лучших практик безопасности.
-      Инструмент использует комбинацию агентских (ИИ) проверок и собственных правил сканирования."
+      description: "Инструмент поиска угроз в prod платформах и их ранжирования на основе анализа рисков. Позволяет обнаруживать уязвимые программные компоненты, раскрытые секреты (пароли, ключи) и отклонения от лучших практик безопасности.уязвимые программные компоненты, раскрытые секреты (пароли, ключи) и отклонения от лучших практик безопасности. Инструмент использует комбинацию агентских (ИИ) проверок и собственных правил сканирования."
       link_URL: "https://github.com/deepfence/ThreatMapper"
       ver_edition: "2.5"
       FSTEK_cert: "Нет"
@@ -18,8 +17,7 @@ Tools:
       lic: 'Apache-2.0 license'
   - name: cilium
     meta:
-      description: "Инструмент ,использующий технологию eBPF (позволяет запускать мини программы внутри ядра) для обеспечения сетевого взаимодействия и его безопасности внутри kubernetes. Позволяет создавать безопасные и высокопроизводительные сети внутри кластеров.
-      Инструмент позволяет внедрять сетевые политики на уронях L3-L7 и производить балансировку траффика, что позволяет инструменту полностью заменить kube-proxy"
+      description: "Инструмент ,использующий технологию eBPF (позволяет запускать мини программы внутри ядра) для обеспечения сетевого взаимодействия и его безопасности внутри kubernetes. Позволяет создавать безопасные и высокопроизводительные сети внутри кластеров. Инструмент позволяет внедрять сетевые политики на уронях L3-L7 и производить балансировку траффика, что позволяет инструменту полностью заменить kube-proxy"
       link_URL: "https://github.com/cilium/cilium"
       ver_edition: "1.18"
       FSTEK_cert: "Нет"
@@ -100,8 +98,7 @@ Tools:
       lic: 'Apache-2.0 license'
   - name: Falco
     meta:
-      description: "Облачное решение для обеспечения безопасности ОС типа Linux. Позволяет детектировать нештатное поведение системы и сообщать потенциальных угрозах безопасности в режиме реального времени.
-      Собираемые события могут быть в дальнейшем проанализорованы с помощью SIEM решений и DLP систем."
+      description: "Облачное решение для обеспечения безопасности ОС типа Linux. Позволяет детектировать нештатное поведение системы и сообщать потенциальных угрозах безопасности в режиме реального времени. Собираемые события могут быть в дальнейшем проанализорованы с помощью SIEM решений и DLP систем."
       link_URL: "https://github.com/falcosecurity/falco"
       ver_edition: "0.42"
       FSTEK_cert: "Нет"
@@ -117,8 +114,7 @@ Tools:
       lic: 'Apache-2.0 license'
   - name: Talos Linux
     meta:
-      description: "Спроектированная с нуля операционная система для запуска kubernetes. В данной ОС убраны все компоненты, кроме необходимых для k8s, взаимодействие с системой происходит только через API.
-      Данное решение, упрощающее архитектуру позволяет максимально минимизировать поверхность атаки на облачную инфраструктуру."
+      description: "Спроектированная с нуля операционная система для запуска kubernetes. В данной ОС убраны все компоненты, кроме необходимых для k8s, взаимодействие с системой происходит только через API. Данное решение, упрощающее архитектуру позволяет максимально минимизировать поверхность атаки на облачную инфраструктуру."
       link_URL: "https://github.com/siderolabs/talos"
       ver_edition: "1.11.5"
       FSTEK_cert: "Нет"
@@ -132,3 +128,195 @@ Tools:
       class: ""
       vendor: 'Sidero Labs'
       lic: 'MPL-2.0 license'
+  - name: Trivy
+    meta:
+      description: "Универсальный сканер безопасности для контейнеров, Kubernetes, файловых систем и репозиториев, позволяющий находить уязвимости в пакетах ОС и зависимостях языков, формировать SBOM и использовать VEX для фильтрации нерелевантных CVE."
+      link_URL: "https://trivy.dev"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["table", "json", "template", "cyclonedx", "spdx-json"]
+      detect_metods: ["CVE", "CVSS", "misconfig", "SBOM", "VEX"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Vulnerability scanning / IaC / SBOM"
+      class: ""
+      vendor: "Aqua Security"
+      lic: "Apache-2.0 license"
+  - name: Anchore Engine
+    meta:
+      description: "Серверный компонент для анализа и политики безопасности Docker/OCI‑образов: выполняет CVE‑сканирование, проверку конфигураций, применение кастомных allow/deny‑политик и интеграцию в CI/CD."
+      link_URL: "https://github.com/anchore/anchore-engine"
+      ver_edition: "Информация не найдена (проект депрекейтнут в пользу Grype/Syft, но остаётся OSS)"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен (архив)"
+      report_formats: ["JSON", "API"]
+      detect_metods: ["CVE", "policy rules (allow/deny lists)"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Vulnerability scanning / Policy enforcement"
+      class: ""
+      vendor: "Anchore"
+      lic: "Apache-2.0 license"
+  - name: Clair
+    meta:
+      description: "Служба статического анализа контейнерных образов от проекта Quay: индексирует слои образов и сопоставляет пакеты с базами уязвимостей различных дистрибутивов Linux."
+      link_URL: "https://github.com/quay/clair"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "API"]
+      detect_metods: ["CVE", "дистрибутивные security‑advisories"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Vulnerability scanning"
+      class: ""
+      vendor: "Project Quay / Red Hat"
+      lic: "Apache-2.0 license"
+  - name: kube-bench
+    meta:
+      description: "Инструмент проверки Kubernetes на соответствие рекомендациям CIS Benchmark: запускается в кластере или на узлах и валидирует настройки API‑сервера, kubelet, etcd и других компонентов."
+      link_URL: "https://github.com/aquasecurity/kube-bench"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "YAML", "JUnit", "stdout"]
+      detect_metods: ["CIS Kubernetes Benchmark"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Configuration / Compliance"
+      class: ""
+      vendor: "Aqua Security"
+      lic: "Apache-2.0 license"
+  - name: kube-hunter
+    meta:
+      description: "Инструмент активного тестирования безопасности Kubernetes‑кластеров, имитирующий действия атакующего для поиска открытых панелей, слабых настроек и известных векторов атак."
+      link_URL: "https://github.com/aquasecurity/kube-hunter"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["text", "JSON", "Kubernetes Secret (опционально)"]
+      detect_metods: ["known K8s misconfig & exploits"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Penetration / Runtime recon"
+      class: ""
+      vendor: "Aqua Security"
+      lic: "Apache-2.0 license"
+  - name: Dagda
+    meta:
+      description: "Инструмент для анализа Docker‑образов и запущенных контейнеров: выполняет CVE‑сканирование, анализ конфигурации и проверку на наличие вредоносного ПО с использованием ClamAV."
+      link_URL: "https://github.com/eliasgranderubio/dagda"
+      ver_edition: "Информация не найдена (поддержка ограничена)"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "MongoDB storage"]
+      detect_metods: ["CVE", "malware scan", "config checks"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Vulnerability scanning / Malware scanning"
+      class: ""
+      vendor: "Community"
+      lic: "GPL-3.0 license"
+  - name: OpenSCAP oscap-docker
+    meta:
+      description: "Расширение OpenSCAP для анализа контейнерных образов по SCAP‑контенту (CVE, конфигурационные профили, CIS/STIG), позволяющее проводить комплаенс‑сканирование Docker‑образов."
+      link_URL: "https://www.open-scap.org/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["ARF", "HTML", "XML"]
+      detect_metods: ["SCAP", "CVE", "compliance profiles"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Compliance / Vulnerability scanning"
+      class: ""
+      vendor: "OpenSCAP / Red Hat"
+      lic: "LGPL-2.1-or-later"
+  - name: Sysdig open-source
+    meta:
+      description: "Инструмент глубокой инспекции контейнеров и хостов (CLI и библиотека), собирающий системные вызовы и метаданные контейнеров, который часто используется как основа для построения собственных решений runtime‑безопасности."
+      link_URL: "https://github.com/draios/sysdig"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["CLI вывод", "pcap‑подобные дампы"]
+      detect_metods: ["системные события, container context"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Runtime observability / Forensics"
+      class: ""
+      vendor: "Sysdig"
+      lic: "Apache-2.0 license"
+  - name: kube-capacity / kube-psp-advisor (policy helpers)
+    meta:
+      description: "CLI‑утилиты, помогающие анализировать использование ресурсов и генерировать безопасные PodSecurityPolicy/Pod Security Standards для Kubernetes, уменьшая риск чрезмерных привилегий контейнеров."
+      link_URL: "https://github.com/sysdiglabs/kube-psp-advisor"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["YAML (политики)", "stdout"]
+      detect_metods: ["policy misconfig patterns"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Policy hardening"
+      class: ""
+      vendor: "Sysdig / Community"
+      lic: "Apache-2.0 license"
+  - name: kubeaudit
+    meta:
+      description: "Инструмент аудита Kubernetes‑манифестов и живых кластеров на наличие небезопасных настроек (привилегированные контейнеры, hostPath, отсутствие ограничения ресурсов и т.п.)."
+      link_URL: "https://github.com/Shopify/kubeaudit"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "text", "log"]
+      detect_metods: ["K8s security best practices", "misconfiguration rules"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Configuration scanning"
+      class: ""
+      vendor: "Shopify"
+      lic: "Apache-2.0 license"
+  - name: Dockle
+    meta:
+      description: "Линтер для Docker‑образов, проверяющий их на соответствие best practices безопасности (минимизация слоёв, отсутствие root‑запуска, корректные HEALTHCHECK, отсутствие секретов и т.п.)."
+      link_URL: "https://github.com/goodwithtech/dockle"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["text", "JSON"]
+      detect_metods: ["Dockerfile / image best practices", "misconfig"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Image hardening / Linting"
+      class: ""
+      vendor: "goodwithtech"
+      lic: "Apache-2.0 license"
+  - name: kube-score
+    meta:
+      description: "Статический анализатор манифестов Kubernetes, оценивающий деплойменты по набору правил (безопасность, надёжность, ресурсы) и выдающий рекомендации по улучшению."
+      link_URL: "https://github.com/zegl/kube-score"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["text", "JSON"]
+      detect_metods: ["K8s best practices", "security & reliability checks"]
+      OSS: "true"
+      division: "Container Security"
+      type: "Configuration / Policy analysis"
+      class: ""
+      vendor: "kube-score project"
+      lic: "MIT License"

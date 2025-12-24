@@ -1,8 +1,7 @@
 Tools:
   - name: brightsec
     meta:
-      description: "AI-powered платформа управления безопасностью приложений, встраиваемая на всех жизненных этапах SDLC.
-      Платформа предлагает DAST решение для проверки API на наличие уязвимостей."
+      description: "AI-powered платформа управления безопасностью приложений, встраиваемая на всех жизненных этапах SDLC. Платформа предлагает DAST решение для проверки API на наличие уязвимостей."
       link_URL: "https://brightsec.com/"
       ver_edition: "13.8"
       FSTEK_cert: "Нет"
@@ -114,8 +113,7 @@ Tools:
       lic: 'Enterprise'
   - name: Q-APISec
     meta:
-      description: "решение для обеспечения безопасности API, позволяющее организациям своевременно инвентаризировать, защищать и анализировать все программные интерфейсы.
-      поддерживает интеграцию с различными языками программирования и фреймворками, включая Java Spring, и использует технологический стек с такими компонентами, как KAFKA, Postgres и Docker."
+      description: "решение для обеспечения безопасности API, позволяющее организациям своевременно инвентаризировать, защищать и анализировать все программные интерфейсы. Поддерживает интеграцию с различными языками программирования и фреймворками, включая Java Spring, и использует технологический стек с такими компонентами, как KAFKA, Postgres и Docker."
       link_URL: "https://squadsec.ru/"
       ver_edition: "Информация не найдена"
       FSTEK_cert: "Нет"
@@ -145,3 +143,99 @@ Tools:
       class: "API Sec / WAF"
       vendor: 'SolidSoft'
       lic: 'Enterprise'
+  - name: Salt Security
+    meta:
+      description: "Платформа безопасности API, обеспечивающая непрерывное обнаружение API, оценку рисков и защиту от атак с использованием машинного обучения и поведенческой аналитики."
+      link_URL: "https://salt.security/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "JSON"]
+      detect_metods: ["OWASP Top 10", "ML-based anomaly detection"]
+      OSS: "false"
+      division: "AppSec"
+      type: "API"
+      class: "API Sec / WAF"
+      vendor: "Salt Security"
+      lic: "Enterprise"
+  - name: CloudGuard WAF
+    meta:
+      description: "Облачное решение Web & API Security от Check Point, использующее контекстный ИИ для защиты веб-приложений и API от известных и неизвестных атак, включая OWASP Top 10 и zero‑day."
+      link_URL: "https://www.checkpoint.com/cloudguard/waf/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "JSON"]
+      detect_metods: ["OWASP Top 10", "AI-based threat prevention", "Zero day"]
+      OSS: "false"
+      division: "AppSec"
+      type: "API"
+      class: "API Sec / WAF"
+      vendor: "Check Point"
+      lic: "Enterprise"
+  - name: Cloudflare API Shield
+    meta:
+      description: "Компонент платформы Cloudflare, обеспечивающий защиту API за счёт WAF, rate limiting, mTLS, проверки схем и обнаружения аномалий в API‑трафике."
+      link_URL: "https://www.cloudflare.com/api-shield/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "JSON"]
+      detect_metods: ["OWASP Top 10", "Schema validation", "Rate limiting", "Bot mitigation"]
+      OSS: "false"
+      division: "AppSec"
+      type: "API"
+      class: "API Sec / WAF"
+      vendor: "Cloudflare"
+      lic: "Enterprise"
+  - name: Imperva API Security
+    meta:
+      description: "Часть платформы Imperva Application Security, обеспечивающая обнаружение и защиту публичных и теневых API, включая поведенческий анализ трафика и интеграцию с облачным WAF."
+      link_URL: "https://www.imperva.com/products/api-security/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "JSON", "PDF"]
+      detect_metods: ["OWASP Top 10", "Behavior analytics", "API discovery"]
+      OSS: "false"
+      division: "AppSec"
+      type: "API"
+      class: "API Sec / WAF"
+      vendor: "Imperva"
+      lic: "Enterprise"
+  - name: Akamai API Security
+    meta:
+      description: "Модуль платформы Akamai App & API Protector, обеспечивающий защиту API и микросервисов с помощью WAF, WAAP и поведенческого анализа, включая защиту от ботнетов и DDoS."
+      link_URL: "https://www.akamai.com/products/app-and-api-protector"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "JSON"]
+      detect_metods: ["OWASP Top 10", "Bot protection", "DDoS mitigation"]
+      OSS: "false"
+      division: "AppSec"
+      type: "API"
+      class: "API Sec / WAF"
+      vendor: "Akamai"
+      lic: "Enterprise"
+  - name: Wallarm
+    meta:
+      description: "Платформа Web & API Security с управляемым WAF, автоматическим обнаружением API, защитой от уязвимостей и атак нулевого дня в мультиоблачных и Kubernetes‑окружениях."
+      link_URL: "https://www.wallarm.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "JSON"]
+      detect_metods: ["OWASP Top 10", "API discovery", "Anomaly detection"]
+      OSS: "false"
+      division: "AppSec"
+      type: "API"
+      class: "API Sec / WAF"
+      vendor: "Wallarm"
+      lic: "Enterprise"

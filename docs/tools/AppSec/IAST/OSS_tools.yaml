@@ -16,3 +16,179 @@ Tools:
       class: "Интерактивный анализатор"
       vendor: 'Contrast Security'
       lic: 'Apache-2.0 license'
+  - name: DongTai IAST
+    meta:
+      description: "Открытый интерактивный анализатор безопасности приложений, использующий пассивную инструментализацию для отслеживания вызовов методов и данных во время выполнения Java‑приложений и сторонних компонентов, что позволяет в реальном времени обнаруживать типичные уязвимости и ошибки конфигурации."
+      link_URL: "https://github.com/HXSecurity/DongTai"
+      ver_edition: "1.16.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Веб-интерфейс", "JSON"]
+      detect_metods: ["OWASP Top 10", "Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "HXSecurity"
+      lic: "Apache-2.0 license"
+  - name: DongTai Java Agent
+    meta:
+      description: "Java‑агент DongTai IAST, который с помощью динамических hook‑ов собирает данные о вызовах методов и потоках данных в Java‑приложении, обеспечивая контекст для выявления уязвимостей во время работы приложения."
+      link_URL: "https://github.com/HXSecurity/DongTai-agent-java"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "Логи"]
+      detect_metods: ["OWASP Top 10 (частично)", "Dataflow tracking"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "HXSecurity"
+      lic: "Apache-2.0 license"
+  - name: DongTai Go Agent
+    meta:
+      description: "Go‑агент DongTai IAST, осуществляющий динамическую инструментализацию Go‑приложений и сбор телеметрии о вызовах функций, что позволяет выявлять уязвимости и небезопасные пути обработки данных в рантайме."
+      link_URL: "https://github.com/HXSecurity/DongTai-agent-go"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "Логи"]
+      detect_metods: ["Dataflow tracking", "Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "HXSecurity"
+      lic: "Apache-2.0 license"
+  - name: DongTai Python Agent
+    meta:
+      description: "Python‑агент DongTai IAST, внедряемый в среду выполнения Python‑приложения для перехвата вызовов и отслеживания потоков данных, что обеспечивает интерактивный анализ безопасности без изменения исходного кода."
+      link_URL: "https://github.com/HXSecurity/DongTai-agent-python"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "Логи"]
+      detect_metods: ["Dataflow tracking", "Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "HXSecurity"
+      lic: "Apache-2.0 license"
+  - name: DongTai Base Image
+    meta:
+      description: "Базовый контейнерный образ инфраструктуры DongTai IAST, включающий MySQL и Redis, предназначенный для развёртывания серверной части интерактивного анализатора в Docker и Kubernetes‑кластерах."
+      link_URL: "https://github.com/HXSecurity/DongTai"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Интерфейс", "Логи"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "HXSecurity"
+      lic: "Apache-2.0 license"
+  - name: DongTai IDEA Plugin
+    meta:
+      description: "Плагин для IntelliJ IDEA, позволяющий разработчикам запускать Java‑агент DongTai IAST непосредственно из IDE и просматривать найденные уязвимости и трассировки вызовов в процессе разработки."
+      link_URL: "https://github.com/HXSecurity/DongTai"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Интерфейс IDE"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "HXSecurity"
+      lic: "Apache-2.0 license"
+  - name: 4A
+    meta:
+      description: "Android Application Auto Analysis (4A) — интерактивный инструмент анализа безопасности Android‑приложений, основанный на Objection и Frida, позволяющий динамически перехватывать и модифицировать выполнение кода для выявления уязвимостей."
+      link_URL: "https://github.com/MrT3acher/4A"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи", "Интерфейс CLI"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "MrT3acher"
+      lic: "GPL-3.0 license"
+  - name: Middleware IAST Agent
+    meta:
+      description: "Агент открытого кода для наблюдения за приложениями на уровне middleware и сбора телеметрии выполнения, который может использоваться как основа для интерактивного анализа безопасности и построения собственных IAST‑решений."
+      link_URL: "https://github.com/middleware-labs/mw-agent"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи", "JSON"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "Middleware Labs"
+      lic: "Apache-2.0 license"
+  - name: OWASP Benchmark Java (IAST target)
+    meta:
+      description: "Тестовое Java‑приложение с большим числом преднамеренных уязвимостей, предназначенное для измерения эффективности SAST, DAST и IAST‑инструментов и настройки интерактивных анализаторов безопасности."
+      link_URL: "https://github.com/OWASP-Benchmark/BenchmarkJava"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["HTML", "JSON", "CSV"]
+      detect_metods: ["OWASP Benchmark test cases"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "OWASP"
+      lic: "Apache-2.0 license"
+  - name: EvoMaster (white-box API IAST-like)
+    meta:
+      description: "Инструмент для автоматизированного тестирования REST и RPC‑API, использующий white‑box подход, анализ кода и генерацию тестов, что позволяет выявлять уязвимости и ошибки логики в рантайме, близко по методологии к IAST."
+      link_URL: "https://github.com/WebFuzzing/EvoMaster"
+      ver_edition: "1.9.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JUnit", "JSON", "Логи"]
+      detect_metods: ["White-box API testing", "Coverage-guided test generation"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "EvoMaster project"
+      lic: "Apache-2.0 license"
+  - name: IAST Demo Agent (Contrast CE sample)
+    meta:
+      description: "Образец open source‑агента, демонстрирующий принцип встраивания сенсоров в код приложения для сбора данных о выполнении и построения IAST‑анализа, используемый в обучающих DevSecOps‑гайдах."
+      link_URL: "https://devsecopsguides.github.io/docs/build-test/iast/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи", "Интерфейс CI/CD"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "IAST"
+      class: "Интерактивный анализатор"
+      vendor: "Community"
+      lic: "Информация не найдена"

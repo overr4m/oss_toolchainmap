@@ -168,3 +168,99 @@ Tools:
       class: "DAST"
       vendor: 'Veracode'
       lic: 'Enterprise'
+  - name: Invicti
+    meta:
+      description: "DAST‑решение для автоматизированного сканирования веб‑приложений и API, использующее proof‑based scanning: инструмент безопасно эксплуатирует найденные уязвимости и предоставляет доказательства их реальной эксплуатации для снижения числа ложных срабатываний."
+      link_URL: "https://www.invicti.com/online-web-application-security-scanner/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "HTML", "PDF", "CSV", "JSON"]
+      detect_metods: ["OWASP Top 10", "CVE", "Proof-based scanning"]
+      OSS: "false"
+      division: "AppSec"
+      type: "DAST"
+      class: "DAST"
+      vendor: "Invicti Security"
+      lic: "SaaS, On-premise, Enterprise"
+  - name: FortiDAST
+    meta:
+      description: "Платформа динамического анализа безопасности веб‑приложений от Fortinet, выполняющая black‑box тестирование с продвинутым краулингом и фуззингом, основанным на базе знаний FortiGuard Labs."
+      link_URL: "https://www.fortinet.com/products/dynamic-application-security-testing"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "HTML", "PDF", "CSV"]
+      detect_metods: ["OWASP Top 10", "CVSS-based risk scoring", "Fuzzing"]
+      OSS: "false"
+      division: "AppSec"
+      type: "DAST"
+      class: "DAST"
+      vendor: "Fortinet"
+      lic: "SaaS, Enterprise"
+  - name: AppSpider
+    meta:
+      description: "DAST‑сканер от Rapid7 (предшественник InsightAppSec), предназначенный для тестирования веб‑приложений и сервисов, поддерживающий аутентифицированный скан, сложные сценарии и интеграцию в CI/CD."
+      link_URL: "https://www.rapid7.com/products/appspider/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["HTML", "PDF", "CSV"]
+      detect_metods: ["OWASP Top 10", "CVE"]
+      OSS: "false"
+      division: "AppSec"
+      type: "DAST"
+      class: "DAST"
+      vendor: "Rapid7"
+      lic: "Enterprise"
+  - name: AppCheck
+    meta:
+      description: "Коммерческий DAST‑сканер из Великобритании, ориентированный на регулярное сканирование веб‑приложений и инфраструктуры с упором на интеграцию в процессы безопасности и отчётность для соответствия требованиям."
+      link_URL: "https://appcheck-ng.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["HTML", "PDF", "CSV"]
+      detect_metods: ["OWASP Top 10", "CVE"]
+      OSS: "false"
+      division: "AppSec"
+      type: "DAST"
+      class: "DAST"
+      vendor: "AppCheck Ltd."
+      lic: "SaaS, подписка"
+  - name: Netsparker Enterprise
+    meta:
+      description: "Облачное DAST‑решение (ранее Netsparker, теперь часть Invicti), предназначенное для масштабного сканирования веб‑приложений и API с автоматической валидацией уязвимостей и широкой интеграцией в DevSecOps."
+      link_URL: "https://www.invicti.com/products/invicti-enterprise/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "HTML", "PDF", "CSV", "JSON"]
+      detect_metods: ["OWASP Top 10", "CVE", "Proof-based scanning"]
+      OSS: "false"
+      division: "AppSec"
+      type: "DAST"
+      class: "DAST"
+      vendor: "Invicti Security"
+      lic: "SaaS, Enterprise"
+  - name: Probely
+    meta:
+      description: "DAST‑сервис, ориентированный на DevSecOps и малый/средний бизнес: предоставляет автоматическое сканирование веб‑приложений и API, интеграцию с CI/CD и тикет‑системами, а также понятные рекомендации для разработчиков."
+      link_URL: "https://probely.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "HTML", "JSON"]
+      detect_metods: ["OWASP Top 10", "CVE"]
+      OSS: "false"
+      division: "AppSec"
+      type: "DAST"
+      class: "DAST"
+      vendor: "Probely"
+      lic: "SaaS, подписка"

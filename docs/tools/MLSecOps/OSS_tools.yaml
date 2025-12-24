@@ -1,8 +1,7 @@
 Tools:
   - name: Advbox
     meta:
-      description: "Набор инструментов для генерации целенаправленных примеров, обманывающих нейронные сети, использующие библиотеки PaddlePaddle, PyTorch, Caffe2, MxNet, Keras и TensorFlow.
-      Является утилитой командной строки для генерации примеров без написания кода"
+      description: "Набор инструментов для генерации целенаправленных примеров, обманывающих нейронные сети, использующие библиотеки PaddlePaddle, PyTorch, Caffe2, MxNet, Keras и TensorFlow. Является утилитой командной строки для генерации примеров без написания кода"
       link_URL: "https://github.com/advboxes/AdvBox"
       ver_edition: "v1.0"
       FSTEK_cert: "Нет"
@@ -290,8 +289,7 @@ Tools:
       lic: 'NVIDIA custom license'
   - name: Stealing_DL_Models (Copycat CNN)
     meta:
-      description: "Репозиторий, в котором подробно рассматривается Copycat CNN - атаки с целью кражи нейросетевых моделей методом черного ящика, не имея доступа ни к весам, ни к обучающим данным.
-      Атака строится на возможности массовой отправки различных изображений модели на обработку с целью их последующего использования для создания датасета и получения копии атакуемой модели"
+      description: "Репозиторий, в котором подробно рассматривается Copycat CNN - атаки с целью кражи нейросетевых моделей методом черного ящика, не имея доступа ни к весам, ни к обучающим данным. Атака строится на возможности массовой отправки различных изображений модели на обработку с целью их последующего использования для создания датасета и получения копии атакуемой модели"
       link_URL: "https://github.com/jeiks/Stealing_DL_Models"
       ver_edition: "v1.0"
       FSTEK_cert: "Нет"
@@ -705,3 +703,227 @@ Tools:
       class: ""
       vendor: 'TalEliyahu'
       lic: 'MIT license'
+  - name: Rebuff
+    meta:
+      description: "Фреймворк для защиты LLM‑приложений от prompt‑инъекций и jailbreak‑атак, включающий фильтры и эвристики для проверки входных и выходных сообщений."
+      link_URL: "https://github.com/protectai/rebuff"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["JSON", "лог‑формат"]
+      detect_metods: ["prompt injection", "jailbreak", "output abuse patterns"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "LLM prompt security"
+      class: ""
+      vendor: "Protect AI"
+      lic: "Apache-2.0 license"
+  - name: NeMo Guardrails
+    meta:
+      description: "Фреймворк для создания программируемых защитных ограничений (guardrails) вокруг LLM‑приложений, позволяющий фильтровать небезопасные запросы и ответы и ограничивать поведение модели."
+      link_URL: "https://github.com/NVIDIA/NeMo-Guardrails"
+      ver_edition: "0.19.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["JSON логи", "policy‑файлы"]
+      detect_metods: ["prompt injection", "jailbreak", "policy violations"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Guardrails / Policy enforcement"
+      class: ""
+      vendor: "NVIDIA"
+      lic: "Apache-2.0 license"
+  - name: Purple Llama Llama Guard
+    meta:
+      description: "Модели модерации вводов и выводов LLM для фильтрации токсичного контента, утечек секретов и вредоносных запросов."
+      link_URL: "https://github.com/meta-llama/PurpleLlama"
+      ver_edition: "Llama Guard 3"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["JSON", "лог‑формат"]
+      detect_metods: ["toxicity", "self‑harm", "PII leakage", "dangerous prompts"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Content moderation"
+      class: ""
+      vendor: "Meta"
+      lic: "Custom open license"
+  - name: Purple Llama Prompt Guard
+    meta:
+      description: "Компонент Purple Llama для защиты от вредоносных промптов и prompt‑инъекций, анализирующий и нормализующий запросы перед отправкой в модель."
+      link_URL: "https://github.com/meta-llama/PurpleLlama"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["JSON", "лог‑формат"]
+      detect_metods: ["prompt injection", "indirect prompt attacks", "policy‑breaking requests"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Prompt security"
+      class: ""
+      vendor: "Meta"
+      lic: "Custom open license"
+  - name: Purple Llama Code Shield
+    meta:
+      description: "Инструмент фильтрации небезопасного кода при генерации LLM, помечающий потенциально уязвимые фрагменты и использование секретов."
+      link_URL: "https://github.com/meta-llama/PurpleLlama"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["JSON", "аннотации коду"]
+      detect_metods: ["insecure code patterns", "hardcoded secrets", "опасные API"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Secure code generation"
+      class: ""
+      vendor: "Meta"
+      lic: "Custom open license"
+  - name: CyberSecEval
+    meta:
+      description: "Набор open‑source бенчмарков для оценки безопасности LLM, проверяющий устойчивость к prompt‑инъекциям, генерации вредоносного кода, фишингу и другим атакам."
+      link_URL: "https://github.com/meta-llama/PurpleLlama/tree/main/CyberSecEval"
+      ver_edition: "v3"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["JSON", "табличные отчёты"]
+      detect_metods: ["prompt injection", "code abuse", "cyber‑attack patterns"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Security benchmarks"
+      class: ""
+      vendor: "Meta"
+      lic: "Custom open license"
+  - name: CodeGate
+    meta:
+      description: "Security‑прокси между IDE и LLM‑сервисами, предотвращающий утечки секретов и анализирующий генерируемый код на небезопасные зависимости и паттерны."
+      link_URL: "https://github.com/stacklok/codegate"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["JSON логи", "IDE‑нотификации"]
+      detect_metods: ["secret leakage", "insecure dependencies", "insecure code"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "LLM dev security / proxy"
+      class: ""
+      vendor: "Stacklok"
+      lic: "Apache-2.0 license"
+  - name: Sigstore (cosign для ML)
+    meta:
+      description: "Набор инструментов для подписи и валидации контейнеров, артефактов и моделей (через cosign и др.), уменьшающий риски атак на цепочку поставок ML."
+      link_URL: "https://www.sigstore.dev"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["подписи и метаданные", "JSON"]
+      detect_metods: ["supply‑chain integrity", "signature verification"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Supply chain security"
+      class: ""
+      vendor: "Sigstore / OpenSSF"
+      lic: "Apache-2.0 license"
+  - name: OpenSSF Scorecard
+    meta:
+      description: "Инструмент автоматизированной оценки безопасности репозиториев, применимый к ML/MLOps‑проектам для проверки практик разработки и цепочки поставок."
+      link_URL: "https://github.com/ossf/scorecard"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "SARIF", "табличный отчёт"]
+      detect_metods: ["branch protection", "CI security", "dependency management", "signed releases"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Repo & supply‑chain audit"
+      class: ""
+      vendor: "OpenSSF"
+      lic: "Apache-2.0 license"
+  - name: Metaflow
+    meta:
+      description: "Фреймворк для построения MLOps‑конвейеров, обеспечивающий трассировку шагов и версионирование артефактов и рекомендуемый в гайдлайнах по безопасной ML‑цепочке поставок."
+      link_URL: "https://github.com/Netflix/metaflow"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["логи и метаданные", "JSON API"]
+      detect_metods: ["прослеживаемость пайплайнов", "контроль артефактов"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Secure MLOps orchestration"
+      class: ""
+      vendor: "Netflix / Outerbounds"
+      lic: "Apache-2.0 license"
+  - name: AIShield Watchtower
+    meta:
+      description: "Инструмент для анализа уязвимостей моделей ИИ: оценивает устойчивость к адверсариальным примерам, атакам извлечения модели и отравлению данных."
+      link_URL: "https://github.com/AIShield/Watchtower"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["JSON", "логи", "визуальные отчёты"]
+      detect_metods: ["adversarial robustness", "model extraction", "poisoning"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Model vulnerability scanning"
+      class: ""
+      vendor: "AIShield"
+      lic: "Apache-2.0 license"
+  - name: Vigil
+    meta:
+      description: "Python‑библиотека и REST API для тестирования и мониторинга моделей на предмет устойчивости, утечек данных и других рисков безопасности."
+      link_URL: "https://github.com/protectai/vigil"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["JSON", "лог‑формат"]
+      detect_metods: ["robustness checks", "privacy leakage tests", "consistency checks"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Model evaluation / monitoring"
+      class: ""
+      vendor: "Protect AI"
+      lic: "Apache-2.0 license"
+  - name: LLAMATOR
+    meta:
+      description: "Фреймворк для тестирования и укрепления LLM‑систем, включающий сценарии атак и проверки устойчивости, с возможностью интеграции в MLOps‑конвейер."
+      link_URL: "https://github.com/llamator-project"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "табличные отчёты"]
+      detect_metods: ["prompt injection", "data leakage", "robustness checks"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "LLM security / testing"
+      class: ""
+      vendor: "Сообщество"
+      lic: "Различные OSS‑лицензии по модулям"
+  - name: ModelScan (расширенный профиль)
+    meta:
+      description: "CLI‑утилита для сканирования моделей и артефактов (pickle, ONNX и др.) на вредоносный или небезопасный код, применяемая для защиты ML‑цепочки поставок."
+      link_URL: "https://github.com/protectai/modelscan"
+      ver_edition: "0.8.7"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "CLI вывод"]
+      detect_metods: ["model malware detection", "insecure deserialization", "supply‑chain issues"]
+      OSS: "true"
+      division: "MLSecOps"
+      type: "Model artifact scanning"
+      class: ""
+      vendor: "Protect AI"
+      lic: "Apache-2.0 license"

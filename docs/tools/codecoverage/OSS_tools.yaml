@@ -49,8 +49,7 @@ Tools:
       lic: 'Apache-2.0/MIT license'
   - name: gcov
     meta:
-      description: "Свободно распространяемая утилита для исследования покрытия кода, которая входит в состав компиляторов GCC. Программа генерирует точное количество исполнений для каждого оператора в программе и позволяет добавить аннотации к исходному коду.
-      Поставляется как стандартная утилита в составе GCC"
+      description: "Свободно распространяемая утилита для исследования покрытия кода, которая входит в состав компиляторов GCC. Программа генерирует точное количество исполнений для каждого оператора в программе и позволяет добавить аннотации к исходному коду. Поставляется как стандартная утилита в составе GCC"
       link_URL: "https://gcc.gnu.org/onlinedocs/gcc/Gcov.html"
       ver_edition: "15.2 (в составе GCC 15.2)"
       FSTEK_cert: "Нет"
@@ -64,3 +63,195 @@ Tools:
       class: ""
       vendor: 'Free Software Foundation'
       lic: 'GPL'
+  - name: Cobertura
+    meta:
+      description: "Открытый инструмент покрытия кода для Java, интегрируется с Maven и Ant, собирает данные во время выполнения тестов и формирует детализированные отчёты о покрытии классов, методов и строк."
+      link_URL: "https://cobertura.github.io/cobertura/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["HTML", "XML"]
+      detect_metods: ["line coverage", "branch coverage"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "Cobertura project"
+      lic: "GPL-2.0-or-later"
+  - name: Coverage.py
+    meta:
+      description: "Стандартный де‑факто инструмент покрытия для Python, отслеживает выполненные строки и ветви кода, поддерживает параллельный запуск тестов и объединение результатов."
+      link_URL: "https://coverage.readthedocs.io/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["text", "HTML", "XML", "JSON"]
+      detect_metods: ["line coverage", "branch coverage"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "Coverage.py project"
+      lic: "Apache-2.0 License"
+  - name: pytest-cov
+    meta:
+      description: "Плагин для pytest, интегрирующий Coverage.py и упрощающий сбор и агрегирование отчётов покрытия при запуске тестов Python."
+      link_URL: "https://pypi.org/project/pytest-cov/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["text", "HTML", "XML", "JSON"]
+      detect_metods: ["line coverage", "branch coverage"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "pytest-cov maintainers"
+      lic: "MIT License" 
+  - name: Istanbul / nyc
+    meta:
+      description: "Инструмент покрытия для JavaScript/TypeScript, выполняющий инструментирование кода и формирующий отчёты о покрытии тестами для Node.js и фронтенд‑проектов."
+      link_URL: "https://github.com/istanbuljs/nyc"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["text", "HTML", "lcov", "JSON"]
+      detect_metods: ["statement", "branch", "function", "line coverage"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "istanbuljs"
+      lic: "BSD-3-Clause License"
+  - name: scoverage
+    meta:
+      description: "Инструмент покрытия кода для Scala, предоставляющий метрики покрытия выражений и ветвей и интегрирующийся с SBT и Maven."
+      link_URL: "https://github.com/scoverage/scalac-scoverage-plugin"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["XML", "HTML"]
+      detect_metods: ["statement coverage", "branch coverage"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "scoverage project"
+      lic: "Apache-2.0 License"
+  - name: OpenCppCoverage
+    meta:
+      description: "Open source‑инструмент покрытия кода для C++ под Windows, не требующий пересборки приложения, поддерживает HTML‑отчёты и интеграцию с Visual Studio и Jenkins."
+      link_URL: "https://github.com/OpenCppCoverage/OpenCppCoverage"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["HTML", "XML (через экспортеры)"]
+      detect_metods: ["line coverage"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "OpenCppCoverage project"
+      lic: "GPL-3.0 License"
+  - name: Coverlet
+    meta:
+      description: "Кроссплатформенная библиотека покрытия для .NET, интегрируемая с dotnet test, генерирующая отчёты в OpenCover, Cobertura, JSON и других форматах."
+      link_URL: "https://github.com/coverlet-coverage/coverlet"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["cobertura", "opencover", "JSON", "lcov"]
+      detect_metods: ["line coverage", "branch coverage", "method coverage"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "Coverlet maintainers"
+      lic: "MIT License"
+  - name: EMMA
+    meta:
+      description: "Набор инструментов для измерения покрытия Java‑кода, обеспечивающий анализ без необходимости доступа к исходникам и генерирующий отчёты с различными метриками покрытия."
+      link_URL: "https://emma.sourceforge.net"
+      ver_edition: "Информация не найдена (проект устаревший)"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен (архив)"
+      report_formats: ["HTML", "text", "XML"]
+      detect_metods: ["class", "method", "line coverage"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "EMMA"
+      lic: "CPL‑1.0‑based"
+  - name: ReportGenerator
+    meta:
+      description: "Генератор и визуализатор отчётов покрытия кода, который объединяет результаты из разных инструментов (например, OpenCover, Cobertura, JaCoCo, lcov, Coverlet) и строит подробные интерактивные отчёты."
+      link_URL: "https://reportgenerator.io"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["HTML", "HTMLSummary", "Latex", "XML", "JSON"]
+      detect_metods: ["агрегация метрик из входных отчётов"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "ReportGenerator"
+      lic: "Apache-2.0 License"
+  - name: go-test-coverage
+    meta:
+      description: "Утилита для Go, использующая стандартный go test -cover и анализирующая отчёты покрытия, чтобы валидировать минимальный порог и выделять проблемные пакеты или файлы."
+      link_URL: "https://github.com/vladopajic/go-test-coverage"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["text", "JSON", "HTML (через интеграции)"]
+      detect_metods: ["line coverage (через go test)"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "vladopajic"
+      lic: "MIT License"
+  - name: OpenCov
+    meta:
+      description: "Самостоятельно развёртываемый веб‑вьюер истории покрытия, совместимый с Coveralls‑подобным API; агрегирует и визуализирует метрики покрытия по коммитам и веткам."
+      link_URL: "https://github.com/danhper/opencov"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Web‑интерфейс", "JSON API"]
+      detect_metods: ["агрегация coverage‑метрик из внешних репортов"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "OpenCov"
+      lic: "MIT License"
+  - name: Codecov Uploader (OSS client)
+    meta:
+      description: "Открытый клиент/интеграция для сервиса Codecov, который умеет собирать и объединять отчёты покрытия из разных инструментов и языков и отправлять их в Codecov для отображения в PR и дашбордах."
+      link_URL: "https://github.com/codecov/uploader"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["различные форматы входных отчётов (lcov, cobertura, jacoco, opencover и др.)"]
+      detect_metods: ["агрегация и нормализация coverage‑данных"]
+      OSS: "true"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "Codecov"
+      lic: "Apache-2.0 License"

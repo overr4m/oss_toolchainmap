@@ -15,7 +15,6 @@ Tools:
       class: "Бинарный анализатор"
       vendor: "Vector 35"
       lic: "Personal, Commercial, Enterprise"
-
   - name: JADX
     meta:
       description: "Декомпилятор для Android-приложений, преобразующий APK, DEX и JAR файлы в исходный код на Java для реверс-инжиниринга. Поддерживает дизассемблирование и анализ безопасности, помогая выявлять уязвимости в бинарном коде."
@@ -32,7 +31,6 @@ Tools:
       class: "Бинарный анализатор"
       vendor: "Skylot"
       lic: "Apache-2.0 license"
-
   - name: ILSpy
     meta:
       description: ".NET декомпилятор, преобразующий сборки .NET в исходный код на C# с поддержкой PDB, ReadyToRun и анализа метаданных. Используется для реверс-инжиниринга и анализа безопасности, интегрируется с Visual Studio и поддерживает кросс-платформенные интерфейсы."
@@ -49,7 +47,6 @@ Tools:
       class: "Бинарный анализатор"
       vendor: "ICSharpCode"
       lic: "MIT license"
-
   - name: Dotpeek
     meta:
       description: "Инструмент для декомпиляции и исследования сборок .NET, построенный на базе встроенного декомпилятора ReSharper. Он декомпилирует любую сборку .NET в исходный код на C# или IL-код."
@@ -82,3 +79,99 @@ Tools:
       class: "Бинарный анализатор"
       vendor: 'Mike Strobel a.k.a. mstrobel'
       lic: 'Apache-2.0 + unknown license'
+  - name: Ghidra
+    meta:
+      description: "Кроссплатформенный фреймворк реверс‑инжиниринга от NSA для анализа бинарных файлов, включающий дизассемблер, декомпилятор и средства автоматизации анализа через скрипты на Java и Python."
+      link_URL: "https://ghidra-sre.org/"
+      ver_edition: "11.0"
+      FSTEK_cert: "Нет"
+      redaction: ["10.4", "11.0"]
+      RUS_access: "Доступен"
+      report_formats: ["Интерфейс", "HTML"]
+      detect_methods: ["Информация не найдена"]
+      OSS: "true"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: "National Security Agency (NSA)"
+      lic: "Apache-2.0 license"
+  - name: BINSEC
+    meta:
+      description: "Набор инструментов для анализа безопасности ПО на уровне бинарного кода, использующий формальные методы, символическое исполнение, абстрактную интерпретацию и SMT‑решатели для поиска уязвимостей."
+      link_URL: "https://binsec.github.io"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["TXT", "JSON"]
+      detect_methods: ["Symbolic execution", "Abstract interpretation"]
+      OSS: "true"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: "BINSEC project"
+      lic: "GPL-2.0 license"
+  - name: Manticore
+    meta:
+      description: "Инструмент динамического бинарного анализа и символического исполнения, поддерживающий анализ ELF‑бинарников и смарт‑контрактов Ethereum для поиска уязвимостей и логических ошибок."
+      link_URL: "https://github.com/trailofbits/manticore"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "TXT"]
+      detect_methods: ["Symbolic execution", "Taint analysis"]
+      OSS: "true"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: "Trail of Bits"
+      lic: "AGPL-3.0 license"
+  - name: BAP
+    meta:
+      description: "Binary Analysis Platform — фреймворк для статического анализа бинарных программ с поддержкой плагинов и API для C, Python и Rust, применяемый для анализа вредоносного ПО и поиска уязвимостей."
+      link_URL: "https://github.com/BinaryAnalysisPlatform/bap"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "TXT"]
+      detect_methods: ["Control flow analysis", "Data flow analysis"]
+      OSS: "true"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: "Binary Analysis Platform community"
+      lic: "BSD-3-Clause license"
+  - name: cwe_checker
+    meta:
+      description: "Статический инструмент анализа бинарного кода для поиска потенциальных уязвимостей, сопоставляемых с CWE, ориентированный на исследовательское применение и автоматизацию проверки бинарей."
+      link_URL: "https://github.com/fkie-cad/cwe_checker"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "TXT"]
+      detect_methods: ["CWE pattern matching"]
+      OSS: "true"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: "Fraunhofer FKIE"
+      lic: "GPL-3.0 license"
+  - name: binbloom
+    meta:
+      description: "Инструмент для анализа бинарных прошивок, автоматически определяющий базовый адрес загрузки, энднianness и некоторые структурные особенности образа, включая поиск UDS‑таблиц."
+      link_URL: "https://github.com/quarkslab/binbloom"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["TXT"]
+      detect_methods: ["Heuristic firmware analysis"]
+      OSS: "true"
+      division: "AppSec"
+      type: "BCA"
+      class: "Бинарный анализатор"
+      vendor: "Quarkslab"
+      lic: "MIT license"

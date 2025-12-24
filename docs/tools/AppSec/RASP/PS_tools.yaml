@@ -132,3 +132,83 @@ Tools:
       class: "Анализатор при Runtime"
       vendor: 'Sysdig'
       lic: 'Enterprise'
+  - name: Contrast Protect
+    meta:
+      description: "RASP‑компонент платформы Contrast Security, который встраивается в рантайм приложения и в реальном времени отслеживает выполнение кода, блокируя атаки на уровне приложения и уменьшая число ложных срабатываний за счёт контекстной информации."
+      link_URL: "https://www.contrastsecurity.com/platform/contrast-protect"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "CSV"]
+      detect_metods: ["OWASP Top 10", "Runtime dataflow analysis"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Contrast Security"
+      lic: "Подписка, Enterprise"
+  - name: Talsec RASP+
+    meta:
+      description: "Коммерческий мобильный RASP‑SDK, встраиваемый в приложения Android и iOS, обеспечивающий защиту от рута/джейлбрейка, хуков, внедрения кода, отладки, эмуляторов и небезопасных окружений в реальном времени."
+      link_URL: "https://talsec.app/rasp"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "Отчёты Security Report"]
+      detect_metods: ["Root/Jailbreak detection", "Hooking detection", "App integrity verification"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Talsec"
+      lic: "Коммерческий SDK, подписка"
+  - name: Pradeo RASP
+    meta:
+      description: "Мобильное RASP‑решение, встроенное в приложение и защищающее его в рантайме от вредоносных приложений, сетевых атак (MITM) и эксплойтов уязвимостей ОС, с возможностью настраиваемых реакций на обнаруженные угрозы."
+      link_URL: "https://pradeo.com/en/solutions/mobile-application-security/rasp/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "PDF"]
+      detect_metods: ["Malware detection", "Network attack detection", "Environment risk analysis"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Pradeo"
+      lic: "SaaS, Enterprise"
+  - name: Digital.ai Application Protection (RASP)
+    meta:
+      description: "RASP‑функциональность в составе платформы Digital.ai, обеспечивающая защиту мобильных и серверных приложений от реверса, подмены, отладки и эксплуатации уязвимостей за счёт встроенных в бинарь механизмов самозащиты."
+      link_URL: "https://digital.ai/runtime-application-self-protection"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "PDF"]
+      detect_metods: ["Code tampering detection", "Debugging detection", "Runtime integrity checks"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Digital.ai"
+      lic: "Enterprise"
+  - name: Promon SHIELD
+    meta:
+      description: "In‑app RASP‑решение для мобильных приложений, ориентированное на банковский и корпоративный сектор, обеспечивающее защиту кода и рантайма от подмены, рут‑окружений, эмуляторов, оверлеев и других форм мобильного фрода."
+      link_URL: "https://promon.io/product/shield/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "Логи"]
+      detect_metods: ["Root/Jailbreak detection", "Code tampering", "Overlay attack detection"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Promon AS"
+      lic: "Коммерческая лицензия, Enterprise"

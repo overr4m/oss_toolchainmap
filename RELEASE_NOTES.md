@@ -18,6 +18,227 @@
 * Syft - перемещен из BCA в SCA/OSA
 * Conjur - перемещен из PS в OSS (Secrets management)
 
+### Следующие инструменты были добавлены в карту:
+
+* API
+  * Salt Security
+  * CloudGuard WAF
+  * Cloudflare API Shield
+  * Imperva API Security
+  * Akamai API Security
+  * Wallarm
+
+* Attack Surface Analysis
+  * Microsoft Defender EASM
+  * Palo Alto Cortex Xpanse
+  * CyCognito
+  * CrowdStrike Falcon Surface
+  * FireCompass ASM
+  * Detectify ASM
+  
+* BCA
+  * Ghidra
+  * BINSEC
+  * Manticore
+  * BAP
+  * cwe_checker
+  * binbloom
+  * CodeSentry
+  * Black Duck Binary Analysis
+  * BinSide
+  * Veracode Binary SAST
+  
+* DAST
+  * Nikto
+  * Arachni
+  * arachni-rest
+  * Akto OSS
+  * Skipfish
+  * Invicti
+  * FortiDAST
+  * AppSpider
+  * AppCheck
+  * Netsparker Enterprise
+  * Probely
+  
+* Whitebox Fuzzing
+  * CI Fuzz
+  * Peach Fuzzer
+  * Synopsys Defensics
+  * Fortra Enterprise Fuzzing
+
+* IAST
+  * DongTai IAST
+    * DongTai Java Agent
+    * DongTai Go Agent
+    * DongTai Python Agent
+    * DongTai Base Image
+    * DongTai IDEA Plugin
+  * 4A
+  * Middleware IAST Agent
+  * OWASP Benchmark Java (IAST target)
+  * EvoMaster (white-box API IAST-like)
+  * IAST Demo Agent (Contrast CE sample)
+  * Checkmarx IAST
+  * Invicti Shark IAST
+  * Acunetix AcuSensor
+  * New Relic IAST
+  * Fortify IAST (Fortify on Demand)
+
+* MAST
+  * Needle
+  * QARK
+  * AndroBugs
+  * QVMAP (Qiling VM Android Profiling)
+  * Frida
+  * Q-mast
+  * NowSecure Platform
+  * Appknox
+  * AppSweep
+  * Edgescan Mobile
+  
+* RASP
+  * freeRASP Android
+  * freeRASP iOS
+  * Free-RASP Community
+  * android-rasp
+  * rasp-poc
+  * Contrast Protect
+  * Talsec RASP+
+  * Pradeo RASP
+  * Digital.ai Application Protection (RASP)
+  * Promon SHIELD
+
+* SAST
+  * SonarQube Community
+  * Cppcheck
+  * Infer
+  * Brakeman
+  * PHPStan
+  * ESLint
+    * ESLint Plugin Security
+  * SpotBugs
+  * Yasca
+  * SonarLint
+  * Veracode Static Analysis
+  * Snyk Code
+  * Cycode SAST
+  * HCL AppScan Source
+  * Spectral SAST
+  * AccuKnox SAST
+  * Aikido Static Analysis
+  * Codacy Security
+  * DeepSource Static Analysis
+  * Mend SAST
+  * Wiz SAST
+
+* SCA/ OSA
+  * Syft
+  * OpenSCA
+    * OpenSCA Web
+  * Tern
+  * Veracode Software Composition Analysis
+  * Sonatype Nexus Lifecycle
+  * FOSSA SCA
+  * Jit SCA
+  * Aikido SCA
+  * Cycode SCA
+  * Plexicus ASPM (SCA)
+  * GitLab Dependency Scanning
+  * Qodana + Mend SCA
+  * Endor Labs
+  * Arnica SCA
+
+* SBOM
+  * CycloneDX CLI
+  * Tern CycloneDX Generator
+  * Syft for SBOM (language‑specific)
+  * BOM (Java SBOM tool)
+  * Retire.js (SBOM mode)
+  * Jake (npm SBOM tool)
+
+* ASPM
+  * Open ASPM
+  * Faraday Community
+  * PatrOwl
+  * Mixeway Platform
+  * Jackhammer
+  * Seccubus
+  * Kvasir
+  * Watchdog (Flipkart)
+  * OpenVAS + Greenbone Community UI
+  * OpsMx Delivery Shield (community components)
+
+* CodeCoverage
+  * Cobertura
+  * Coverage.py
+  * pytest-cov
+  * Istanbul / nyc
+  * scoverage
+  * OpenCppCoverage
+  * Coverlet
+  * EMMA
+  * ReportGenerator
+  * go-test-coverage
+  * OpenCov
+  * Codecov Uploader (OSS client)
+  * Visual Studio Enterprise Code Coverage
+  * dotCover
+  * Parasoft Code Coverage (C/C++test/Jtest)
+  * Squish Coco
+  * RKTracer
+  * Cantata Coverage
+  * NCover
+  * Squish Test Center Coverage
+  * BullseyeCoverage
+  * VectorCAST/Cover
+  * Parasoft C/C++test (coverage‑only use)
+
+* Container Secuirty
+  * Trivy
+  * Anchore Engine
+  * Clair
+  * kube-bench
+  * kube-hunter
+  * Dagda
+  * OpenSCAP oscap-docker
+  * Sysdig open-source
+  * kube-capacity / kube-psp-advisor (policy helpers)
+  * kubeaudit
+  * Dockle
+  * kube-score
+  * Wiz Container Security
+  * Sysdig Secure
+  * Check Point CloudGuard Container Security
+  * Trend Micro Cloud One – Container Security
+  * Bitdefender GravityZone Security for Containers
+  * Uptycs CNAPP (Container & K8s Security)
+  * SentinelOne Singularity Cloud (Container Security)
+  * Hillstone CloudArmour CNAPP
+  * Sysdig Secure for Cloud (Kubernetes & Container)
+  * CloudGuard CNAPP (Workload & Container Protection)
+  * CloudDefense.AI Container Security
+
+* Secret Management
+  * Open Policy Agent (OPA)
+  * Casbin
+  * Permify
+  * OpenFGA
+  * OPAL (Open Policy Administration Layer)
+  * HashiCorp Vault (OSS)
+  * Wazuh
+  * Security Onion
+  * Elastic Stack (Elastic Security)
+  * SPIFFE / SPIRE
+  * Keycloak
+  * OSSEC
+  * Suricata
+  * Zeek
+  * Trivy Operator (Kubernetes)
+  * kube-bench (as security governance)
+
+* MLSecOps - обьемное количество инструментов, включая тестируемые на рынке в текущий момент времени
+
 ### Следующие инструменты удалены из карты:
 
 * Models-are-code - инструмент не найден

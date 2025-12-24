@@ -267,3 +267,163 @@ Tools:
       class: "Статический анализатор"
       vendor: 'Ajin Abraham a.k.a. "ajinabraham"'
       lic: 'MIT License'
+  - name: SonarQube Community
+    meta:
+      description: "Платформа статического анализа и контроля качества кода, поддерживающая 30+ языков (Java, C#, JavaScript, TypeScript, Python, C/C++, Go и др.), с правилами для уязвимостей, багов и code smells и интеграцией в CI/CD."
+      link_URL: "https://www.sonarsource.com/products/sonarqube/"
+      ver_edition: "10.7 (Community)"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Dashboard", "HTML", "JSON", "XML", "CSV"]
+      detect_methods: ["CWE", "OWASP Top 10", "SANS Top 25"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "SonarSource"
+      lic: "GNU LGPL v3 (Community Edition)"
+  - name: Cppcheck
+    meta:
+      description: "Статический анализатор для C и C++, ориентированный на поиск ошибок времени выполнения (утечки памяти, выход за пределы массива, некорректное использование стандартной библиотеки) без зависимости от внешних библиотек."
+      link_URL: "http://cppcheck.sourceforge.net/"
+      ver_edition: "2.14"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Text", "XML", "CSV", "HTML"]
+      detect_methods: ["CWE"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Cppcheck project"
+      lic: "GPL-3.0 license"
+  - name: Infer
+    meta:
+      description: "Статический анализатор от Meta (Facebook) для C, C++, Java и Objective‑C, использующий абстрактную интерпретацию для обнаружения проблем с ресурсами, гонок, NPE и других дефектов до запуска кода."
+      link_URL: "https://github.com/facebook/infer"
+      ver_edition: "1.2.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Text", "JSON"]
+      detect_methods: ["CWE (частично)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Meta"
+      lic: "MIT license"
+  - name: Brakeman
+    meta:
+      description: "Специализированный SAST‑анализатор для Ruby on Rails, выполняющий анализ приложений без запуска, выявляющий инъекции, XSS, небезопасную сериализацию и другие уязвимости на ранних стадиях."
+      link_URL: "https://github.com/presidentbeef/brakeman"
+      ver_edition: "6.2.1"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["HTML", "JSON", "Tabs", "Markdown", "Text"]
+      detect_methods: ["CWE", "OWASP Top 10 (частично)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Brakeman project"
+      lic: "MIT license"
+  - name: PHPStan
+    meta:
+      description: "Статический анализатор для PHP, выполняющий анализ типов и потоков данных без запуска кода, позволяющий находить ошибки и потенциальные уязвимости в современных PHP‑проектах."
+      link_URL: "https://github.com/phpstan/phpstan"
+      ver_edition: "2.0.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Text", "JSON"]
+      detect_methods: ["CWE (частично)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "PHPStan"
+      lic: "MIT license"
+  - name: ESLint
+    meta:
+      description: "Расширяемый линтер и статический анализатор для JavaScript/TypeScript, позволяющий обнаруживать потенциально опасные конструкции, небезопасные практики и нарушения стиля через наборы правил, включая security‑плагины."
+      link_URL: "https://eslint.org/"
+      ver_edition: "9.0.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "Stylish", "HTML", "JUnit", "Checkstyle"]
+      detect_methods: ["CWE (через плагины)", "OWASP Top 10 (частично)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "OpenJS Foundation"
+      lic: "MIT license"
+  - name: SpotBugs
+    meta:
+      description: "Наследник FindBugs для Java, анализирующий байт‑код и выявляющий типичные ошибки и потенциальные уязвимости в приложениях и библиотеках на JVM."
+      link_URL: "https://spotbugs.github.io/"
+      ver_edition: "4.9.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["XML", "HTML", "Text"]
+      detect_methods: ["CWE (через плагины)", "OWASP Top 10 (частично)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "SpotBugs team"
+      lic: "LGPL-2.1 license"
+  - name: Yasca
+    meta:
+      description: "Агрегатор статического анализа, который запускает набор внутренних и внешних линтеров/сканеров для различных языков (C/C++, Java, PHP, JavaScript и др.) и объединяет результаты в единый отчёт."
+      link_URL: "https://github.com/scovetta/yasca"
+      ver_edition: "2.1.1"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["HTML", "XML", "Text", "CSV"]
+      detect_methods: ["CWE (через плагины)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Yasca project"
+      lic: "Apache-2.0 license"
+  - name: SonarLint
+    meta:
+      description: "Плагин для IDE (IntelliJ, VS Code, Eclipse, Visual Studio), выполняющий локальный статический анализ кода на основе правил SonarQube и дающий разработчику моментальную обратную связь о проблемах безопасности и качества."
+      link_URL: "https://www.sonarsource.com/products/sonarlint/"
+      ver_edition: "10.3"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Интерфейс IDE"]
+      detect_methods: ["CWE", "OWASP Top 10 (через профили Sonar)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "SonarSource"
+      lic: "GNU LGPL v3"
+  - name: ESLint Plugin Security
+    meta:
+      description: "Набор правил безопасности для ESLint, нацеленный на обнаружение уязвимостей в Node.js и браузерном JavaScript: небезопасные вызовы eval, прямой доступ к пользовательскому вводу, небезопасное использование crypto и др."
+      link_URL: "https://github.com/nodesecurity/eslint-plugin-security"
+      ver_edition: "1.7.1"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "Stylish", "HTML", "JUnit"]
+      detect_methods: ["CWE (частично)", "OWASP Top 10 (частично)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Node Security (NSP)"
+      lic: "Apache-2.0 license"

@@ -16,3 +16,163 @@ Tools:
       class: "ASPM"
       vendor: 'The Security Dojo'
       lic: 'BSD 3-Clause License'
+  - name: Open ASPM
+    meta:
+      description: "Полноценная open source‑платформа Application Security Posture Management, агрегирующая результаты SAST, DAST, SCA, secret‑сканеров и IaC‑анализаторов (gitleaks, trufflehog, grype, syft и др.), с инвентаризацией активов, риск‑скорингом и API для автоматизации."
+      link_URL: "https://github.com/Open-ASPM-Project/core-software"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Dashboard", "JSON"]
+      detect_metods: ["CVE (через интеграции)", "CWE", "Secrets", "IaC misconfig"]
+      OSS: "true"
+      division: "Application Security Posture Management"
+      type: "ASPM"
+      class: "ASPM"
+      vendor: "Open ASPM Project"
+      lic: "Информация не найдена"
+  - name: Faraday Community
+    meta:
+      description: "Open source‑платформа управления уязвимостями, собирающая результаты множества сканеров (Nessus, OpenVAS, Burp, Nmap и др.) в единый рабочий простор, с поддержкой рабочих процессов, тэгов и отчётности."
+      link_URL: "https://github.com/infobyte/faraday"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Web‑интерфейс", "HTML", "JSON"]
+      detect_metods: ["CVE (через подключённые сканеры)", "CWE (через маппинг)"]
+      OSS: "true"
+      division: "Application Security Posture Management"
+      type: "ASPM"
+      class: "ASPM"
+      vendor: "Infobyte"
+      lic: "GPL‑v2"
+  - name: PatrOwl
+    meta:
+      description: "Многоисточниковая платформа для оркестрации и корреляции результатов сканирования (SAST, DAST, infra‑сканеры), позволяющая управлять задачами, активами и уязвимостями через веб‑интерфейс и API."
+      link_URL: "https://patrowl.io/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["Dashboard", "JSON"]
+      detect_metods: ["CVE (через интеграции)"]
+      OSS: "true"
+      division: "Application Security Posture Management"
+      type: "ASPM"
+      class: "ASPM"
+      vendor: "PatrOwl"
+      lic: "Информация не найдена"
+  - name: Mixeway Platform
+    meta:
+      description: "Open source‑платформа DevSecOps/ASPM, объединяющая результаты сканеров кода, контейнеров и инфраструктуры, строящая риск‑карту приложений и автоматизирующая создание задач на исправление."
+      link_URL: "https://mixeway.io/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["Dashboard", "JSON"]
+      detect_metods: ["CVE (через интеграции)", "policy‑based risk"]
+      OSS: "true"
+      division: "Application Security Posture Management"
+      type: "ASPM"
+      class: "ASPM"
+      vendor: "Mixeway"
+      lic: "Информация не найдена"
+  - name: Jackhammer
+    meta:
+      description: "Платформа для массового управления результатами сканирования веб‑приложений и хостов, агрегирующая данные от множества инструментов (в т.ч. DAST) и позволяющая централизованно отслеживать уязвимости."
+      link_URL: "https://github.com/olacabs/jackhammer"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Web‑интерфейс", "JSON"]
+      detect_metods: ["CVE (через подключённые сканеры)"]
+      OSS: "true"
+      division: "Application Security Posture Management"
+      type: "ASPM"
+      class: "ASPM"
+      vendor: "Ola Cabs"
+      lic: "Apache‑2.0 license"
+  - name: Seccubus
+    meta:
+      description: "Инструмент для автоматизации повторных сканирований и сравнения результатов (drift‑анализ), умеет импортировать отчёты популярных сканеров и подсвечивать новые уязвимости между итерациями."
+      link_URL: "https://www.seccubus.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["HTML", "CSV"]
+      detect_metods: ["CVE (через внешние сканеры)"]
+      OSS: "true"
+      division: "Application Security Posture Management"
+      type: "ASPM"
+      class: "ASPM"
+      vendor: "Seccubus"
+      lic: "Информация не найдена"
+  - name: Kvasir
+    meta:
+      description: "Веб‑интерфейс и платформа над результатами Nessus и других сканеров, поддерживающая управление активами, уязвимостями и приоритизацией исправлений в стиле лёгкого VM/ASPM‑решения."
+      link_URL: "https://github.com/KvasirSecurity/Kvasir"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Web‑интерфейс", "CSV"]
+      detect_metods: ["CVE (через Nessus/др.)"]
+      OSS: "true"
+      division: "Application Security Posture Management"
+      type: "ASPM"
+      class: "ASPM"
+      vendor: "KvasirSecurity"
+      lic: "Информация не найдена"
+  - name: Watchdog (Flipkart)
+    meta:
+      description: "Платформа Flipkart для управления уязвимостями и результатами сканеров, обеспечивающая централизованный учёт, трекинг исправлений и интеграцию с DevOps‑процессами."
+      link_URL: "https://github.com/flipkart-incubator/watchdog"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Web‑интерфейс", "JSON"]
+      detect_metods: ["CVE (через интегрированные сканеры)"]
+      OSS: "true"
+      division: "Application Security Posture Management"
+      type: "ASPM"
+      class: "ASPM"
+      vendor: "Flipkart"
+      lic: "Информация не найдена"
+  - name: OpenVAS + Greenbone Community UI
+    meta:
+      description: "Open source‑стек сканирования и управления уязвимостями, включающий движок OpenVAS и веб‑интерфейс Greenbone, используемый как основа для построения собственных ASPM/VM‑решений."
+      link_URL: "https://www.openvas.org/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["HTML", "XML", "CSV"]
+      detect_metods: ["CVE", "CVSS", "SCAP"]
+      OSS: "true"
+      division: "Application Security Posture Management"
+      type: "ASPM"
+      class: "ASPM"
+      vendor: "Greenbone Networks"
+      lic: "GPL"
+  - name: OpsMx Delivery Shield (community components)
+    meta:
+      description: "Платформа для защиты CI/CD и приложений, включающая open source‑компоненты для агрегации сигналов безопасности, управления политиками и построения единой картины posture по пайплайнам доставки."
+      link_URL: "https://www.opsmx.com/blog/top-open-source-application-security-tools/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["Dashboard", "JSON"]
+      detect_metods: ["CVE (через сканеры)", "pipeline policy checks"]
+      OSS: "true"
+      division: "Application Security Posture Management"
+      type: "ASPM"
+      class: "ASPM"
+      vendor: "OpsMx"
+      lic: "Информация не найдена"

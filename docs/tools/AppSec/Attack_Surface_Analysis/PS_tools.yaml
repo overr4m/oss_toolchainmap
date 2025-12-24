@@ -47,3 +47,99 @@ Tools:
       class: "Анализ поверхности атаки"
       vendor: 'JetBrains'
       lic: 'Community (60 дней бесплатно), Ultimate, Ultimate plus'
+  - name: Microsoft Defender EASM
+    meta:
+      description: "Модуль External Attack Surface Management в составе Microsoft Defender, обеспечивающий непрерывное обнаружение интернет‑доступных активов, оценку уязвимостей и приоритизацию рисков для облачных и гибридных инфраструктур."
+      link_URL: "https://azure.microsoft.com/en-us/products/defender-external-attack-surface-management"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "JSON"]
+      detect_metods: ["Attack Surface Management", "Threat intelligence enrichment"]
+      OSS: "false"
+      division: "AppSec"
+      type: "Attack Surface Analysis"
+      class: "Анализ поверхности атаки"
+      vendor: "Microsoft"
+      lic: "Enterprise"
+  - name: Palo Alto Cortex Xpanse
+    meta:
+      description: "Платформа внешнего управления поверхностью атаки, которая автоматически обнаруживает все интернет‑доступные активы организации и оценивает их уязвимость, используя данные экосистемы Palo Alto Networks."
+      link_URL: "https://www.paloaltonetworks.com/cortex/cortex-xpanse"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "CSV", "JSON"]
+      detect_metods: ["External Attack Surface Management", "Risk-based prioritization"]
+      OSS: "false"
+      division: "AppSec"
+      type: "Attack Surface Analysis"
+      class: "Анализ поверхности атаки"
+      vendor: "Palo Alto Networks"
+      lic: "Enterprise"
+  - name: CyCognito
+    meta:
+      description: "Платформа внешнего управления поверхностью атаки, использующая автоматизированную разведку и контекстный анализ для выявления теневых активов и критичных внешних уязвимостей организации."
+      link_URL: "https://www.cycognito.com/platform"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "PDF", "CSV"]
+      detect_metods: ["External Attack Surface Management", "Threat intelligence", "Attack path analysis"]
+      OSS: "false"
+      division: "AppSec"
+      type: "Attack Surface Analysis"
+      class: "Анализ поверхности атаки"
+      vendor: "CyCognito"
+      lic: "Enterprise"
+  - name: CrowdStrike Falcon Surface
+    meta:
+      description: "Модуль Falcon Surface в составе платформы CrowdStrike, предоставляющий видимость внешней поверхности атаки, автоматическое обнаружение интернет‑доступных активов и приоритизацию рисков на основе threat intelligence CrowdStrike."
+      link_URL: "https://www.crowdstrike.com/products/attack-surface-management/falcon-surface/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "CSV", "JSON"]
+      detect_metods: ["External Attack Surface Management", "Threat intelligence", "Risk scoring"]
+      OSS: "false"
+      division: "AppSec"
+      type: "Attack Surface Analysis"
+      class: "Анализ поверхности атаки"
+      vendor: "CrowdStrike"
+      lic: "Enterprise"
+  - name: FireCompass ASM
+    meta:
+      description: "Платформа Next Gen External Attack Surface Management, объединяющая пассивную и активную разведку с полуавтоматическими pentest‑плейбуками для выявления и валидации внешних уязвимостей."
+      link_URL: "https://www.firecompass.com/platform/external-attack-surface-management/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "PDF", "CSV"]
+      detect_metods: ["External Attack Surface Management", "Automated recon", "Attack simulation"]
+      OSS: "false"
+      division: "AppSec"
+      type: "Attack Surface Analysis"
+      class: "Анализ поверхности атаки"
+      vendor: "FireCompass"
+      lic: "Enterprise"
+  - name: Detectify ASM
+    meta:
+      description: "Сервис управления поверхностью атаки, основанный на crowdsourced‑подходе: автоматически сканирует внешние активы и дополняет результаты результатами исследователей безопасности Detectify Crowdsource."
+      link_URL: "https://detectify.com/attack-surface-management"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Интерфейс", "JSON"]
+      detect_metods: ["External Attack Surface Management", "Crowdsourced vulnerabilities"]
+      OSS: "false"
+      division: "AppSec"
+      type: "Attack Surface Analysis"
+      class: "Анализ поверхности атаки"
+      vendor: "Detectify"
+      lic: "SaaS, подписка"
