@@ -16,8 +16,6 @@ OUTPUT = BASE_DIR / "pdf_table" / "tools-map.pdf"
 def main() -> None:
     html_content = render_tools_html()
 
-
-
     full_html = f"""\
 <!doctype html>
 <html>

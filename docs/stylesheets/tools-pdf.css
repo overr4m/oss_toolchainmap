@@ -1,6 +1,6 @@
 @page {
     size: A4 landscape;
-    margin: 2mm 10mm 12mm 2mm;
+    margin: 4mm 12mm 12mm 4mm;
 
     @bottom-right {
         content: element(page-footer);
@@ -69,7 +69,7 @@ td.auto-section-name {
     align-items: center;
     justify-content: space-between;
     gap: 2mm;
-    font-size: 7pt;
+    font-size: 8pt;
     padding: 0;
 }
 
@@ -81,11 +81,11 @@ td.auto-section-name {
 }
 
 .footer-logo {
-    height: 10mm;
+    height: 10.5mm;
 }
 
 .footer-copyright {
-    font-size: 7pt;
+    font-size: 8pt;
     color: black;
     white-space: nowrap;
     margin-right: auto;
