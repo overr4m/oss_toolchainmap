@@ -1,0 +1,92 @@
+@page {
+    size: A4 landscape;
+    margin: 2mm 10mm 12mm 2mm;
+
+    @bottom-right {
+        content: element(page-footer);
+    }
+
+    @bottom-left {
+        content: element(page-footer_copyright);
+    }
+}
+
+html, body {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 6.5pt;
+    font-kerning: normal;
+    line-height: 1.1;
+    transform-origin: top left;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    word-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+table.tools-table {
+    border-collapse: collapse;
+    border: 1px solid #1953ff;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #1953ff;
+    padding: 1px 2px;
+    overflow-wrap: break-word;
+    overflow-wrap: auto;
+}
+
+th {
+    background: #1953ff;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tbody {
+    break-before: auto;
+    break-after: auto;
+}
+
+td.auto-section-name {
+    font-weight: 700;
+    color: #1953ff;
+    white-space: nowrap;
+}
+
+.page-footer {
+    position: running(page-footer);
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+    padding: 0;
+}
+
+.page-footer_copyright {
+    position: running(page-footer_copyright);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2mm;
+    font-size: 7pt;
+    padding: 0;
+}
+
+.footer-logos {
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+    margin-left: auto;
+}
+
+.footer-logo {
+    height: 10mm;
+}
+
+.footer-copyright {
+    font-size: 7pt;
+    color: black;
+    white-space: nowrap;
+    margin-right: auto;
+}
