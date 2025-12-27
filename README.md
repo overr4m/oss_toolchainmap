@@ -190,6 +190,10 @@ $ mkdocs serve -a 127.0.0.1:8001 # прямое обозначение адре�
 $ python -m scripts.export_tools_pdf
 ```
 
+      python -m scripts build-search
+      python -m scripts export-pdf
+
+
 * Очистка локального репозитория
 
 ```bash

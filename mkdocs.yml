@@ -139,8 +139,6 @@ extra:
     json_schema: "MyNiiSearcher.ts"
   site_url_path: /oss_toolchainmap
   generator_ignore_message: 'appsec-ta ''24'
-  jinja_context:
-    tools_table_html: "{{ tools_table_html() }}"
   table_config:
 
     - division: AppSec

@@ -29,10 +29,7 @@ search:
 
 ***
 
-<div id="tools-table-wrapper" style="display:none;">
-  {{ tools_table_html() }}
-</div>
-
+{{ tools_table_html() }}
 
 ***
 

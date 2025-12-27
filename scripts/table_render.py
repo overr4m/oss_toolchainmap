@@ -1,3 +1,5 @@
+"""Docstring для scripts.table_render"""
+
 from typing import Any, Dict, List
 from pathlib import Path
 import yaml
@@ -12,22 +14,21 @@ def _chunk_tools(
     tools: List[Dict[str, Any]],
     size: int = MAX_TOOLS_PER_ROW,
 ) -> List[List[Dict[str, Any]]]:
-    """Разбить список инструментов на чанки для строк."""
+    """Chank to string"""
     if not tools:
         return []
     return [tools[i:i + size] for i in range(0, len(tools), size)]
 
 
 def _render_ps_cells(tools: List[Dict[str, Any]]) -> str:
+    """HTML table cells for proprietary tools"""
     cells: List[str] = []
     count = min(len(tools), MAX_TOOLS_PER_ROW)
 
     for i in range(count):
         name = tools[i].get("name", "")
         cells.append(
-            '<td><span class="tbl-ps-tool">{}</span></td>'.format(
-                name,
-            ),
+            f'<td><span class="tbl-ps-tool">{name}</span></td>',
         )
 
     if count < MAX_TOOLS_PER_ROW:
@@ -53,6 +54,7 @@ def _render_oss_cells(tools: List[Dict[str, Any]]) -> str:
 
 
 def render_table(data: Dict[str, Any]) -> str:
+    """Render HTML tools map"""
     html: List[str] = []
 
     html.append('<table border="1" style="border-collapse: collapse;">')
@@ -238,6 +240,7 @@ def _load_mkdocs_env_and_config() -> Dict[str, Any]:
     table_config = extra.get("table_config", []) or []
 
     class DummyEnv:
+        """Minimal MkDocs"""
         def __init__(self, config_file_path: str) -> None:
             self.conf = {"config_file_path": config_file_path}
 
@@ -247,5 +250,6 @@ def _load_mkdocs_env_and_config() -> Dict[str, Any]:
 
 
 def render_tools_html() -> str:
+    """Return rendered from mkdocs.yml"""
     data = _load_mkdocs_env_and_config()
     return render_table(data)

@@ -1,4 +1,4 @@
-"""Load and normalize table data for tools map."""
+"""Table data for tools map"""
 
 import os
 from typing import Any, Dict, List
@@ -8,13 +8,13 @@ import yaml
 
 
 def get_root_dir(env: Any) -> str:
-    """Return MkDocs project root directory."""
+    """Return MkDocs project"""
     path = env.conf["config_file_path"]
     return os.path.dirname(str(path))
 
 
 def load_yaml_absolute(env: Any, rel_path: str) -> Dict[str, Any]:
-    """Load YAML file using path relative to MkDocs config."""
+    """YAML to MkDocs config"""
     root_dir = get_root_dir(env)
     full_path = os.path.join(root_dir, rel_path)
     with open(full_path, "r", encoding="utf-8") as f:
@@ -23,7 +23,7 @@ def load_yaml_absolute(env: Any, rel_path: str) -> Dict[str, Any]:
 
 
 def _normalize_tools(raw: Any) -> List[Dict[str, Any]]:
-    """Normalize tools section to a list of dictionaries."""
+    """Normalize tools"""
     if isinstance(raw, dict):
         tools = raw.get("Tools")
         if isinstance(tools, list):
@@ -37,7 +37,7 @@ def build_table_data(
     env: Any,
     table_config: List[Dict[str, Any]],
 ) -> Dict[str, Any]:
-    """Expand table config with OSS/PS tools loaded from YAML."""
+    """OSS/PS tools from YAML"""
     data: Dict[str, Any] = {"table": []}
 
     for division in table_config:
@@ -92,5 +92,5 @@ def load_table_data(
     env: Any,
     table_config: List[Dict[str, Any]],
 ) -> Dict[str, Any]:
-    """Public wrapper to build table data structure."""
+    """Public wrapper"""
     return build_table_data(env, table_config)
