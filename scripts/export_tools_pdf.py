@@ -1,3 +1,5 @@
+"""Export DevSecOps tools table to PDF."""
+
 from pathlib import Path
 import sys
 import traceback
@@ -10,13 +12,14 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 BASE_DIR = ROOT
-OUTPUT = BASE_DIR / "pdf_table" / "tools-map.pdf"
+OUTPUT = BASE_DIR / "docs" / "pdf_table" / "tools-map.pdf"
 
 
 def main() -> None:
+    """Render HTML with tools table and save it as PDF."""
     html_content = render_tools_html()
 
-    full_html = f"""\
+    full_html = """\
 <!doctype html>
 <html>
   <head>
@@ -28,24 +31,29 @@ def main() -> None:
       <div class="page-footer">
         <div class="footer-logos">
           <a href="https://geminishkv.github.io/gpages_intro/" target="_blank">
-            <img src="docs/assets/logotype/site/logo_pdf.png" class="footer-logo" />
+            <img src="docs/assets/logotype/site/logo_pdf.png" \
+class="footer-logo" />
           </a>
           <a href="https://findevsecops.ru" target="_blank">
-            <img src="docs/assets/logotype/site/FDSO_logo.png" class="footer-logo" />
+            <img src="docs/assets/logotype/site/FDSO_logo.png" \
+class="footer-logo" />
           </a>
+          <!--
           <a href="https://lanit.ru" target="_blank">
-            <img src="docs/assets/logotype/site/LANIT_logo.png" class="footer-logo" />
+            <img src="docs/assets/logotype/site/LANIT_logo.png" \
+class="footer-logo" />
           </a>
+          -->
         </div>
       </div>
       <div class="page-footer_copyright">
-        <div class="footer-copyright">© <a href="https://geminishkv.github.io/gpages_intro/" target="_blank">AppSecTA </a> &amp; <a href="https://findevsecops.ru" target="_blank">FinDevSecOps</a>
+        <div class="footer-copyright">© \
+<a href="https://geminishkv.github.io/gpages_intro/" target="_blank">AppSecTA \
+</a> &amp; <a href="https://findevsecops.ru" target="_blank">FinDevSecOps</a>
 </div>
       </div>
-      {html_content}
-  </body>
-</html>
-"""
+      """
+    full_html = f"{full_html}{html_content}\n  </body>\n</html>\n"
 
     css_path = BASE_DIR / "docs" / "stylesheets" / "tools-pdf.css"
 
@@ -60,5 +68,5 @@ def main() -> None:
 if __name__ == "__main__":
     try:
         main()
-    except Exception:
+    except OSError:
         traceback.print_exc()

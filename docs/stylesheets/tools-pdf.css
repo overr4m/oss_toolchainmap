@@ -1,6 +1,6 @@
 @page {
     size: A4 landscape;
-    margin: 4mm 12mm 12mm 4mm;
+    margin: 5mm 14mm 14mm 5mm;
 
     @bottom-right {
         content: element(page-footer);

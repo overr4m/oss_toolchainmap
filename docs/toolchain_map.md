@@ -10,7 +10,7 @@ search:
 
 Карта инструментов помогает подобрать оптимальные решения под любые условия: когда нет бюджета, когда невозможно внедрить тяжёлую корпоративную платформу, когда команда маленькая или приходится закрывать все роли в одиночку и т.д.
 
-**Что важно знать про карту:**
+### Что важно знать про карту
 
 - Карта инструментов показывает, какие существуют **классы** и **типы** решений, и как они связаны между собой в общей DevSec/AppSec экосистеме.
 - Текущая версия карты — **прототип**, она активно дорабатывается и будет развиваться вместе с сообществом
@@ -30,38 +30,9 @@ search:
 ***
 
 <div id="tools-table-wrapper" style="display:none;">
-  {{ tools_table() }}
+  {{ tools_table_html() }}
 </div>
 
-<button type="button" data-tools-overlay-trigger class="tools-overlay__trigger">
-  <h4>Развернуть карту инструментов</h4>
-</button>
-
-<a href="tools-map.pdf" target="_blank" rel="noopener" class="tools-overlay__trigger">
-  <h4>Открыть карту инструментов в PDF</h4>
-</a>
-
-
-<div data-tools-overlay class="tools-overlay">
-  <div class="tools-overlay__backdrop"></div>
-  <div class="tools-overlay__dialog">
-    <button type="button" class="tools-overlay__close">×</button>
-    <div id="tools-table-container" class="tools-overlay__table"></div>
-  </div>
-</div>
-
-***
-
-# Поиск по карте
-
-<div id="tools-search">
-  <input
-    type="search"
-    id="tools-search-input"
-    placeholder="Свободный поиск"
-  />
-  <ul id="tools-search-results"></ul>
-</div>
 
 ***
 

@@ -27,6 +27,7 @@ Temporary Items
 __pycache__/
 .mypy_cache
 .ruff_cache
+lunr
 venv/
 .venv
 *.py[cod]
@@ -48,6 +49,7 @@ logs/
 dist/
 build/
 pdf_table
+site
 
 # Databases / dumps
 *.sqlite

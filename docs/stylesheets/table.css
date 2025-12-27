@@ -44,3 +44,13 @@ a.show-tools-overlay {
   cursor: pointer;
   color: #1953ff;
 }
+
+.tools-table-container {
+  padding: 0;
+  margin: 0;
+}
+
+.tools-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}

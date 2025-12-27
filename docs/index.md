@@ -26,6 +26,10 @@ description:
 
 ***
 
+<div align="center"><h2 id="typewriter-target"></h2></div>
+
+***
+
 ## Зачем это нужно
 
 * показывает, какие **классы и типы инструментов** вообще бывают (SAST, DAST, SCA/OSA, secrets‑management, container security, CNAPP, MLSecOps, coverage, SIEM/SOC и др.);
