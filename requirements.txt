@@ -11,6 +11,7 @@ pymdown-extensions==10.16.1
 
 # PDF
 mkdocs-pdf==0.1.2
+weasyprint>=67.0
 
 # Search
 lunr==0.6.2
