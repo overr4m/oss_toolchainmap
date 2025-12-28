@@ -49,6 +49,8 @@ jobs:
         run: |
           python scripts/export_tools_pdf.py \
             --output docs/pdf_table/tools-map.pdf
+        env:
+          PYTHONPATH: .
 
       - name: Validate MkDocs config
         run: |
