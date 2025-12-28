@@ -15,8 +15,8 @@ from scripts.render_tools_popups_from_table import (
 
 def define_env(env: Any) -> None:
     """Register macros for MkDocs."""
-    table_config: List[Dict[str, Any]] = (
-        env.conf.get("extra", {}).get("table_config", [])
+    table_config: List[Dict[str, Any]] = env.conf.get("extra", {}).get(
+        "table_config", []
     )
 
     @env.macro

@@ -35,15 +35,16 @@ def main() -> None:
 
     if len(sys.argv) < 2 or sys.argv[1] in {"-h", "--help"}:
         available = ", ".join(commands)
-        print(f"Использование: python -m scripts <команда>\n"
-              f"Доступные команды: {available}")
+        print(
+            f"Использование: python -m scripts <команда>\n"
+            f"Доступные команды: {available}"
+        )
         raise SystemExit(0)
 
     cmd = sys.argv[1]
     if cmd not in commands:
         available = ", ".join(commands)
-        print(f"Неизвестная команда: {cmd}\n"
-              f"Доступные команды: {available}")
+        print(f"Неизвестная команда: {cmd}\n" f"Доступные команды: {available}")
         raise SystemExit(1)
 
     commands[cmd]()
