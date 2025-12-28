@@ -85,7 +85,6 @@ extra_css:
   - stylesheets/burger.css
   - stylesheets/mobile-heder.css
   - stylesheets/mobile-logo.css
-  - stylesheets/clipboard.css
   - stylesheets/layout.css
   - stylesheets/tools-table.css
 

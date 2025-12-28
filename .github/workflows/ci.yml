@@ -209,6 +209,12 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Build tools.json (preview)
+        run: |
+          python scripts/build_search_data.py
+        env:
+          PYTHONPATH: .
+
       - name: Validate MkDocs config (preview)
         run: |
           mkdocs build --clean --config-file mkdocs.yml --site-dir /tmp/mkdocs-check
@@ -266,6 +272,12 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Build tools.json
+        run: |
+          python scripts/build_search_data.py
+        env:
+          PYTHONPATH: .
 
       - name: Validate MkDocs config
         run: |

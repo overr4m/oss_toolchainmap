@@ -50,6 +50,7 @@ dist/
 build/
 pdf_table
 site
+assets/search
 
 # Databases / dumps
 *.sqlite
