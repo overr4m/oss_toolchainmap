@@ -38,7 +38,7 @@ def _chunk(
     tools_list = [t for t in tools if t]
 
     return (
-        [tools_list[i : i + size] for i in range(0, len(tools_list), size)]
+        [tools_list[i:i + size] for i in range(0, len(tools_list), size)]
         if tools_list
         else []
     )
@@ -74,9 +74,23 @@ def _render_tool_with_popup(
     description = str(meta.get("description", "") or "")
     vendor = str(meta.get("vendor", "") or "")
     lic = str(meta.get("lic", "") or "")
-    ver_edition = str(meta.get("ver_edition", "") or meta.get("veredition", "") or "")
-    fstec = str(meta.get("FSTEK_cert", "") or meta.get("FSTEKcert", "") or "")
-    rus_access = str(meta.get("RUS_access", "") or meta.get("RUSaccess", "") or "")
+    ver_edition = str(
+        meta.get("ver_edition", "")
+        or meta.get("veredition", "")
+        or ""
+    )
+
+    fstec = str(
+        meta.get("FSTEK_cert", "")
+        or meta.get("FSTEKcert", "")
+        or ""
+    )
+
+    rus_access = str(
+        meta.get("RUS_access", "")
+        or meta.get("RUSaccess", "")
+        or ""
+    )
     link_url = str(meta.get("link_URL", "") or meta.get("linkURL", "") or "")
     report_formats_str = _fmt_list(
         meta.get("report_formats") or meta.get("reportformats") or []
@@ -90,7 +104,8 @@ def _render_tool_with_popup(
     detect_methods_str = _fmt_list(detect_methods)
 
     popup_id = (
-        f"tool-popup-" f"{hash(division + type_name + class_name + name) & 0xFFFFFFFF}"
+        "tool-popup-"
+        f"{hash(division + type_name + class_name + name) & 0xFFFFFFFF}"
     )
 
     html: List[str] = []
@@ -133,14 +148,24 @@ def _render_tool_with_popup(
     if kind:
         html.append(f"      <p><strong>Категория:</strong> {kind}</p>")
     if ver_edition:
-        html.append(f"      <p><strong>Версия / издание:</strong> {ver_edition}</p>")
+        html.append(
+            "      <p><strong>Версия / издание:</strong> "
+            f"{ver_edition}</p>"
+        )
     if fstec:
-        html.append(f"      <p><strong>Сертификация ФСТЭК:</strong> {fstec}</p>")
+        html.append(
+            "      <p><strong>Сертификация ФСТЭК:</strong> "
+            f"{fstec}</p>"
+        )
     if rus_access:
-        html.append(f"      <p><strong>Доступность в РФ:</strong> {rus_access}</p>")
+        html.append(
+            "      <p><strong>Доступность в РФ:</strong> "
+            f"{rus_access}</p>"
+        )
     if report_formats_str:
         html.append(
-            f"      <p><strong>Форматы отчетов:</strong> " f"{report_formats_str}</p>"
+            "      <p><strong>Форматы отчетов:</strong> "
+            f"{report_formats_str}</p>"
         )
     if detect_methods_str:
         html.append(
@@ -277,7 +302,11 @@ def render_tools_popups_from_table(env: Any) -> str:
     html.append('<table class="tools-table">')
     html.append("<thead>")
     html.append("<tr>")
-    html.append('<th class="tools-table__th" style="width: 8%;">' "Направление" "</th>")
+    html.append(
+        '<th class="tools-table__th" style="width: 8%;">'
+        "Направление"
+        "</th>"
+    )
     html.append('<th class="tools-table__th" style="width: 10%;">Тип</th>')
     html.append('<th class="tools-table__th" style="width: 10%;">Класс</th>')
     html.append('<th class="tools-table__th">PS инструменты</th>')
@@ -331,7 +360,9 @@ def render_tools_popups_from_table(env: Any) -> str:
                     "</td>"
                 )
             else:
-                html.append('<td class="tools-table__td tools-table__td--ps"></td>')
+                html.append(
+                    '<td class="tools-table__td tools-table__td--ps"></td>'
+                )
 
             if i < len(oss_chunks):
                 oss_html = "".join(
@@ -350,7 +381,9 @@ def render_tools_popups_from_table(env: Any) -> str:
                     "</td>"
                 )
             else:
-                html.append('<td class="tools-table__td tools-table__td--oss"></td>')
+                html.append(
+                    '<td class="tools-table__td tools-table__td--oss"></td>'
+                )
 
             html.append("</tr>")
 

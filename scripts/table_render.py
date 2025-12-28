@@ -17,7 +17,7 @@ def _chunk_tools(
     """Chank to string"""
     if not tools:
         return []
-    return [tools[i : i + size] for i in range(0, len(tools), size)]
+    return [tools[i:i + size] for i in range(0, len(tools), size)]
 
 
 def _render_ps_cells(tools: List[Dict[str, Any]]) -> str:
@@ -85,9 +85,17 @@ def render_table(data: Dict[str, Any]) -> str:
         types = division.get("type")
 
         if not types:
-            ps_tools = division.get("PS_tools") or division.get("PStools") or []
+            ps_tools = (
+                division.get("PS_tools")
+                or division.get("PStools")
+                or []
+            )
 
-            oss_tools = division.get("OSS_tools") or division.get("OSStools") or []
+            oss_tools = (
+                division.get("OSS_tools")
+                or division.get("OSStools")
+                or []
+            )
 
             ps_chunks = _chunk_tools(ps_tools, MAX_TOOLS_PER_ROW)
             oss_chunks = _chunk_tools(oss_tools, MAX_TOOLS_PER_ROW)
@@ -126,8 +134,16 @@ def render_table(data: Dict[str, Any]) -> str:
                 classes = [
                     {
                         "name": "",
-                        "PS_tools": (t.get("PS_tools") or t.get("PStools") or []),
-                        "OSS_tools": (t.get("OSS_tools") or t.get("OSStools") or []),
+                        "PS_tools": (
+                            t.get("PS_tools")
+                            or t.get("PStools")
+                            or []
+                        ),
+                        "OSS_tools": (
+                            t.get("OSS_tools")
+                            or t.get("OSStools")
+                            or []
+                        ),
                     },
                 ]
 
@@ -146,8 +162,16 @@ def render_table(data: Dict[str, Any]) -> str:
                         {
                             "type": type_name,
                             "class": class_name,
-                            "ps": (ps_chunks[idx] if idx < len(ps_chunks) else []),
-                            "oss": (oss_chunks[idx] if idx < len(oss_chunks) else []),
+                            "ps": (
+                                ps_chunks[idx]
+                                if idx < len(ps_chunks)
+                                else []
+                            ),
+                            "oss": (
+                                oss_chunks[idx]
+                                if idx < len(oss_chunks)
+                                else []
+                            ),
                         },
                     )
 
@@ -168,7 +192,10 @@ def render_table(data: Dict[str, Any]) -> str:
                 )
 
             if i == 0 or row["type"] != flat_rows[i - 1]["type"]:
-                type_span = sum(1 for r in flat_rows if r["type"] == row["type"]) or 1
+                type_span = (
+                    sum(1 for r in flat_rows if r["type"] == row["type"])
+                    or 1
+                )
                 html.append(
                     (
                         f'<td rowspan="{type_span}" style="font-weight:700;">'
@@ -178,7 +205,8 @@ def render_table(data: Dict[str, Any]) -> str:
 
             if i == 0 or row["class"] != flat_rows[i - 1]["class"]:
                 class_span = (
-                    sum(1 for r in flat_rows if r["class"] == row["class"]) or 1
+                    sum(1 for r in flat_rows if r["class"] == row["class"])
+                    or 1
                 )
                 html.append(
                     (

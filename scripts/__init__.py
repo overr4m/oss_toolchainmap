@@ -44,7 +44,11 @@ def main() -> None:
     cmd = sys.argv[1]
     if cmd not in commands:
         available = ", ".join(commands)
-        print(f"Неизвестная команда: {cmd}\n" f"Доступные команды: {available}")
+        print(
+            "Неизвестная команда: "
+            f"{cmd}\nДоступные команды: {available}"
+        )
+
         raise SystemExit(1)
 
     commands[cmd]()
