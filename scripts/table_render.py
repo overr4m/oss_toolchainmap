@@ -226,7 +226,7 @@ def render_table(data: Dict[str, Any]) -> str:
 def _load_mkdocs_env_and_config() -> Dict[str, Any]:
     mkdocs_path = BASE_DIR / "mkdocs.yml"
     with mkdocs_path.open("r", encoding="utf-8") as f:
-        mk = yaml.load(f, Loader=yaml.FullLoader) or {}
+        mk = yaml.safe_load(f) or {}
 
     extra = mk.get("extra", {}) or {}
     table_config = extra.get("table_config", []) or []

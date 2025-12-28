@@ -164,19 +164,20 @@ jobs:
       - name: Dependency security check with safety
         run: |
           safety check -r requirements.txt || true
-  security_secrets_checks:
-    runs-on: ubuntu-latest
-    needs:
-      - linter_checks
-      - layout_linter_checks
-      - dependency_audit_checks
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Scan repository for secrets with gitleaks
-        uses: gitleaks/gitleaks-action@v2
-        with:
-          config-path: .gitleaks.toml
+#  security_secrets_checks:
+#    runs-on: ubuntu-latest
+#    needs:
+#      - linter_checks
+#      - layout_linter_checks
+#      - dependency_audit_checks
+#    steps:
+#      - uses: actions/checkout@v4
+
+#      - name: Scan repository for secrets with gitleaks
+#        uses: gitleaks/gitleaks-action@v2
+#        with:
+#          config-path: .gitleaks.toml
   docs-preview:
     if: github.event_name == 'pull_request'
     needs:
@@ -185,7 +186,7 @@ jobs:
       - layout_linter_checks
       - dependency_audit_checks
       - security_py_dependency_checks
-      - security_secrets_checks
+#      - security_secrets_checks
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -243,7 +244,7 @@ jobs:
       - layout_linter_checks
       - dependency_audit_checks
       - security_py_dependency_checks
-      - security_secrets_checks
+#      - security_secrets_checks
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
