@@ -7,4 +7,3 @@ description:
 ---
 
 {{ tools_table_popups() }}
-

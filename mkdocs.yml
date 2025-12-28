@@ -29,8 +29,8 @@ theme:
     - content.code.select
     - content.code.annotate
     - content.action.view
-    - navigation.instant
-    - navigation.instant.prefetch
+#    - navigation.instant
+#    - navigation.instant.prefetch
     - content.lazy
 
 plugins:
