@@ -315,7 +315,7 @@ jobs:
 
   deploy:
     name: Deploy to GitHub Pages
-    if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/develop')
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/master')
     needs:
       - build
     runs-on: ubuntu-latest
