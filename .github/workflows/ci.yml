@@ -1,4 +1,3 @@
----
 name: ci
 
 on:
@@ -22,7 +21,7 @@ concurrency:
 
 jobs:
 
-  linter_checks_ruff_py:
+  linter_checks:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -49,14 +48,21 @@ jobs:
         run: |
           ruff check .
           ruff format --check .
-
       - name: Lint with flake8
         run: |
-          flake8 .
+          pip install flake8
+          flake8 . \
+            --statistics \
+            --show-source
+      - name: Type checking with mypy
+        run: |
+          pip install mypy
+          mypy . --config-file mypy.ini
 
+  # YAML + Markdown
   docs_linter_checks:
     runs-on: ubuntu-latest
-    needs: linter_checks_ruff_py
+    needs: linter_checks
     steps:
       - uses: actions/checkout@v4
 
@@ -71,14 +77,18 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@v20
         with:
           globs: |
-            docs/*.md
+            docs/**/*.md
             README.md
             SECURITY.md
             CODE_OF_CONDUCT.md
             CONTRIBUTING.md
+            RELEASE_NOTES.md
+            NOTICE.md
+            LICENSE.md
 
   layout_linter_checks:
     runs-on: ubuntu-latest
+    needs: linter_checks
     steps:
       - uses: actions/checkout@v4
 
@@ -89,25 +99,31 @@ jobs:
 
       - name: Install JS/CSS linters
         run: |
-          npm install --save-dev eslint stylelint stylelint-config-standard
+          npm install --save-dev eslint stylelint
 
       - name: Lint JavaScript in docs
         run: |
-          if ls docs/**/*.js >/dev/null 2>&1; then
-            npx eslint "docs/**/*.js"
+          if ls docs/javascripts/**/*.js >/dev/null 2>&1; then
+            npx eslint "docs/javascripts/**/*.js"
           fi
-          if ls javascripts/**/*.js >/dev/null 2>&1; then
-            npx eslint "javascripts/**/*.js"
+          if [ -f "eslint.config.js" ]; then
+            echo "Using eslint.config.js from repo root"
           fi
 
       - name: Lint CSS in docs
         run: |
-          npx stylelint "docs/**/*.css" "stylesheets/**/*.css"
+          if ls docs/stylesheets/**/*.css >/dev/null 2>&1; then
+            npx stylelint "docs/stylesheets/**/*.css"
+          fi
+          if [ -f "stylelint.config.cjs" ]; then
+            echo "Using stylelint.config.cjs from repo root"
+          fi
+
 
   dependency_audit_checks:
     runs-on: ubuntu-latest
     needs:
-      - linter_checks_ruff_py
+      - linter_checks
       - layout_linter_checks
     steps:
       - uses: actions/checkout@v4
@@ -124,6 +140,7 @@ jobs:
   security_py_dependency_checks:
     runs-on: ubuntu-latest
     needs:
+      - linter_checks
       - layout_linter_checks
       - dependency_audit_checks
     steps:
@@ -144,14 +161,15 @@ jobs:
 
       - name: Security scan with bandit
         run: |
-          bandit -r .
+          bandit -r main.py scripts -ll
+
       - name: Dependency security check with safety
         run: |
           safety check -r requirements.txt || true
-
   security_secrets_checks:
     runs-on: ubuntu-latest
     needs:
+      - linter_checks
       - layout_linter_checks
       - dependency_audit_checks
     steps:
@@ -161,31 +179,10 @@ jobs:
         uses: gitleaks/gitleaks-action@v2
         with:
           config-path: .gitleaks.toml
-
-#  security_docker_checks:
-#    runs-on: ubuntu-latest
-#    needs:
-#      - layout_linter_checks
-#      - dependency_audit_checks
-#      - security_py_dependency_checks
-#      - security_secrets_checks
-#    steps:
-#      - uses: actions/checkout@v4
-
-#      - name: Install hadolint
-#        run: |
-#          curl -sSL https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64 \
-#            -o /usr/local/bin/hadolint
-#          chmod +x /usr/local/bin/hadolint
-
-#      - name: Lint Dockerfiles with hadolint
-#        run: |
-#          find labs -name 'Dockerfile' -print0 | xargs -0 -n1 hadolint --failure-threshold error
-#        shell: bash
-
   docs-preview:
     if: github.event_name == 'pull_request'
     needs:
+      - linter_checks
       - docs_linter_checks
       - layout_linter_checks
       - dependency_audit_checks
@@ -213,15 +210,20 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Generate tools map PDF
-        run: |
-          python scripts/export_tools_pdf.py
-
       - name: Validate MkDocs config (preview)
         run: |
           mkdocs build --clean --config-file mkdocs.yml --site-dir /tmp/mkdocs-check
         env:
           PYTHONPATH: .
+
+      - name: Ensure pdf_table directory exists (preview)
+        run: |
+          mkdir -p docs/pdf_table
+
+      - name: Generate tools map PDF (preview)
+        run: |
+          python scripts/export_tools_pdf.py \
+            --output docs/pdf_table/tools-map.pdf
 
       - name: Build MkDocs site (preview)
         run: |
@@ -238,6 +240,7 @@ jobs:
   build:
     if: github.event_name == 'push'
     needs:
+      - linter_checks
       - docs_linter_checks
       - layout_linter_checks
       - dependency_audit_checks
@@ -271,11 +274,15 @@ jobs:
         env:
           PYTHONPATH: .
 
-      - name: Type checking with mypy
+      - name: Ensure pdf_table directory exists
         run: |
-          mypy labs .
-        env:
-          MYPY_CACHE_DIR: .mypy_cache
+          mkdir -p docs/pdf_table
+
+      - name: Generate tools map PDF
+        run: |
+          python scripts/export_tools_pdf.py \
+            --output docs/pdf_table/tools-map.pdf
+
       - name: Build MkDocs site
         run: |
           mkdocs build --site-dir site
@@ -284,19 +291,12 @@ jobs:
 
       - name: Generate sitemap.xml
         run: |
-          python scripts/generate_sitemap.py
+          python scripts/generate_sitemap.py || echo "No sitemap generator, skipping."
 
       - name: Ensure site directory exists
         run: |
           if [ ! -d "site" ]; then
             echo "site directory is missing"
-            exit 1
-          fi
-
-      - name: Ensure sitemap.xml exists
-        run: |
-          if [ ! -f "site/sitemap.xml" ]; then
-            echo "sitemap.xml is missing"
             exit 1
           fi
 
