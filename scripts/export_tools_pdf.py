@@ -1,4 +1,4 @@
-"""Export DevSecOps tools table to PDF."""
+"""Export DevSecOps tools table to PDF"""
 
 from pathlib import Path
 import sys
@@ -16,7 +16,7 @@ OUTPUT = BASE_DIR / "docs" / "pdf_table" / "tools-map.pdf"
 
 
 def main() -> None:
-    """Render HTML with tools table and save it as PDF."""
+    """Render HTML with tools table and save it as PDF"""
     html_content = render_tools_html()
 
     full_html = """\

@@ -8,6 +8,9 @@ from scripts.table_data import (
     load_yaml_absolute,
 )
 from scripts.table_render import render_table, render_tools_html
+from scripts.render_tools_popups_from_table import (
+    render_tools_popups_from_table,
+)
 
 
 def define_env(env: Any) -> None:
@@ -37,3 +40,8 @@ def define_env(env: Any) -> None:
     def tools_table_html() -> str:
         """Return the rendered HTML table for use in templates."""
         return render_tools_html()
+
+    @env.macro
+    def tools_table_popups(_page: object | None = None) -> str:
+        """Render tools table with hover popups."""
+        return render_tools_popups_from_table(env)

@@ -48,6 +48,7 @@ markdown_extensions:
   - md_in_html
   - attr_list
   - fenced_code
+  - attr_list
   - admonition
   - pymdownx.highlight:
       anchor_linenums: true
@@ -74,7 +75,6 @@ markdown_extensions:
   - pymdownx.smartsymbols
 
 extra_css:
-  - stylesheets/table.css
   - stylesheets/header.css
   - stylesheets/menu.css
   - stylesheets/footer.css
@@ -87,6 +87,7 @@ extra_css:
   - stylesheets/mobile-logo.css
   - stylesheets/clipboard.css
   - stylesheets/layout.css
+  - stylesheets/tools-table.css
 
 extra_javascript:
   - javascripts/tools-overlay.js
@@ -97,16 +98,18 @@ extra_javascript:
   - javascripts/custom-title.js
   - javascripts/menu-logo.js
   - javascripts/typewriter-target.js
+  - javascripts/tools-table.js
 
 nav:
   - "Главная страница": index.md
-  - "Карта инструментов":
+  - "Материалы":
       - "Toolchain Map": toolchain_map.md
+      - "Интерактивная карта": map.md
       - "Поиск по карте": search.md
       - "Православные вендора": vendor_rf.md
       - "Зарубежные вендора": vendor_external.md
       - "Open Source Projects": OSS.md
-  - "Материалы":
+  - "Дополнения":
         - "Лицензии ПО": licenses.md
         - "Классификация инструментов": appsec_tt.md
         - "Дополнительные материалы": materials_iso.md

@@ -25,12 +25,12 @@ search:
 
 ***
 
-<div align="center"><h2 id="typewriter-target"></h2></div>
+<div class="tools-map__header" markdown="1">
 
-***
+# Карта инструментов 
+
+[Скачать PDF версию](pdf_table/tools-map.pdf){ .md-button .tools-pdf-button DevSecOps_ToolchainMap_FDSO }
+
+</div>
 
 {{ tools_table_html() }}
-
-***
-
-![Логотип](assets/logotype/logotypemd.jpg)
