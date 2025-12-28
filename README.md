@@ -197,12 +197,8 @@
 $ python3 -m venv .venv
 $ source .venv/bin/activate
 $ pip install -r requirements.txt
-$ pip install weasyprint
-$ pip install mkdocs-include-markdown-plugin
-$ pip install mkdocs-meta-descriptions-plugin
 $ python scripts/build_search_data.py
-$ ruff format .
-$ python -m mkdocs build -v > build.log 2>&1
+$ python -m mkdocs build -v > build.log 2>&1 # debug
 $ python -m mkdocs serve --livereload
 # or
 $ mkdocs serve -a 127.0.0.1:8001 # прямое обозначение адреса
@@ -213,10 +209,6 @@ $ mkdocs serve -a 127.0.0.1:8001 # прямое обозначение адре�
 ```bash
 $ python -m scripts.export_tools_pdf
 ```
-
-      python -m scripts build-search
-      python -m scripts export-pdf
-
 
 * Очистка локального репозитория
 
