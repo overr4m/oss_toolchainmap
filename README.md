@@ -6,6 +6,9 @@
 <a href="https://img.shields.io/badge/Risk_Analyze-2448a2"><img src="https://img.shields.io/badge/Course-Risk_Analysis-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/AppSec-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/Contributor-Шмаков_И._С.-8b9aff" alt="Contributor Badge"></a>
 <img src="https://img.shields.io/badge/git-%23F05033.svg?style=flat-square&logo=git&logoColor=white" alt="Git">
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3670A0.svg?logo=python&logoColor=ffdd54" alt="Python"></a>
+<a href="https://mypy-lang.org/"><img src="https://img.shields.io/badge/type_checked-mypy-039dfc?style=flat" alt="mypy"></a>
+<a href="https://flake8.pycqa.org/"><img src="https://img.shields.io/badge/Code%20style-flake8-orange?style=flat" alt="flake8"></a>
+<a href="https://pylint.readthedocs.io/"><img src="https://img.shields.io/badge/linting-pylint-1254a0?style=flat" alt="pylint"></a>
 <a href="https://www.mkdocs.org/"><img src="https://img.shields.io/badge/MkDocs-326ce5.svg?logo=MaterialForMkDocs&logoColor=white" alt="MkDocs"></a>
 <a href="https://www.markdownguide.org/"><img src="https://img.shields.io/badge/Markdown-000000.svg?logo=markdown&logoColor=white" alt="Markdown"></a>
 <a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" alt="Ruff"></a>
@@ -56,14 +59,14 @@
 │   ├── assets
 │   │   ├── logotype
 │   │   │   ├── logotypemd.jpg
-│   │   │   ├── logotypemd2.jpg
 │   │   │   └── site
 │   │   │       ├── favicon.ico
-│   │   │       ├── logo_menu.png
+│   │   │       ├── LANIT_logo.png
+│   │   │       ├── logo_pdf.png
 │   │   │       └── logo.png
 │   │   └── search
 │   │       └── tools.json
-│   ├── external.md
+│   ├── codeofconduct.md
 │   ├── index.md
 │   ├── javascripts
 │   │   ├── custom-title.js
@@ -72,24 +75,35 @@
 │   │   ├── tools-overlay.js
 │   │   ├── tools-search_pagging.js
 │   │   ├── tools-search_style.js
-│   │   └── tools-search.js
+│   │   ├── tools-search.js
+│   │   ├── tools-table.js
+│   │   └── typewriter-target.js
 │   ├── licenses.md
 │   ├── liders.md
+│   ├── map.md
 │   ├── materials_iso.md
 │   ├── OSS.md
-│   ├── research-notes.md
+│   ├── pdf_table
+│   │   └── tools-map.pdf
+│   ├── release-notes.md
+│   ├── rules.md
+│   ├── search.md
 │   ├── stylesheets
 │   │   ├── burger.css
+│   │   ├── clipboard.css
 │   │   ├── footer.css
 │   │   ├── header.css
+│   │   ├── layout.css
 │   │   ├── menu.css
 │   │   ├── mobile-heder.css
 │   │   ├── mobile-logo.css
 │   │   ├── search.css
 │   │   ├── sidebar.css
-│   │   ├── table.css
 │   │   ├── tools-overlay.css
+│   │   ├── tools-pdf.css
+│   │   ├── tools-table.css
 │   │   └── typeset.css
+│   ├── toolchain_map.md
 │   ├── tools
 │   │   ├── AppSec
 │   │   │   ├── API
@@ -142,7 +156,9 @@
 │   │   └── Secrets_Management
 │   │       ├── OSS_tools.yaml
 │   │       └── PS_tools.yaml
+│   ├── vendor_external.md
 │   └── vendor_rf.md
+├── eslint.config.js
 ├── LICENSE.md
 ├── main.py
 ├── mkdocs.yml
@@ -151,16 +167,24 @@
 ├── README.md
 ├── RELEASE_NOTES.md
 ├── requirements.txt
+├── ruff.toml
 ├── scripts
 │   ├── __init__.py
 │   ├── __pycache__
 │   │   ├── __init__.cpython-314.pyc
+│   │   ├── build_search_data.cpython-314.pyc
+│   │   ├── export_tools_pdf.cpython-314.pyc
+│   │   ├── render_tools_popups_from_table.cpython-314.pyc
+│   │   ├── render_tools_with_popups.cpython-314.pyc
 │   │   ├── table_data.cpython-314.pyc
 │   │   └── table_render.cpython-314.pyc
 │   ├── build_search_data.py
+│   ├── export_tools_pdf.py
+│   ├── render_tools_popups_from_table.py
 │   ├── table_data.py
 │   └── table_render.py
-└── SECURITY.md
+├── SECURITY.md
+└── stylelint.config.cjs
 ```
 
 ***

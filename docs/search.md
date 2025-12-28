@@ -16,7 +16,3 @@ search:
   />
   <ul id="tools-search-results"></ul>
 </div>
-
-***
-
-![Логотип](assets/logotype/logotypemd.jpg)

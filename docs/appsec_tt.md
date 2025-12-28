@@ -188,5 +188,3 @@ description: Расшифровка аббревиатур, их класс, о�
 
   </tbody>
 </table>
-
-![Логотип](assets/logotype/logotypemd.jpg)

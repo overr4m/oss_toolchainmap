@@ -6,5 +6,3 @@ description: Описание изменений для проекта и стр
 {% include-markdown  "../RELEASE_NOTES.md" %}
 
 ***
-
-![Логотип](assets/logotype/logotypemd.jpg)

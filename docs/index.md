@@ -13,6 +13,9 @@ description:
 <a href="https://www.mkdocs.org/"><img src="https://img.shields.io/badge/MkDocs-326ce5.svg?logo=MaterialForMkDocs&logoColor=white" alt="MkDocs"></a>
 <a href="https://www.markdownguide.org/"><img src="https://img.shields.io/badge/Markdown-000000.svg?logo=markdown&logoColor=white" alt="Markdown"></a>
 <a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" alt="Ruff"></a>
+<a href="https://mypy-lang.org/"><img src="https://img.shields.io/badge/type_checked-mypy-039dfc?style=flat" alt="mypy"></a>
+<a href="https://flake8.pycqa.org/"><img src="https://img.shields.io/badge/Code%20style-flake8-orange?style=flat" alt="flake8"></a>
+<a href="https://pylint.readthedocs.io/"><img src="https://img.shields.io/badge/linting-pylint-1254a0?style=flat" alt="pylint"></a>
 <a href="https://github.com/geminishkv/oss_toolchainmap/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/geminishkv/oss_toolchainmap/ci.yml?branch=develop&label=GitHub%20Actions&logo=githubactions&logoColor=white" alt="CI" /></a>
 <a href="https://github.com/geminishkv/oss_toolchainmap/releases"><img src="https://img.shields.io/github/v/release/geminishkv/oss_toolchainmap?label=Release" alt="Latest release" /></a>
 <a href="https://github.com/geminishkv/oss_toolchainmap"><img src="https://img.shields.io/github/repo-size/geminishkv/oss_toolchainmap?label=Repo%20size" alt="Repo size" /></a></div>
@@ -107,3 +110,7 @@ description:
     * обсудить архитектуру или подход к категоризации.
 
 Мы придерживаемся **Кодекса поведения**, чтобы обсуждения оставались профессиональными и уважительными, даже когда мнения расходятся.
+
+***
+
+![Логотип](assets/logotype/logotypemd.jpg)

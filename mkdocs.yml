@@ -127,17 +127,11 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/geminishkv
     - icon: fontawesome/solid/code-branch
-      link: https://github.com/geminishkv/oss_toolchainmap/
-    - icon: fontawesome/brands/telegram
-      link: https://t.me/shmakovis_appsec
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/geminishkv
-    - icon: fontawesome/brands/linkedin-in
-      link: https://www.linkedin.com/in/geminishkvdev
+      link: https://github.com/findevsecops/oss_toolchainmap/
     - icon: fontawesome/regular/envelope-open
       link: mailto:shmakovis@inbox.ru
-    - icon: fontawesome/solid/rss
-      link: https://geminishkv.github.io/oss_toolchainmap/feed.xml
+#    - icon: fontawesome/solid/rss
+#      link: https://geminishkv.github.io/oss_toolchainmap/feed.xml
   annotate:
     json_schema: "MyNiiSearcher.ts"
   site_url_path: /oss_toolchainmap

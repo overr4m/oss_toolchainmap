@@ -1,9 +1,5 @@
 extends: default
 
-ignore: |
-  **/audit_reports/**
-  **/sca/dependency-check-report/**
-
 rules:
   truthy:
     level: warning

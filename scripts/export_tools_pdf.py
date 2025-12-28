@@ -35,7 +35,7 @@ def main() -> None:
 class="footer-logo" />
           </a>
           <a href="https://findevsecops.ru" target="_blank">
-            <img src="docs/assets/logotype/site/FDSO_logo.png" \
+            <img src="docs/assets/logotype/site/logo.png" \
 class="footer-logo" />
           </a>
           <!--

@@ -5,7 +5,3 @@ hide:
 title: 
 description:
 ---
-
-***
-
-![Логотип](assets/logotype/logotypemd.jpg)
