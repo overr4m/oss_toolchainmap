@@ -73,7 +73,7 @@ Tools:
       FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Доступен"
-      report_formats: ["JSON, "table", "cyclonedx", "PDF"]
+      report_formats: ["JSON", "table", "cyclonedx", "PDF"]
       detect_metods: ["CVSS", "CVE"]
       OSS: "true"
       division: "AppSec"
