@@ -170,6 +170,23 @@ Tools:
       vendor: "GitLab"
       lic: "Подписка"
 
+  - name: AppSec.Wave
+    meta:
+      description: "Скоростной аудит безопасности кода с помощью искусственного интеллекта"
+      link_URL: "https://appsec-wave.ru/"
+      ver_edition: "25.4.5"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Да"
+      report_formats: ["HTML", "PDF", "JSON", "SARIF"]
+      detect_metods: ["CWE", "OWASP Top 10"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: 'ООО "АппСек Солюшенс"'
+      lic: 'Trial, Подписка'
+
   - name: Microfocus Fortify
     meta:
       description: ""
