@@ -266,7 +266,7 @@ Tools:
       RUS_access: "Доступен"
       report_formats: ["json", "pdf", "csv"]
       detect_methods: ["CVE", "CVSS"]
-      OSS: "true"
+      OSS: "false"
       division: "AppSec"
       type: "SCA/OSA"
       class: "Анализатор"
