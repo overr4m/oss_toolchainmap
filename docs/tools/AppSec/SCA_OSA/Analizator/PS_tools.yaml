@@ -370,6 +370,24 @@ Tools:
       class: "Анализатор"
       vendor: "Endor Labs"
       lic: "SaaS, Enterprise"
+      
+  - name: Xygeni SCA
+    meta:
+      description: "Выявление уязвимостей, управление лицензиями и предотвращение рисков"
+      link_URL: "https://xygeni.io/open-source-security/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен (проверить у вендора соответствие санкциям)"
+      report_formats: ["table", "cyclonedx", "SPDX"]
+      detect_metods: ["CVE"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: 'Xygeni'
+      lic: 'Trial, Подписка'
+      
   - name: Arnica SCA
     meta:
       description: "DevSecOps‑платформа с SCA‑модулем, ориентированным на CI/CD‑интеграции: обеспечивает быстрый анализ зависимостей в пайплайнах, автоматические политики блокировки и уведомления в чаты и трекеры."
