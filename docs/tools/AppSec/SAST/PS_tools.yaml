@@ -381,23 +381,6 @@ Tools:
       vendor: "Mend.io"
       lic: "SaaS, Enterprise"
 
-  - name: Debricked
-    meta:
-      description: "Debricked позволяет организациям и проектам эффективно, бесперебойно и безопасно управлять уязвимостями в открытом исходном коде."
-      link_URL: "https://debricked.com/"
-      ver_edition: "Информация не найдена"
-      FSTEK_cert: "Нет"
-      redaction: []
-      RUS_access: "Ограничен (проверить у вендора соответствие санкциям)"
-      report_formats: ["table", "CycloneDX", "SPDX-2.3"]
-      detect_metods: []
-      OSS: "false"
-      division: "AppSec"
-      type: "SCA/OSA"
-      class: "Анализатор"
-      vendor: 'OpenText'
-      lic: 'Информация не найдена'
-
   - name: Xygeni SAST
     meta:
       description: "Выявление уязвимостей в коде"
