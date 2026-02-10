@@ -15,6 +15,22 @@ Tools:
       class: "Анализатор при Runtime"
       vendor: 'Microfocus'
       lic: 'Enterprise'
+  - name: AppSec.Cryptex
+    meta:
+      description: "Решение для шифрования и защиты мобильных приложений от запуска в небезопасной среде."
+      link_URL: "https://appsec-cryptex.ru/"
+      ver_edition: ""
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Веб-интерфейс"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: 'ООО «АппСек Солюшенс»'
+      lic: 'SaaS, On-Premise'
   - name: Jscrambler
     meta:
       description: "Платформа для защиты JavaScript-кода, предлагающая инструменты для обфускации кода, защиты от реверс-инжиниринга и мониторинга клиентской части веб-приложений."

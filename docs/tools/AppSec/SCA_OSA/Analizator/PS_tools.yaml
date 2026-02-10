@@ -257,7 +257,7 @@ Tools:
       vendor: "Jit"
       lic: "SaaS, подписка"
   - name: Debricked
-  meta:
+    meta:
       description: "Инструмент анализа состава ПО для сканирования зависимостей с открытым исходным кодом, обнаружения уязвимостей и проверки лицензий с интеграцией в CI/CD. Поддерживает языки: JavaScript, TypeScript, Python, Java, PHP, Ruby, Go, .NET, C, C++, Rust. Предлагает автоматизированное исправление уязвимостей и облачную архитектуру."
       link_URL: "https://debricked.com/"
       ver_edition: "Информация не найдена"
