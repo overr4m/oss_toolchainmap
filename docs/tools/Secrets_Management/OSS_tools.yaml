@@ -79,6 +79,24 @@ Tools:
       class: ""
       vendor: 'Gitleaks'
       lic: 'MIT License.'
+      
+- name: Trufflehog
+    meta:
+      description: "Мощный инструмент для обнаружения, классификации, проверки и анализа секретов. В данном контексте секрет — это учетные данные, которые машина использует для аутентификации перед другой машиной. Сюда входят ключи API, пароли к базам данных, закрытые ключи шифрования и другое."
+      link_URL: "https://github.com/trufflesecurity/trufflehog"
+      ver_edition: "3.93.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON"]
+      detect_metods: ["Secrets detection"]
+      OSS: "true"
+      division: "Secrets Management"
+      type: ""
+      class: ""
+      vendor: 'Truffle Security Co'
+      lic: 'AGPL 3 license'
+      
   - name: Spring Cloud Config
     meta:
       description: "Компонент экосистемы Spring Cloud для централизованного управления конфигурацией, в том числе, связанной с secret management. Для серверной части имеется возможность конфигурации шифрования серктетов и их версионирования, а для клиентской части - динамическое обновление примененных настроек"
