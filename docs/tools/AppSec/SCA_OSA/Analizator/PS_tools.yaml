@@ -273,7 +273,6 @@ Tools:
       vendor: "OpenText"
       lic: "Proprietary"
       
-    meta:
   - name: Aikido SCA
     meta:
       description: "Компонент SCA в Aikido Security: проводит анализ зависимостей, формирует SBOM и приоритизирует уязвимости с учётом достижимости и контекста (code→cloud), снижая шум и количество ложноположительных срабатываний."
