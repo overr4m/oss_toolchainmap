@@ -47,22 +47,7 @@ Tools:
       class: "Анализатор"
       vendor: "OWASP"
       lic: "Apache-2.0 License"
-  - name: Debricked
-    meta:
-      description: "Инструмент анализа состава ПО для сканирования зависимостей с открытым исходным кодом, обнаружения уязвимостей и проверки лицензий с интеграцией в CI/CD. Поддерживает языки: JavaScript, TypeScript, Python, Java, PHP, Ruby, Go, .NET, C, C++, Rust. Предлагает автоматизированное исправление уязвимостей и облачную архитектуру."
-      link_URL: "https://debricked.com/"
-      ver_edition: "Информация не найдена"
-      FSTEK_cert: "Нет"
-      redaction: []
-      RUS_access: "Доступен"
-      report_formats: ["json", "pdf", "csv"]
-      detect_methods: ["CVE", "CVSS"]
-      OSS: "true"
-      division: "AppSec"
-      type: "SCA/OSA"
-      class: "Анализатор"
-      vendor: "Debricked"
-      lic: "Proprietary"
+ 
   - name: Dependency Check
     meta:
       description: "Инструмент OWASP для обнаружения уязвимостей в зависимостях приложений, с интеграцией в CI/CD и поддержкой различных типов проектов. Поддерживает языки: Java, JavaScript, .NET, Python, Ruby, PHP. Интегрируется с Maven и Gradle, использует локальное кэширование базы уязвимостей."
@@ -79,6 +64,24 @@ Tools:
       class: "Анализатор"
       vendor: "OWASP"
       lic: "Apache-2.0 License"
+
+  - name: Depscan
+    meta:
+      description: "Инструмент аудита безопасности и рисков нового поколения, основанный на известных уязвимостях, рекомендациях и ограничениях лицензий для зависимостей проекта."
+      link_URL: "https://github.com/owasp-dep-scan/dep-scan"
+      ver_edition: "6.1.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "table", "cyclonedx", "PDF"]
+      detect_metods: ["CVSS", "CVE"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "Анализатор"
+      vendor: 'OWASP'
+      lic: 'MIT license'
+      
   - name: Trivy
     meta:
       description: "Комплексный сканер уязвимостей для контейнеров, репозиториев кода и облачных сред, поддерживающий создание SBOM и интеграцию с CI/CD. Поддерживает языки: Go, Java, JavaScript, Python, Ruby, PHP, Rust. Отличается высокой производительностью и поддержкой сканирования инфраструктуры как кода."

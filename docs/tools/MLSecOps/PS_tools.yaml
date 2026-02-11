@@ -31,6 +31,22 @@ Tools:
       class: ""
       vendor: 'AI Guardian'
       lic: 'Trial, Enterprise'
+  - name: AppSec.GenAI
+    meta:
+      description: "Умный сканер обнаружения уязвимостей для защиты данных и моделей машинного обучения. Он разработан для повышения киберустойчивости взаимодействий с большими языковыми моделями на всех этапах их жизненного цикла (SSDLC)."
+      link_URL: "https://appsec-genai.ru/"
+      ver_edition: "25.4.2"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "CSV", "DOCX", "PDF"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: ""
+      class: ""
+      vendor: 'ООО «АппСек Солюшенс»'
+      lic: 'SaaS, On-Premise'
   - name: Guard-ai
     meta:
       description: ""
