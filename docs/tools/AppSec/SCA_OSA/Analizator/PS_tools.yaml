@@ -257,7 +257,7 @@ Tools:
       vendor: "Jit"
       lic: "SaaS, подписка"
   - name: Debricked
-  meta:
+    meta:
       description: "Инструмент анализа состава ПО для сканирования зависимостей с открытым исходным кодом, обнаружения уязвимостей и проверки лицензий с интеграцией в CI/CD. Поддерживает языки: JavaScript, TypeScript, Python, Java, PHP, Ruby, Go, .NET, C, C++, Rust. Предлагает автоматизированное исправление уязвимостей и облачную архитектуру."
       link_URL: "https://debricked.com/"
       ver_edition: "Информация не найдена"
@@ -273,7 +273,6 @@ Tools:
       vendor: "OpenText"
       lic: "Proprietary"
       
-    meta:
   - name: Aikido SCA
     meta:
       description: "Компонент SCA в Aikido Security: проводит анализ зависимостей, формирует SBOM и приоритизирует уязвимости с учётом достижимости и контекста (code→cloud), снижая шум и количество ложноположительных срабатываний."
