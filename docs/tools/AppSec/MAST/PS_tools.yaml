@@ -163,3 +163,19 @@ Tools:
       class: "Анализатор MobApp"
       vendor: "Edgescan"
       lic: "SaaS, Enterprise"
+  - name: AppSec.Cryptex
+    meta:
+      description: "Решение для шифрования и защиты мобильных приложений от запуска в небезопасной среде."
+      link_URL: "https://appsec-cryptex.ru/"
+      ver_edition: ""
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Веб-интерфейс"]
+      detect_methods: []
+      OSS: "false"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "ООО «АппСек Солюшенс»"
+      lic: "SaaS, On-Premise"
