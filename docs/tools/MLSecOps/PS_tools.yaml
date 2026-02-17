@@ -1,161 +1,385 @@
 Tools:
   - name: Сitadel
     meta:
-      description: ""
-      link_URL: ""
+      description: "Масштабируемая совместная ML‑система, которая с помощью Intel SGX защищает конфиденциальность как владельца данных, так и владельца модели в недоверенных инфраструктурах"
+      link_URL: "https://citadel-ai.com/"
       ver_edition: ""
-      FSTEK_cert: ""
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
-      report_formats: []
+      RUS_access: "Информация не найдена"
+      report_formats: ["Веб-интерфейс"]
       detect_metods: []
       OSS: "false"
       division: "MLSecOps"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
-  - name: AI Validation
-    meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
-      redaction: []
-      RUS_access: ""
-      report_formats: []
-      detect_metods: []
-      OSS: "false"
-      division: "MLSecOps"
-      type: ""
-      class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'В данный момент не продается'
+      lic: 'Enterprise'
   - name: Guardian
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Инструмент, предназначенный для формирования внутренних политик и правил работы с ML и LLM внутри организации (AI governance & compliance). Позволяет формализовать процессы использовании ИИ и фильтровать выходные данные моделей, сохраняя при этом приватность пользователей"
+      link_URL: "https://www.aiguardianapp.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
-      report_formats: []
-      detect_metods: []
+      RUS_access: "Доступен(?)"
+      report_formats: ["Веб-интерфейс"]
+      detect_metods: ["Информация не найдена"]
       OSS: "false"
       division: "MLSecOps"
-      type: ""
+      type: "AI governance"
       class: ""
-      vendor: ''
-      lic: ''
-  - name: Veil
+      vendor: 'AI Guardian'
+      lic: 'Trial, Enterprise'
+  - name: AppSec.GenAI
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Умный сканер обнаружения уязвимостей для защиты данных и моделей машинного обучения. Он разработан для повышения киберустойчивости взаимодействий с большими языковыми моделями на всех этапах их жизненного цикла (SSDLC)."
+      link_URL: "https://appsec-genai.ru/"
+      ver_edition: "25.4.2"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
-      report_formats: []
-      detect_metods: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "CSV", "DOCX", "PDF"]
+      detect_metods: ["Информация не найдена"]
       OSS: "false"
       division: "MLSecOps"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'ООО «АппСек Солюшенс»'
+      lic: 'SaaS, On-Premise'
   - name: Guard-ai
     meta:
       description: ""
-      link_URL: ""
+      link_URL: "https://www.deloitte.com/an/en/services/risk-advisory/services/guard-ai.html"
       ver_edition: ""
       FSTEK_cert: ""
       redaction: []
-      RUS_access: ""
+      RUS_access: "Недоступен"
       report_formats: []
       detect_metods: []
       OSS: "false"
       division: "MLSecOps"
       type: ""
       class: ""
-      vendor: ''
+      vendor: 'Deloitte'
       lic: ''
   - name: АI-guard
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Программное решение, предназначенное для обеспечения защиты персональных данных. Оно позволяет защищать сканы удостоверений личности, паспортов, водительских прав, MRZ‑зон, банковских карт, штрихкодов, деловых документов используемые в моделях машинного обучения в соответствии с требованиям GDPR и CCPA"
+      link_URL: "https://aiservice.am/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
+      RUS_access: "Информация не найдена"
       report_formats: []
       detect_metods: []
       OSS: "false"
       division: "MLSecOps"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'AI SERVICE LLC'
+      lic: 'Информация не найдена'
   - name: model-scanner
     meta:
-      description: ""
-      link_URL: ""
+      description: "Инструмент в составе AI Security Platform, предназначенный для контроля и управления supply chain в области ИИ. Обнаруживает вредоносное ПО, подмену и скрытые уязвимости до развертывания с использованием агентов и моделей машинного обучения из публичных репозиториев"
+      link_URL: "https://hiddenlayer.com/model-scanner/"
       ver_edition: ""
-      FSTEK_cert: ""
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
+      RUS_access: "Информация не найдена"
       report_formats: []
-      detect_metods: []
+      detect_metods: ["AI agent, machine learning models"]
       OSS: "false"
       division: "MLSecOps"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'HiddenLayer Inc'
+      lic: 'Demo, Подписка'
   - name: Patronus
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Платформа для оценки и оптимизации AI‑моделей и продуктов на основе LLM. Предназначена для систематического тестирования и оценки качества работы создаваемых моделей перед выпуском в прод и во время эксплуатации"
+      link_URL: "https://www.patronus.ai/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
-      report_formats: []
+      RUS_access: "Доступен"
+      report_formats: [""]
       detect_metods: []
       OSS: "false"
       division: "MLSecOps"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'Patronus AI'
+      lic: 'Free, Enterprise'
   - name: advai-versus
     meta:
-      description: ""
-      link_URL: ""
+      description: "Набор иструментов, используемый разработчиками для стресс‑тестирования и оценки AI‑систем. Инструмент интегрируется в MLOps‑архитектуру."
+      link_URL: "https://www.advai.co.uk/advai-versus/"
       ver_edition: ""
-      FSTEK_cert: ""
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
+      RUS_access: "Недоступен(?)"
       report_formats: []
       detect_metods: []
       OSS: "false"
       division: "MLSecOps"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'Advai Limited'
+      lic: 'Информация не найдена'
   - name: modelscan
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Инструмент для проведения статического анализа кода с целью обнаружения уязвимостей и ошибок, связанных с сериализацией в моделях машинного обучения"
+      link_URL: "https://protectai.com/modelscan"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
-      report_formats: []
-      detect_metods: []
-      OSS: "false"
+      RUS_access: "Доступен"
+      report_formats: ["Интерфейс, H5, Pickle, SavedModel"]
+      detect_metods: ["Pytorch, Tensorflow, Keras, Scikit learn"]
+      OSS: "true"
       division: "MLSecOps"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'Protect AI'
+      lic: 'Информация не найдена'
+  - name: Protect AI Platform (Guardian / Layer / Recon)
+    meta:
+      description: "Платформа для безопасности ИИ‑систем, включающая модули Guardian (governance и zero‑trust для моделей), Layer (end‑to‑end защита LLM на всём жизненном цикле) и Recon (автоматизированный red teaming)."
+      link_URL: "https://protectai.com"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "JSON (API)", "отчёты об оценке рисков"]
+      detect_metods: ["model & data risk assessment", "LLM red teaming", "AI security posture management"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "AI-SPM / LLM security / Red teaming"
+      class: ""
+      vendor: "Protect AI"
+      lic: "SaaS, Enterprise"
+  - name: Mindgard Platform
+    meta:
+      description: "Платформа для red teaming и hardening моделей ИИ, фокусирующаяся на оценке уязвимостей и защите LLM, multi‑modal и агентных систем на этапах разработки и эксплуатации."
+      link_URL: "https://mindgard.ai"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "API"]
+      detect_metods: ["adversarial testing", "runtime threat detection", "model hardening recommendations"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "Red teaming / Runtime protection"
+      class: ""
+      vendor: "Mindgard"
+      lic: "Enterprise, подписка"
+  - name: CalypsoAI Platform
+    meta:
+      description: "Решение для безопасности LLM‑приложений, включающее автоматизированный red teaming (Inference Red‑Team) и адаптивную защиту на рантайме (Inference Defend) с интеграцией в существующие SOC‑процессы."
+      link_URL: "https://calypsoai.com"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "JSON (API)"]
+      detect_metods: ["prompt injection", "data leakage", "toxic output", "policy violations"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "LLM security / Red teaming / Governance"
+      class: ""
+      vendor: "CalypsoAI"
+      lic: "SaaS, Enterprise"
+  - name: Apex AI Security
+    meta:
+      description: "Платформа безагентной защиты LLM‑приложений, копилотов и GenAI‑порталов, обеспечивающая мониторинг активности, предотвращение утечек и автоматическое применение политик."
+      link_URL: "https://apex.com"  # укороченный указатель, см. описание
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "API", "алерты для SIEM/SOAR"]
+      detect_metods: ["AI threat detection", "policy enforcement", "data loss prevention"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "LLM runtime protection"
+      class: ""
+      vendor: "Apex"
+      lic: "SaaS, подписка"
+  - name: Aim Security Platform
+    meta:
+      description: "Решение для управления рисками при использовании ИИ, обеспечивающее инвентаризацию AI‑приложений, контроль потоков данных и реализацию политик доступа в реальном времени."
+      link_URL: "https://www.aim.security"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "JSON (API)"]
+      detect_metods: ["shadow AI discovery", "data flow visibility", "policy & compliance enforcement"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "AI governance / Access governance"
+      class: ""
+      vendor: "Aim Security"
+      lic: "SaaS, Enterprise"
+  - name: Securiti Data Command Center (AI Security)
+    meta:
+      description: "Платформа DSPM/AI‑security, объединяющая управление данными и ИИ: формирует knowledge graph по данным и AI‑объектам, управляет доступом и защищает LLM‑взаимодействия с учётом регуляторных требований."
+      link_URL: "https://securiti.ai"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "JSON (API)", "отчёты по комплаенсу"]
+      detect_metods: ["LLM firewall", "data lineage & classification", "privacy & AI governance"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "AI security / DSPM / Governance"
+      class: ""
+      vendor: "Securiti"
+      lic: "SaaS, Enterprise"
+  - name: TestSavantAI
+    meta:
+      description: "Платформа защиты генеративных AI‑приложений, специализирующаяся на автоматическом сканировании и обнаружении отравления данных, prompt‑инъекций, токсичных и небезопасных ответов."
+      link_URL: "https://testsavant.ai"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "API"]
+      detect_metods: ["prompt injection", "data poisoning", "toxic output", "compliance violations"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "LLM security / Testing"
+      class: ""
+      vendor: "TestSavantAI"
+      lic: "SaaS, Enterprise"
+  - name: TensorOpera AI Platform
+    meta:
+      description: "Платформа для разработки и безопасного развертывания генеративных AI‑приложений, включающая безопасные API агентов, защищённую инфраструктуру тренировки и деплоя моделей, а также отслеживание экспериментов."
+      link_URL: "https://tensoropera.ai"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "API", "отчёты об экспериментах"]
+      detect_metods: ["secure model deployment", "access controls", "supply‑chain controls для моделей"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "Secure AI platform"
+      class: ""
+      vendor: "TensorOpera"
+      lic: "SaaS, Enterprise"
+  - name: Pillar Security Platform
+    meta:
+      description: "Платформа для управления рисками по всему жизненному циклу AI‑агентов: обеспечивает обнаружение активов, оценку рисков, адаптивные guardrails для рантайма и управление доступом."
+      link_URL: "https://www.pillar.security"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "JSON (API)"]
+      detect_metods: ["continuous risk assessment", "runtime guardrails", "RBAC для AI‑систем"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "AI risk management / Guardrails"
+      class: ""
+      vendor: "Pillar Security"
+      lic: "SaaS, Enterprise"
+  - name: Wiz AI-SPM
+    meta:
+      description: "Модуль Wiz для управления позицией безопасности AI‑систем (AI‑SPM): строит AI‑BOM, анализирует риски adversarial‑атак, кражи модели и отравления данных на всём пути LLM‑пайплайна."
+      link_URL: "https://www.wiz.io/academy/ai-security/llm-security"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "JSON (API)"]
+      detect_metods: ["adversarial risk", "model theft", "data poisoning", "exposure mapping через AI‑BOM"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "AI security posture management"
+      class: ""
+      vendor: "Wiz"
+      lic: "SaaS, Enterprise"
+  - name: Cobalt AI Security Automation
+    meta:
+      description: "Платформа автоматизации безопасности ИИ‑систем с возможностями real‑time обнаружения угроз, оркестрации ответных действий и интеграцией с существующими SOC‑инструментами."
+      link_URL: "https://www.cobaltai.com"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "JSON (API)", "алерты"]
+      detect_metods: ["runtime anomaly detection", "policy enforcement", "automated response workflows"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "Runtime AI security / Automation"
+      class: ""
+      vendor: "Cobalt AI"
+      lic: "SaaS, Enterprise"
+  - name: Superblocks LLM Security Controls
+    meta:
+      description: "Набор практик и контролей в платформе Superblocks для интеграции безопасных LLM‑функций в корпоративные приложения, включая фильтрацию запросов, DLP и аудит."
+      link_URL: "https://www.superblocks.com"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс", "логи", "JSON (API)"]
+      detect_metods: ["prompt filtering", "data loss prevention", "usage logging & auditing"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "Application LLM security"
+      class: ""
+      vendor: "Superblocks"
+      lic: "SaaS"
+  - name: Genta Secure LLM Architecture Services
+    meta:
+      description: "Консультационно‑платформенный продукт, предлагающий безопасные архитектурные паттерны для деплоя LLM в VPC или on‑prem: least‑privilege доступ, private gateways, human‑in‑the‑loop и сопоставление с ISO/IEC 42001."
+      link_URL: "https://genta.dev/resources/llm-security-enterprise"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["архитектурные схемы", "отчёты", "JSON (API) при интеграции"]
+      detect_metods: ["архитектурная оценка рисков", "контроль доступа", "audit‑ready дизайн"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "Secure architecture / Consulting+platform"
+      class: ""
+      vendor: "Genta"
+      lic: "Enterprise"
+  - name: MLSecOps.com Community Platform
+    meta:
+      description: "Комьюнити‑платформа и обучающий хаб по MLSecOps, предоставляющая методологии, best practices и интеграции с инструментами безопасности для ML/LLM по всему жизненному циклу."
+      link_URL: "https://mlsecops.com"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Веб-интерфейс", "обучающие материалы"]
+      detect_metods: ["методологические фреймворки", "гайдлайны по защите ML‑пайплайнов"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "Education / Governance support"
+      class: ""
+      vendor: "MLSecOps Community"
+      lic: "Информация не найдена"
+  - name: Securiti LLM Firewall
+    meta:
+      description: "Компонент платформы Securiti, предоставляющий контекстно‑осведомлённый LLM‑файрвол для защиты взаимодействий с моделями, включая анализ содержимого запросов и ответов и применение политик доступа к данным."
+      link_URL: "https://securiti.ai/solutions/ai-security"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["логи", "JSON (API)", "дашборды"]
+      detect_metods: ["prompt & response inspection", "data governance rules", "toxicity & PII detection"]
+      OSS: "false"
+      division: "MLSecOps"
+      type: "LLM firewall"
+      class: ""
+      vendor: "Securiti"
+      lic: "SaaS, Enterprise"

@@ -1,22 +1,5 @@
 Tools:
-  - name: Falco 
-    meta:
-      description: "Система мониторинга безопасности в режиме реального времени для контейнеров и облачной инфраструктуры.\
-       Она поддерживает Kubernetes, Docker, OpenShift и другие платформы, отслеживая поведение приложений и систем, выявляя аномалии и потенциальные угрозы с помощью правил и событий."
-      link_URL: "https://falco.org/, https://github.com/falcosecurity/falco"
-      ver_edition: "0.41"
-      FSTEK_cert: " Нет"
-      redaction: ["0.41.1", "0.41.2", "0.41.3"]
-      RUS_access: "Доступен"
-      report_formats: ["JSON", "Syslog", "File (запись в файлы на диске)", "Standard Output (stdout)", "HTTP", "gRPC"]
-      detect_metods: ["MITRE ATT&CK", "PCI DSS", "NIST"]
-      OSS: "true" 
-      division: "AppSec"
-      type: "RASP"
-      class: "Анализатор при Runtime"
-      vendor: 'Sysdig'
-      lic: 'Apache-2.0 License'
-  - name: Baiduʼs OpenRASP 
+  - name: OpenRASP
     meta:
       description: "набор инструментов RASP с открытым исходным кодом от Baidu, который использует перехватчики и инструменты во время выполнения для защиты веб-приложений.\
        Вместо того чтобы просто фильтровать входные данные, он анализирует потоки выполнения на предмет аномального поведения, которое может указывать на атаку.\
@@ -32,5 +15,101 @@ Tools:
       division: "AppSec"
       type: "RASP"
       class: "Анализатор при Runtime"
-      vendor: ''
+      vendor: 'Baidu'
       lic: 'Apache-2.0 License'
+  - name: Hdiv CE (RAST)
+    meta:
+      description: "Платформа, предоставляющая подробные отчеты о процессе работы приложения путем встраивания специального агента с целью снятия метрик."
+      link_URL: "https://github.com/hdiv/hdiv"
+      ver_edition: "3.5.2"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Веб-интерфейс"]
+      detect_metods: ["OWASP Top 10","application agent"]
+      OSS: "true"
+      division: "AppSec"
+      type: "RASP"
+      class: "Интерактивный анализатор"
+      vendor: 'Hdiv security'
+      lic: 'Apache-2.0 license'
+  - name: freeRASP Android
+    meta:
+      description: "Библиотека RASP для Android, реализующая встроенную защиту мобильных приложений: обнаружение рутованных устройств, отладчиков, эмуляторов, репакетинга и попыток внедрения кода, с отправкой событий безопасности в систему мониторинга."
+      link_URL: "https://github.com/talsec/Free-RASP-Android"
+      ver_edition: "6.13.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи", "JSON"]
+      detect_metods: ["Root/Jailbreak detection", "Repackaging detection", "Debugging detection"]
+      OSS: "true"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Talsec"
+      lic: "MIT license (open-source часть), freemium SDK"
+  - name: freeRASP iOS
+    meta:
+      description: "Мобильный in‑app RASP SDK для iOS, обеспечивающий обнаружение джейлбрейка, подмены приложений, отладки, небезопасной среды выполнения и других признаков компрометации, предназначенный для встраивания в банковские и финтех‑приложения."
+      link_URL: "https://github.com/talsec/Free-RASP-iOS"
+      ver_edition: "6.13.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи", "JSON"]
+      detect_metods: ["Jailbreak detection", "App tampering", "Debugger detection"]
+      OSS: "true"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Talsec"
+      lic: "MIT license (open-source часть), freemium SDK"
+  - name: Free-RASP Community
+    meta:
+      description: "Кроссплатформенный RASP‑SDK, предоставляющий единую библиотеку для защиты мобильных приложений на Android, iOS, Flutter, Cordova и React Native от реверс‑инжиниринга, клонирования, запуска в небезопасной ОС и других runtime‑угроз."
+      link_URL: "https://github.com/talsec/Free-RASP-Community"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи", "JSON"]
+      detect_metods: ["Root/Jailbreak detection", "Repackaging detection", "Unsafe environment detection"]
+      OSS: "true"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Talsec"
+      lic: "MIT license (open-source часть), freemium SDK"
+  - name: android-rasp
+    meta:
+      description: "Лёгкое open source‑решение RASP для Android, ориентированное на защиту приложений от запуска на скомпрометированных устройствах, проверку целостности приложения и выявление небезопасных условий выполнения."
+      link_URL: "https://github.com/securevale/android-rasp"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи"]
+      detect_metods: ["Root detection", "Tamper detection"]
+      OSS: "true"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "SecureVale"
+      lic: "MIT license"
+  - name: rasp-poc
+    meta:
+      description: "Proof‑of‑concept RASP‑агент для JVM, демонстрирующий перехват и модификацию критичных классов Java (например, ProcessBuilder) с помощью ASM для предотвращения эксплуатации уязвимостей типа RCE и других атак в рантайме."
+      link_URL: "https://github.com/mouadk/rasp-poc"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Логи"]
+      detect_metods: ["Java bytecode instrumentation", "Runtime behavior monitoring"]
+      OSS: "true"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Community"
+      lic: "MIT license"

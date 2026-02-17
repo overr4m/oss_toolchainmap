@@ -1,20 +1,36 @@
 Tools:
   - name: Fortify
     meta:
-      description: ""
+      description: "Технология самозащиты приложений в реальном времени, которая интегрируется в приложение для обнаружения и блокировки атак, отслеживая его поведение и перехватывая попытки эксплуатации уязвимостей"
       link_URL: "https://www.microfocus.com/ru-ru/documentation/fortify-application-defender/"
-      ver_edition: ""
-      FSTEK_cert: ""
+      ver_edition: "20.3.0"
+      FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Недоступен"
-      report_formats: []
-      detect_metods: []
+      report_formats: ["Веб-интерфейс"]
+      detect_metods: ["Информация не найдена"]
       OSS: "false"
       division: "AppSec"
       type: "RASP"
       class: "Анализатор при Runtime"
-      vendor: ''
-      lic: ''
+      vendor: 'Microfocus'
+      lic: 'Enterprise'
+  - name: AppSec.Cryptex
+    meta:
+      description: "Решение для шифрования и защиты мобильных приложений от запуска в небезопасной среде."
+      link_URL: "https://appsec-cryptex.ru/"
+      ver_edition: ""
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Веб-интерфейс"]
+      detect_metods: ["Информация не найдена"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: 'ООО «АппСек Солюшенс»'
+      lic: 'SaaS, On-Premise'
   - name: Jscrambler
     meta:
       description: "Платформа для защиты JavaScript-кода, предлагающая инструменты для обфускации кода, защиты от реверс-инжиниринга и мониторинга клиентской части веб-приложений."
@@ -33,20 +49,20 @@ Tools:
       lic: 'Code Integrity: Starter, Enterprise, managed Services; Webpage Integrity: Visibility, PCI DSS v4, Forms Control, Managed Services'
   - name: Signal Sciences
     meta:
-      description: ""
+      description: "Решение компании Fastly сочетающее в себе WAF и RASP платформу комбинированные в целях защиты в реальном времени приложений от хакерских атак."
       link_URL: "https://www.fastly.com/products/web-application-api-protection"
       ver_edition: ""
-      FSTEK_cert: ""
+      FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Недоступен"
-      report_formats: []
-      detect_metods: []
+      report_formats: ["Веб-интерфейс"]
+      detect_metods: ["информация недоступна"]
       OSS: "false"
       division: "AppSec"
       type: "RASP"
       class: "Анализатор при Runtime"
-      vendor: ''
-      lic: ''
+      vendor: 'Fastly'
+      lic: 'Подписка'
   - name: Appdome
     meta:
       description: "No-code платформа для внедрения защиты в мобильные приложения на Android и iOS.\
@@ -114,4 +130,101 @@ Tools:
       type: "RASP"
       class: "Анализатор при Runtime"
       vendor: 'DoveRunner'
-      lic: 'Android: Free Trial,	Professional,	Enterprise; IOS: Professional,	Enterprise'
+      lic: 'Android: Free Trial, Professional, Enterprise; IOS: Professional'
+  - name: Falco
+    meta:
+      description: "Система мониторинга безопасности в режиме реального времени для контейнеров и облачной инфраструктуры.\
+       Она поддерживает Kubernetes, Docker, OpenShift и другие платформы, отслеживая поведение приложений и систем, выявляя аномалии и потенциальные угрозы с помощью правил и событий."
+      link_URL: "https://falco.org/"
+      ver_edition: "0.42"
+      FSTEK_cert: " Нет"
+      redaction: [ "0.42.1" ]
+      RUS_access: "Доступен"
+      report_formats: [ "JSON", "Syslog", "File (запись в файлы на диске)", "Standard Output (stdout)", "HTTP", "gRPC" ]
+      detect_metods: [ "MITRE ATT&CK", "PCI DSS", "NIST" ]
+      OSS: "true"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: 'Sysdig'
+      lic: 'Enterprise'
+  - name: Contrast Protect
+    meta:
+      description: "RASP‑компонент платформы Contrast Security, который встраивается в рантайм приложения и в реальном времени отслеживает выполнение кода, блокируя атаки на уровне приложения и уменьшая число ложных срабатываний за счёт контекстной информации."
+      link_URL: "https://www.contrastsecurity.com/platform/contrast-protect"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "CSV"]
+      detect_metods: ["OWASP Top 10", "Runtime dataflow analysis"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Contrast Security"
+      lic: "Подписка, Enterprise"
+  - name: Talsec RASP+
+    meta:
+      description: "Коммерческий мобильный RASP‑SDK, встраиваемый в приложения Android и iOS, обеспечивающий защиту от рута/джейлбрейка, хуков, внедрения кода, отладки, эмуляторов и небезопасных окружений в реальном времени."
+      link_URL: "https://talsec.app/rasp"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "Отчёты Security Report"]
+      detect_metods: ["Root/Jailbreak detection", "Hooking detection", "App integrity verification"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Talsec"
+      lic: "Коммерческий SDK, подписка"
+  - name: Pradeo RASP
+    meta:
+      description: "Мобильное RASP‑решение, встроенное в приложение и защищающее его в рантайме от вредоносных приложений, сетевых атак (MITM) и эксплойтов уязвимостей ОС, с возможностью настраиваемых реакций на обнаруженные угрозы."
+      link_URL: "https://pradeo.com/en/solutions/mobile-application-security/rasp/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "PDF"]
+      detect_metods: ["Malware detection", "Network attack detection", "Environment risk analysis"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Pradeo"
+      lic: "SaaS, Enterprise"
+  - name: Digital.ai Application Protection (RASP)
+    meta:
+      description: "RASP‑функциональность в составе платформы Digital.ai, обеспечивающая защиту мобильных и серверных приложений от реверса, подмены, отладки и эксплуатации уязвимостей за счёт встроенных в бинарь механизмов самозащиты."
+      link_URL: "https://digital.ai/runtime-application-self-protection"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "PDF"]
+      detect_metods: ["Code tampering detection", "Debugging detection", "Runtime integrity checks"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Digital.ai"
+      lic: "Enterprise"
+  - name: Promon SHIELD
+    meta:
+      description: "In‑app RASP‑решение для мобильных приложений, ориентированное на банковский и корпоративный сектор, обеспечивающее защиту кода и рантайма от подмены, рут‑окружений, эмуляторов, оверлеев и других форм мобильного фрода."
+      link_URL: "https://promon.io/product/shield/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "Логи"]
+      detect_metods: ["Root/Jailbreak detection", "Code tampering", "Overlay attack detection"]
+      OSS: "false"
+      division: "AppSec"
+      type: "RASP"
+      class: "Анализатор при Runtime"
+      vendor: "Promon AS"
+      lic: "Коммерческая лицензия, Enterprise"

@@ -1,41 +1,41 @@
-# OS generated files
+#(macOS / Windows / misc)
 .DS_Store
 .DS_Store?
 ._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-.DS_Store
 .AppleDouble
 .LSOverride
+.Spotlight-V100
+.Trashes
 .DocumentRevisions-V100
 .fseventsd
-.Spotlight-V100
 .TemporaryItems
-.Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+ehthumbs.db
+Thumbs.db
 *.icloud
+CACHEDIR.TAG
 
-# Python cache and compiled files
+# remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Python
 __pycache__/
+.mypy_cache
+.ruff_cache
+lunr
+venv/
+.venv
 *.py[cod]
 *.pyo
 *.pyd
-.ruff_cache
-
-# Secrets and environment configs
-.env
-.env.*
-*.env
-venv/
-.venv/
 .vscode/
 .idea/
 *.swp
-
-# Logs and runtime files
 *.log
 logs/
 *.pid
@@ -44,26 +44,41 @@ logs/
 *.odt
 *.xlsx
 *.xls
-# site
-docs/assets/search/
+
+# Build / dist artifacts (site, bundles, etc.)
 dist/
 build/
-echo/
+pdf_table
+site
+assets/search
 
-# Databases
+# Databases / dumps
 *.sqlite
 *.db
 *.sql
 
-# Temporary/backup/compressed files
-*.bak
-*.tmp
-*.zip
-*.tar
-*.gz
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archive / package formats
 *.7z
+*.dmg
+*.gz
+*.iso
+*.jar
 *.rar
+*.zip
+# *.tar
+
+# Secrets и env-конфиги
+.env
+.env.*
+*.env
 
 # Node.js
 node_modules/
-/node_modules

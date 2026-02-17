@@ -1,7 +1,9 @@
+"""Сборка записей об инструментах"""
+
 import json
 import pathlib
-from typing import Sequence
-from typing import Any, Dict, List
+from typing import Sequence, Any, Dict, List
+from yaml import YAMLError
 
 import yaml
 
@@ -32,7 +34,9 @@ def _build_record(
         "FSTEK_cert": meta.get("FSTEK_cert", "") or "",
         "RUS_access": meta.get("RUS_access", "") or "",
         "report_formats": meta.get("report_formats", []) or [],
-        "detect_methods": meta.get("detect_methods") or meta.get("detect_metods") or [],
+        "detect_methods": (
+            meta.get("detect_methods") or meta.get("detect_metods") or []
+        ),
         "OSS": meta.get("OSS", ""),
         "lic": meta.get("lic", "") or "",
         "kind": kind_label,  # OSS / PS
@@ -41,6 +45,7 @@ def _build_record(
 
 
 def load_tools_from_file(path: pathlib.Path) -> List[Dict[str, Any]]:
+    """Подгрузка"""
     raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     records: List[Dict[str, Any]] = []
 
@@ -72,14 +77,17 @@ def load_tools_from_file(path: pathlib.Path) -> List[Dict[str, Any]]:
 
 
 def main() -> None:
+    """Записи об инструментах из YAML как JSON"""
     all_records: List[Dict[str, Any]] = []
 
     for yaml_path in TOOLS_DIR.rglob("*.yaml"):
         try:
             recs = load_tools_from_file(yaml_path)
-            all_records.extend(recs)
-        except Exception as e:
+        except (YAMLError, OSError, ValueError) as e:
             print(f"[WARN] Ошибка при разборе {yaml_path}: {e}")
+            continue
+
+        all_records.extend(recs)
 
     OUT_FILE.write_text(
         json.dumps(all_records, ensure_ascii=False, indent=2),

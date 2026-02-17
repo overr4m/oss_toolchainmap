@@ -1,145 +1,467 @@
 Tools:
   - name: AppArmor
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
-      redaction: []
-      RUS_access: ""
+      description: "Подсистема безопасности Linux, предназначенная для управления доступом приложений к ресурсам, включая файла секретов, с помощью политик. По умолчанию включен в ядро Linux с версии 2.6.36"
+      link_URL: "https://apparmor.net/"
+      ver_edition: "4.0"
+      FSTEK_cert: "Нет"
+      redaction: ["4.0.1, 4.0.2"]
+      RUS_access: "Доступен"
       report_formats: []
-      detect_metods: []
+      detect_metods: ["DAC, MAC"]
       OSS: "true"
       division: "Secrets Management"
-      type: ""
+      type: "Security module"
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'Canonical Ltd'
+      lic: 'GPL-2.0 license'
   - name: OPA Gatefeeper
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Облачный контроллер политик kubernetes, который помогает усиливать используемые политики (написанные с помощью OPA)"
+      link_URL: "https://github.com/open-policy-agent/gatekeeper"
+      ver_edition: "3.21.0"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
-      report_formats: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON","Audit logs"]
       detect_metods: []
       OSS: "true"
       division: "Secrets Management"
-      type: ""
+      type: "Policy controller"
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'Open Policy Agent'
+      lic: 'Apache-2.0 license'
   - name: Infisical
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Платформа secret management для централизованного хранения конфигурации приложений и их секретов. Имеется возможность версионирования секретов и синхронизации секретов с платформами GitHub, AWS и Vercel. Имеет enterprise версию"
+      link_URL: "https://github.com/Infisical/infisical"
+      ver_edition: "0.154.5"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
-      report_formats: []
+      RUS_access: "Доступен"
+      report_formats: ["Веб-интерфейс"]
       detect_metods: []
       OSS: "true"
       division: "Secrets Management"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'Infisical'
+      lic: 'MIT license'
   - name: OpenBAO
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Открытое решение для централизованного хранения, управления и предоставления секретов. Позволяет создавать динамические секреты с помощью AWS"
+      link_URL: "https://github.com/openbao/openbao"
+      ver_edition: "2.4.4"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
+      RUS_access: "Доступен"
       report_formats: []
       detect_metods: []
       OSS: "true"
       division: "Secrets Management"
-      type: ""
+      type: "Secrets vault"
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'OpenBao'
+      lic: 'MPL-2.0 license'
   - name: Gitleaks
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "инструмент с открытым исходным кодом, предназначенный для выявления утечек конфиденциальных данных (API-ключи, пароли, токены доступа и другие) в архивах, файлах, директориях и репозиториях"
+      link_URL: "https://github.com/gitleaks/gitleaks"
+      ver_edition: "8.30"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
-      report_formats: []
+      RUS_access: "Доступен"
+      report_formats: ["CSV, Junit, JSON, SARIF"]
       detect_metods: []
       OSS: "true"
       division: "Secrets Management"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'Gitleaks'
+      lic: 'MIT License.'
+      
+  - name: Trufflehog
+    meta:
+      description: "Мощный инструмент для обнаружения, классификации, проверки и анализа секретов. В данном контексте секрет — это учетные данные, которые машина использует для аутентификации перед другой машиной. Сюда входят ключи API, пароли к базам данных, закрытые ключи шифрования и другое."
+      link_URL: "https://github.com/trufflesecurity/trufflehog"
+      ver_edition: "3.93.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON"]
+      detect_metods: ["Secrets detection"]
+      OSS: "true"
+      division: "Secrets Management"
+      type: ""
+      class: ""
+      vendor: 'Truffle Security Co'
+      lic: 'AGPL 3 license'
+      
   - name: Spring Cloud Config
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Компонент экосистемы Spring Cloud для централизованного управления конфигурацией, в том числе, связанной с secret management. Для серверной части имеется возможность конфигурации шифрования серктетов и их версионирования, а для клиентской части - динамическое обновление примененных настроек"
+      link_URL: "https://github.com/spring-cloud/spring-cloud-config"
+      ver_edition: "5.0"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
+      RUS_access: "Доступен"
       report_formats: []
       detect_metods: []
       OSS: "true"
       division: "Secrets Management"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'Spring Cloud'
+      lic: 'Apache-2.0 license'
   - name: Gerrit
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
-      redaction: []
-      RUS_access: ""
-      report_formats: []
-      detect_metods: []
+      description: "веб-система для проверки и ревью кода, тесно интегрированная с системой контроля версий Git. Позволяет просматривать изменения внутри каждого файла и вручную искать присутствие секретов в коде"
+      link_URL: "https://www.gerritcodereview.com/"
+      ver_edition: "3.13"
+      FSTEK_cert: "Нет"
+      redaction: ["3.13.1"]
+      RUS_access: "Доступен"
+      report_formats: ["Веб-интерфейс"]
+      detect_metods: ["Code review"]
       OSS: "true"
       division: "Secrets Management"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
-  - name: Mozilla SOPS
+      vendor: 'Gerrit Code Review'
+      lic: 'Apache-2.0 license'
+  - name: SOPS
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Редактор зашифрованных файлов, который позволяет безопасно хранить секретные данные в виде обычных текстовых файлов, шифруя только значения и оставляя ключи видимыми"
+      link_URL: "https://github.com/getsops/sops"
+      ver_edition: "3.11"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
-      report_formats: []
+      RUS_access: "Доступен"
+      report_formats: ["YAML, JSON, ENV, INI"]
       detect_metods: []
       OSS: "true"
       division: "Secrets Management"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'Mozilla'
+      lic: ' MPL-2.0 license'
   - name: CheckMate
     meta:
-      description: ""
-      link_URL: ""
-      ver_edition: ""
-      FSTEK_cert: ""
+      description: "Инструмент для обнаружения секретов, оставленных в исходном коде, логах и конфигурационных файлах."
+      link_URL: "https://github.com/adedayo/checkmate"
+      ver_edition: "0.9.5"
+      FSTEK_cert: "Нет"
       redaction: []
-      RUS_access: ""
-      report_formats: []
+      RUS_access: "Доступен"
+      report_formats: ["YAML, XML"]
+      detect_metods: ["Pattern recognition, heuristics, entropy analysis"]
+      OSS: "true"
+      division: "Secrets Management"
+      type: ""
+      class: ""
+      vendor: 'Adedayo'
+      lic: 'BSD-3-Clause license'
+  - name: CoSign
+    meta:
+      description: "Коммандная утилита, необходимая для создания и валидации подписей ПО в Sigstore - проекте с открытым исходным кодом, созданным для повышения безопасности цепочки поставок ПО с помощью цифровых подписей и верификации программных артефактов"
+      link_URL: "https://github.com/sigstore/cosign"
+      ver_edition: "3.0.2"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Cli"]
       detect_metods: []
       OSS: "true"
       division: "Secrets Management"
       type: ""
       class: ""
-      vendor: ''
-      lic: ''
+      vendor: 'Sigstore'
+      lic: 'Apache-2.0 license'
+  - name: Confidant
+    meta:
+      description: "https://lyft.github.io/confidant/"
+      link_URL: "система, предназначенная для безопасного хранения и управления секретами. Использует AWS DynamoDB для хранения и AWS Key Management Service (KMS) для шифрования"
+      ver_edition: "7.0.0"
+      FSTEK_cert: "Нет"
+      redaction: [ ]
+      RUS_access: "Доступен"
+      report_formats: [ "Интерфейс" ]
+      detect_metods: [ "IAm" ]
+      OSS: "true"
+      division: "Secrets Management"
+      type: ""
+      class: ""
+      vendor: 'Lyft'
+      lic: 'Apache-2.0 license'
+  - name: Conjur
+    meta:
+      description: "Интерфейс для безопасной аутентификации, контроля и аудита машинного доступа к инструментам, приложениям, контейнерам и облачным средам за счет управления секретами."
+      link_URL: "https://github.com/cyberark/conjur"
+      ver_edition: "1.24.0"
+      FSTEK_cert: "Нет"
+      redaction: [ ]
+      RUS_access: "Доступен"
+      report_formats: [ ]
+      detect_metods: [ ]
+      OSS: "false"
+      division: "Secrets Management"
+      type: ""
+      class: ""
+      vendor: 'CyberArk'
+      lic: 'GNU LGPL license'
+  - name: Open Policy Agent (OPA)
+    meta:
+      description: "Универсальный движок политик, позволяющий централизованно описывать и применять правила доступа и безопасности (Rego) для микросервисов, Kubernetes, API‑шлюзов и инфраструктуры."
+      link_URL: "https://openpolicyagent.org"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "Decision logs"]
+      detect_metods: ["Rego policy evaluation", "Audit logging"]
+      OSS: "true"
+      division: "Security Management"
+      type: "Policy engine"
+      class: ""
+      vendor: "OPA project / CNCF"
+      lic: "Apache-2.0 license"
+  - name: Casbin
+    meta:
+      description: "Библиотека авторизации, реализующая различные модели контроля доступа (ACL, RBAC, ABAC), с собственным форматом политик и веб‑интерфейсом для управления ими."
+      link_URL: "https://github.com/casbin/casbin"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["policy files (CONF, CSV)"]
+      detect_metods: ["ACL", "RBAC", "ABAC", "RESTful policies"]
+      OSS: "true"
+      division: "Security Management"
+      type: "Authorization / Policy engine"
+      class: ""
+      vendor: "Casbin"
+      lic: "Apache-2.0 license"
+  - name: Permify
+    meta:
+      description: "Authorization‑as‑a‑service решение, вдохновлённое Google Zanzibar, для построения централизованной, масштабируемой, гранулярной системы прав доступа."
+      link_URL: "https://github.com/Permify/permify"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON (API)", "audit logs"]
+      detect_metods: ["relationship‑based access control", "Zanzibar‑подобные политики"]
+      OSS: "true"
+      division: "Security Management"
+      type: "Authorization service"
+      class: ""
+      vendor: "Permify"
+      lic: "Apache-2.0 license"
+  - name: OpenFGA
+    meta:
+      description: "Высокопроизводительный движок авторизации с тонкой настройкой прав (fine‑grained authorization), реализующий модель, вдохновлённую Google Zanzibar."
+      link_URL: "https://github.com/openfga/openfga"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON (API)", "audit logs"]
+      detect_metods: ["relationship‑based authorization", "policy evaluation"]
+      OSS: "true"
+      division: "Security Management"
+      type: "Authorization engine"
+      class: ""
+      vendor: "OpenFGA"
+      lic: "Apache-2.0 license"
+  - name: OPAL (Open Policy Administration Layer)
+    meta:
+      description: "Сервис для управления и доставки политик и данных в policy‑агенты (OPA, Cedar и др.) в режиме реального времени."
+      link_URL: "https://github.com/permitio/opal"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON (API)", "logs"]
+      detect_metods: ["policy distribution", "real‑time updates"]
+      OSS: "true"
+      division: "Security Management"
+      type: "Policy distribution"
+      class: ""
+      vendor: "Permit.io"
+      lic: "Apache-2.0 license"
+  - name: HashiCorp Vault (OSS)
+    meta:
+      description: "Источник‑доступное решение для управления секретами, ключами шифрования и токенами, обеспечивающее аудит доступа и динамическую выдачу учётных данных."
+      link_URL: "https://github.com/hashicorp/vault"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["JSON (API)", "audit logs"]
+      detect_metods: ["RBAC policies", "secret lease/rotation", "audit trail"]
+      OSS: "true"
+      division: "Security Management"
+      type: "Secrets vault"
+      class: ""
+      vendor: "HashiCorp"
+      lic: "BUSL / MPL (OSS core)"
+  - name: Wazuh
+    meta:
+      description: "Платформа безопасности и управления событиями (SIEM/ХIDS) с открытым исходным кодом: сбор логов, корреляция событий, управление политиками и мониторинг целостности."
+      link_URL: "https://github.com/wazuh/wazuh"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "dashboards (Kibana/OpenSearch)"]
+      detect_metods: ["log analysis", "file integrity monitoring", "intrusion detection", "policy compliance"]
+      OSS: "true"
+      division: "Security Management"
+      type: "SIEM / XDR"
+      class: ""
+      vendor: "Wazuh Inc."
+      lic: "GPL-2.0 license"
+  - name: Security Onion
+    meta:
+      description: "Дистрибутив для мониторинга безопасности сети и хоста, включающий IDS/IPS, full‑packet‑capture, анализ логов и дашборды."
+      link_URL: "https://github.com/Security-Onion-Solutions/securityonion"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["Dashboards", "PCAP", "JSON logs"]
+      detect_metods: ["IDS/IPS", "NSM", "log correlation"]
+      OSS: "true"
+      division: "Security Management"
+      type: "SOC platform"
+      class: ""
+      vendor: "Security Onion Solutions"
+      lic: "GNU GPL / mixed OSS"
+  - name: Elastic Stack (Elastic Security)
+    meta:
+      description: "Набор продуктов Elasticsearch‑Kibana‑Beats‑Logstash, используемый как бесплатное SIEM‑решение для корреляции событий, detection‑правил и управления инцидентами."
+      link_URL: "https://github.com/elastic/elasticsearch"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["JSON", "dashboards", "alerts"]
+      detect_metods: ["rule‑based detection", "anomaly detection", "correlation rules"]
+      OSS: "true"
+      division: "Security Management"
+      type: "SIEM / Log management"
+      class: ""
+      vendor: "Elastic"
+      lic: "SSPL / Elastic License, с OSS‑компонентами"
+  - name: SPIFFE / SPIRE
+    meta:
+      description: "Стек для управления идентичностями сервисов: стандартизированные SVID‑сертификаты и сервер/агенты SPIRE для автоматического выдачи и ротации."
+      link_URL: "https://github.com/spiffe/spire"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["x509 SVID", "JWT SVID", "logs"]
+      detect_metods: ["workload attestation", "identity issuance"]
+      OSS: "true"
+      division: "Security Management"
+      type: "Identity / Workload security"
+      class: ""
+      vendor: "CNCF / SPIFFE"
+      lic: "Apache-2.0 license"
+  - name: Keycloak
+    meta:
+      description: "Сервер идентификации и доступа, предоставляющий SSO, OAuth2/OIDC, управление ролями и политиками доступа к приложениям и API."
+      link_URL: "https://github.com/keycloak/keycloak"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON (tokens, audit logs)", "admin console"]
+      detect_metods: ["RBAC/realm roles", "policy rules", "authN/authZ flows"]
+      OSS: "true"
+      division: "Security Management"
+      type: "IAM / Access management"
+      class: ""
+      vendor: "Red Hat / Community"
+      lic: "Apache-2.0 license"
+  - name: OSSEC
+    meta:
+      description: "Хост‑ориентированная система обнаружения вторжений (HIDS) с функциями анализа логов, контроля целостности и оповещения."
+      link_URL: "https://github.com/ossec/ossec-hids"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["logs", "email alerts", "JSON (через интеграции)"]
+      detect_metods: ["log correlation", "rootkit detection", "file integrity monitoring"]
+      OSS: "true"
+      division: "Security Management"
+      type: "HIDS"
+      class: ""
+      vendor: "OSSEC Foundation"
+      lic: "GPL license"
+  - name: Suricata
+    meta:
+      description: "Движок IDS/IPS и сетевого мониторинга, выполняющий глубокий анализ трафика, сигнатурное и поведенческое обнаружение угроз."
+      link_URL: "https://github.com/OISF/suricata"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["EVE JSON", "PCAP", "alerts"]
+      detect_metods: ["IDS/IPS rules", "protocol detection", "flow analysis"]
+      OSS: "true"
+      division: "Security Management"
+      type: "IDS/IPS / Network security monitoring"
+      class: ""
+      vendor: "OISF"
+      lic: "GPL-2.0 license"
+  - name: Zeek
+    meta:
+      description: "Платформа сетевой безопасности, занимающаяся высокоуровневым анализом трафика и генерацией богатых логов для дальнейшей корреляции и расследований."
+      link_URL: "https://github.com/zeek/zeek"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["structured logs", "JSON (через интеграции)"]
+      detect_metods: ["protocol analyzers", "custom scripts & policies"]
+      OSS: "true"
+      division: "Security Management"
+      type: "Network security monitoring"
+      class: ""
+      vendor: "Zeek Project"
+      lic: "BSD license"
+  - name: Trivy Operator (Kubernetes)
+    meta:
+      description: "Оператор Kubernetes, который использует Trivy для непрерывного сканирования кластеров и образов, интегрируясь с Kubernetes API для управления результатами и политиками."
+      link_URL: "https://github.com/aquasecurity/trivy-operator"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["Kubernetes CRD", "JSON", "Prometheus metrics"]
+      detect_metods: ["vulnerability scanning", "config audit", "RBAC misconfig detection"]
+      OSS: "true"
+      division: "Security Management"
+      type: "Cloud/K8s security posture"
+      class: ""
+      vendor: "Aqua Security"
+      lic: "Apache-2.0 license"
+  - name: kube-bench (as security governance)
+    meta:
+      description: "Инструмент проверки Kubernetes на соответствие CIS‑бенчмаркам, применяемый для управления политиками и аудита конфигураций кластеров."
+      link_URL: "https://github.com/aquasecurity/kube-bench"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["JSON", "YAML", "JUnit"]
+      detect_metods: ["CIS Kubernetes Benchmark checks"]
+      OSS: "true"
+      division: "Security Management"
+      type: "Compliance / Policy audit"
+      class: ""
+      vendor: "Aqua Security"
+      lic: "Apache-2.0 license"

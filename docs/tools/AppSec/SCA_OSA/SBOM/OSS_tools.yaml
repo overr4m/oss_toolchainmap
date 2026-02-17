@@ -1,11 +1,11 @@
-OSS:
+Tools:
   - name: Trivy
     meta:
       description: "Комплексный сканер уязвимостей от Aqua Security, генерирующий Software Bill of Materials (SBOM) в форматах SPDX и CycloneDX, а также сканирующий уязвимости в контейнерах, репозиториях кода и облачных средах. Поддерживает языки: Go, Java, JavaScript, Python, Ruby, PHP, Rust. Отличается высокой производительностью и поддержкой сканирования инфраструктуры как кода."
-      link_URL: "https://trivy.dev/, https://github.com/aquasecurity/trivy"
-      ver_edition: "0.64"
+      link_URL: "https://github.com/aquasecurity/trivy"
+      ver_edition: "0.68"
       FSTEK_cert: "Нет"
-      redaction: ["0.64.1"]
+      redaction: ["0.68.1"]
       RUS_access: "Доступен"
       report_formats: ["json", "table"]
       detect_metods: ["CVE", "CVSS"]
@@ -13,10 +13,25 @@ OSS:
       division: "AppSec"
       type: "SCA/OSA"
       class: "SBOM"
-      vendor: ""
+      vendor: "Aqua security"
       lic: "Apache-2.0 License"
-
-  - name: Jit
+  - name: Syft
+    meta:
+      description: "Инструмент CLI и библиотека Go для создания спецификации программного обеспечения (SBOM) на основе образов контейнеров и файловых систем. Поддерживаемые платформы: Alpine, Bitnami packages, C, C++, Dart, Debian, Dotnet, Objective-C, Elixir, Erlang, Go, Haskell, Java, JavaScript, Jenkins Plugins, Linux kernel archives, Linux kernel modules, Nix, PHP, Python, Red Hat, Ruby, Rust, Swift, Wordpress plugins, Terraform providers."
+      link_URL: "https://github.com/anchore/syft"
+      ver_edition: "1.38.0"
+      FSTEK_cert: "Нет"
+      redaction: [ ]
+      RUS_access: "Доступен"
+      report_formats: [ "json", "text", "xml", "table" ]
+      detect_methods: [ "Информация не найдена" ]
+      OSS: "true"
+      division: "AppSec"
+      type: "SCA/OSA"
+      class: "SBOM"
+      vendor: "Anchore"
+      lic: "Apache-2.0 license"
+  - name: Jit ASPM platform (SBOM)
     meta:
       description: "Платформа для внедрения в GitHub или GitLab, сканирует выбранные репозитории и проекты, также может запускаться автоматически."
       link_URL: "https://www.jit.io/aspm-platform/sbom"
@@ -30,15 +45,14 @@ OSS:
       division: "AppSec"
       type: "SCA/OSA"
       class: "SBOM"
-      vendor: ""
+      vendor: "Jit io"
       lic: "Community, Growth, Enterprise"
-
   - name: CycloneDX (CDXGen)
     meta:
       description: "Инструмент от OWASP для создания Software Bill of Materials (SBOM) в формате CycloneDX из исходного кода и контейнерных образов. Поддерживает языки: C/C++, Go, Java, Javascript, .NET, Node.js, PHP, Python, Ruby, Rust."
-      link_URL: "https://cyclonedx.github.io/cdxgen/#/, https://github.com/CycloneDX/cdxgen"
+      link_URL: "https://github.com/CycloneDX/cdxgen"
       ver_edition: "11.4.0"
-      FSTEK_cert: ""
+      FSTEK_cert: "Нет"
       redaction: ["11.4.1", "11.4.2", "11.4.3"]
       RUS_access: "Доступен"
       report_formats: ["json", "table"]
@@ -48,4 +62,116 @@ OSS:
       type: "SCA/OSA"
       class: "SBOM"
       vendor: "OWASP, CycloneDX"
+      lic: "Apache-2.0 License"
+  - name: SPDX SBOM Generator
+    meta:
+      description: "Утилита для создания SBOM в формате SPDX на основе исходного кода, бинарей или сборочных артефактов; интегрируется в CI/CD для автоматического инвентаризации OSS‑компонентов."
+      link_URL: "https://github.com/spdx/spdx-sbom-generator"
+      ver_edition: "0.0.16"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["spdx-json", "spdx-tag-value"]
+      detect_methods: ["SBOM (SPDX)", "License identification (SPDX)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SBOM"
+      class: "Анализатор"
+      vendor: "SPDX Project"
+      lic: "Apache-2.0 License"
+  - name: CycloneDX CLI
+    meta:
+      description: "CLI‑инструмент для генерации и обработки SBOM в формате CycloneDX: умеет конвертировать форматы, валидировать документы, объединять и фильтровать BOM для разных экосистем."
+      link_URL: "https://github.com/CycloneDX/cyclonedx-cli"
+      ver_edition: "0.27.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["cyclonedx-json", "cyclonedx-xml", "protobuf"]
+      detect_methods: ["SBOM (CycloneDX)", "Интеграции с SCA‑сканерами"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SBOM"
+      class: "Анализатор"
+      vendor: "CycloneDX"
+      lic: "Apache-2.0 License"
+  - name: Tern CycloneDX Generator
+    meta:
+      description: "Шаблон/расширение для Tern, позволяющее генерировать CycloneDX‑совместимые SBOM для контейнерных образов, упрощая дальнейший анализ уязвимостей и лицензий в сторонних SCA‑платформах."
+      link_URL: "https://github.com/CycloneDX/tern-cyclonedx"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["cyclonedx-json", "cyclonedx-xml"]
+      detect_methods: ["SBOM (CycloneDX)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SBOM"
+      class: "Анализатор"
+      vendor: "CycloneDX community"
+      lic: "Apache-2.0 License"
+  - name: Syft for SBOM (language‑specific)
+    meta:
+      description: "Режим использования Syft как генератора языка‑специфичных SBOM для npm, PyPI, Maven, Go modules и др., с возможностью экспорта в CycloneDX/SPDX и дальнейшего анализа внешними SCA‑решениями."
+      link_URL: "https://github.com/anchore/syft"
+      ver_edition: "1.18.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["cyclonedx-json", "cyclonedx-xml", "spdx-json"]
+      detect_methods: ["SBOM (CycloneDX/SPDX)", "CVE через внешние фиды"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SBOM"
+      class: "Анализатор"
+      vendor: "Anchore"
+      lic: "Apache-2.0 License"
+  - name: BOM (Java SBOM tool)
+    meta:
+      description: "Генератор SBOM для Java/Gradle/Maven‑проектов, создающий CycloneDX‑или SPDX‑совместимые документы на основе зависимостей, перечисленных в build‑файлах."
+      link_URL: "https://github.com/CycloneDX/cyclonedx-maven-plugin"
+      ver_edition: "2.9.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["cyclonedx-xml", "cyclonedx-json"]
+      detect_methods: ["SBOM (CycloneDX)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SBOM"
+      class: "Анализатор"
+      vendor: "CycloneDX"
+      lic: "Apache-2.0 License"
+  - name: Retire.js (SBOM mode)
+    meta:
+      description: "Помимо поиска уязвимых JS‑зависимостей, Retire.js может использоваться как часть OSS‑стека SCA и SBOM‑генерации для фронтенд‑ и Node.js‑приложений."
+      link_URL: "https://github.com/RetireJS/retire.js"
+      ver_edition: "5.4.0"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["text", "json", "cyclonedx"]
+      detect_methods: ["CVE", "SBOM (CycloneDX)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SBOM"
+      class: "Анализатор"
+      vendor: "RetireJS"
+      lic: "Apache-2.0 License"
+  - name: Jake (npm SBOM tool)
+    meta:
+      description: "Утилита/плагин для NPM‑экосистемы, позволяющая собирать SBOM по JavaScript‑проекту и его зависимостям, чтобы далее использовать их в SCA‑платформах."
+      link_URL: "https://github.com/CycloneDX/cyclonedx-node-module"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Доступен"
+      report_formats: ["cyclonedx-json", "cyclonedx-xml"]
+      detect_methods: ["SBOM (CycloneDX)"]
+      OSS: "true"
+      division: "AppSec"
+      type: "SBOM"
+      class: "Анализатор"
+      vendor: "CycloneDX"
       lic: "Apache-2.0 License"

@@ -14,4 +14,180 @@ Tools:
       type: ""
       class: ""
       vendor: 'SonarSource'
-      lic: 'Enterprise Edition'
+      lic: 'Trial, Enterprise Edition'
+  - name: Visual Studio Enterprise Code Coverage
+    meta:
+      description: "Встроенный механизм покрытия кода в Visual Studio Enterprise для .NET и C++, показывающий процент покрытия по сборкам, классам и методам, с подсветкой покрытых/непокрытых строк в редакторе и экспортом отчётов."
+      link_URL: "https://learn.microsoft.com/en-us/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested"
+      ver_edition: "Visual Studio 2022 Enterprise"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["встроенный отчёт", "Cobertura XML (экспорт)", "DGML"]
+      detect_methods: ["line coverage", "block coverage"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "Microsoft"
+      lic: "Visual Studio Enterprise"
+  - name: dotCover
+    meta:
+      description: "Коммерческий инструмент покрытия кода для .NET от JetBrains, интегрируемый с Visual Studio и Rider, поддерживающий MSTest, NUnit, xUnit и предоставляющий детальные отчёты по строкам, ветвям и тестам‑покрывателям."
+      link_URL: "https://www.jetbrains.com/dotcover/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["HTML", "XML", "JSON", "TeamCity service messages"]
+      detect_methods: ["statement coverage", "branch coverage"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "JetBrains"
+      lic: "Коммерческая, входит в dotUltimate"
+  - name: Parasoft Code Coverage (C/C++test/Jtest)
+    meta:
+      description: "Модуль покрытия в продуктах Parasoft C/C++test и Jtest, поддерживающий линии, блоки, ветви, пути и MC/DC; интегрируется с IDE и CI, применим для unit‑ и интеграционных тестов, включая safety‑critical проекты."
+      link_URL: "https://www.parasoft.com/solutions/code-coverage/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Скорее всего недоступен"
+      report_formats: ["HTML", "XML", "JUnit", "Cobertura"]
+      detect_methods: ["line", "statement", "branch", "path", "MC/DC coverage"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "Parasoft"
+      lic: "Enterprise"
+  - name: Squish Coco
+    meta:
+      description: "Инструмент покрытия кода для C, C++, C#, SystemC, Tcl и QML, дополняющий UI‑тесты Squish; собирает метрики по операторам, ветвям и условиям и формирует отчёты для анализа качества тестирования."
+      link_URL: "https://www.froglogic.com/squish/coco/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["HTML", "Text", "XML", "JUnit", "Cobertura"]
+      detect_methods: ["statement coverage", "branch coverage", "condition coverage", "MC/DC (частично)"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "froglogic / Qt Group"
+      lic: "Коммерческая"
+  - name: RKTracer
+    meta:
+      description: "Коммерческий инструмент покрытия кода RKTracer для C, C++, CUDA, C#, Java, Kotlin, JavaScript, TypeScript, Python, Go и Swift, работающий с любыми компиляторами и целевыми платформами, включая встраиваемые системы."
+      link_URL: "https://www.rkvalidate.com/tools-for-code-coverage/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["HTML", "XML", "Text", "Cobertura"]
+      detect_methods: ["line coverage", "function coverage", "branch coverage"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "RKValidate"
+      lic: "Enterprise"
+  - name: Cantata Coverage
+    meta:
+      description: "Компонент покрытия в тестовом фреймворке Cantata для C/C++, поддерживающий все уровни покрытия, в том числе MC/DC, и предназначенный для сертифицируемых систем (авиация, авто, медтехника)."
+      link_URL: "https://www.qa-systems.com/tools/cantata-unit-testing/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["HTML", "XML", "Text"]
+      detect_methods: ["statement", "branch", "decision", "MC/DC coverage"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "QA Systems"
+      lic: "Enterprise"
+  - name: NCover
+    meta:
+      description: "Корпоративное решение покрытия кода для .NET, предоставляющее дашборды, расширенные метрики (в т.ч. условное покрытие), интеграции с CI и централизованное хранение результатов."
+      link_URL: "https://www.ncover.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["HTML", "XML", "proprietary dashboard"]
+      detect_methods: ["statement coverage", "branch/condition coverage"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "NCover"
+      lic: "Desktop, Code Central, Collector (коммерческие)"
+  - name: Squish Test Center Coverage
+    meta:
+      description: "Веб‑платформа управления тестами Squish Test Center, умеющая импортировать и визуализировать отчёты покрытия (в т.ч. из Squish Coco и других средств), связывая тест‑кейсы с участками кода."
+      link_URL: "https://www.froglogic.com/squish/test-center/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен"
+      report_formats: ["HTML dashboard", "JSON", "XML (импорт)"]
+      detect_methods: ["агрегация coverage‑метрик из внешних инструментов"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "froglogic / Qt Group"
+      lic: "Коммерческая"
+  - name: BullseyeCoverage
+    meta:
+      description: "Коммерческий инструмент покрытия для C и C++, популярный в embedded‑разработке; поддерживает множество компиляторов и платформ, даёт детальные отчёты по операторам и ветвям."
+      link_URL: "https://www.bullseye.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["HTML", "Text", "XML"]
+      detect_methods: ["statement coverage", "branch coverage"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "Bullseye Testing Technology"
+      lic: "Коммерческая"
+  - name: VectorCAST/Cover
+    meta:
+      description: "Модуль покрытия в экосистеме VectorCAST для C/C++/Ada, сертифицированный для использования в проектах с требованиями DO‑178C и аналогичных стандартов, поддерживающий MC/DC и другие уровни."
+      link_URL: "https://www.vector.com/vectorcast/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["HTML", "XML", "Text"]
+      detect_methods: ["statement", "branch", "MC/DC coverage"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "Vector Informatik"
+      lic: "Enterprise"
+  - name: Parasoft C/C++test (coverage‑only use)
+    meta:
+      description: "Хотя C/C++test — комплексный инструмент, его часто используют только как мотор покрытия: он интегрируется с различными компиляторами и RTOS, что удобно для измерения покрытия на встраиваемых таргетах."
+      link_URL: "https://www.parasoft.com/products/ctest/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Скорее всего недоступен"
+      report_formats: ["HTML", "XML", "Cobertura", "JUnit"]
+      detect_methods: ["line", "branch, path, MC/DC coverage"]
+      OSS: "false"
+      division: "codecoverage"
+      type: ""
+      class: ""
+      vendor: "Parasoft"
+      lic: "Enterprise"

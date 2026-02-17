@@ -18,37 +18,37 @@ Tools:
 
   - name: App-Ray
     meta:
-      description: ""
+      description: "Решение для комплексного автоматизированного аудит безопасности мобильных приложений для платформ Android и iOS."
       link_URL: "https://app-ray.co/"
       ver_edition: ""
-      FSTEK_cert: ""
+      FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Недоступен"
-      report_formats: []
-      detect_methods: []
+      report_formats: ["Веб-интерфейс"]
+      detect_methods: ["Информация не найдена"]
       OSS: "false"
       division: "AppSec"
       type: "MAST"
       class: "Анализатор MobApp"
-      vendor: ""
-      lic: ""
+      vendor: "GuardSquare"
+      lic: "Информация не найдена"
 
   - name: Codified Security
     meta:
-      description: ""
+      description: "Решение автоматизированного поиска уязвимостей с возможностью добавления пользовательских правил для сканирования. Поддерживает платформы Android и iOS."
       link_URL: "https://codifiedsecurity.com/"
-      ver_edition: ""
-      FSTEK_cert: ""
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Недоступен"
-      report_formats: []
-      detect_methods: []
+      report_formats: ["Веб-интерфейс"]
+      detect_methods: ["Информация не найдена"]
       OSS: "false"
       division: "AppSec"
       type: "MAST"
       class: "Анализатор MobApp"
-      vendor: ""
-      lic: ""
+      vendor: "Codified security"
+      lic: "Информация не найдена"
 
   - name: ImmuniWeb
     meta:
@@ -58,14 +58,14 @@ Tools:
       FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Доступен"
-      report_formats: []
+      report_formats: ["Online"]
       detect_methods: ["OWASP Mobile Top 10", "GDPR", "PCI DSS"]
       OSS: "false"
       division: "AppSec"
       type: "MAST"
       class: "Анализатор MobApp"
       vendor: "ImmuniWeb"
-      lic: ""
+      lic: "Информация не найдена"
 
   - name: Quixxi
     meta:
@@ -82,4 +82,84 @@ Tools:
       type: "MAST"
       class: "Анализатор MobApp"
       vendor: "Quixxi"
-      lic: ""
+      lic: "Информация не найдена"
+  - name: Q-mast
+    meta:
+      description: "Автоматизированное решение Mobile Application Security Testing (MAST) от Quokka, сочетающее SAST, DAST, IAST и принудительное исполнение путей для комплексного анализа мобильных приложений iOS и Android без доступа к исходному коду, с поддержкой генерации SBOM и непрерывного мониторинга приложений."
+      link_URL: "https://www.quokka.io/products/q-mast"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "PDF", "JSON", "SBOM"]
+      detect_methods: ["OWASP MASVS", "NIAP", "NIST", "CVE"]
+      OSS: "false"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "Quokka"
+      lic: "Enterprise, подписка"
+  - name: NowSecure Platform
+    meta:
+      description: "Облачная платформа для тестирования безопасности мобильных приложений, выполняющая автоматизированный анализ iOS и Android‑приложений на реальных устройствах и сопоставляющая результаты со стандартами OWASP, GDPR, PCI и другими регуляторными требованиями."
+      link_URL: "https://www.nowsecure.com/platform/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "PDF", "JSON"]
+      detect_methods: ["OWASP Mobile Top 10", "GDPR", "PCI DSS"]
+      OSS: "false"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "NowSecure"
+      lic: "SaaS, Enterprise"
+  - name: Appknox
+    meta:
+      description: "Платформа для проверки безопасности мобильных приложений с уклоном на бинарный анализ, объединяющая SAST, DAST и тестирование API более чем по 140 автоматизированным тест‑кейсам для iOS и Android и интегрируемая в DevOps/CI/CD."
+      link_URL: "https://www.appknox.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "PDF", "JSON"]
+      detect_methods: ["OWASP Mobile Top 10", "CVSS"]
+      OSS: "false"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "Appknox"
+      lic: "SaaS, подписка"
+  - name: AppSweep
+    meta:
+      description: "Инструмент тестирования безопасности мобильных приложений от GuardSquare (AppSweep), анализирующий Android‑приложения и SDK, находящий уязвимости и предоставляющий рекомендации по их устранению через удобный облачный сервис."
+      link_URL: "https://www.guardsquare.com/appsweep-mobile-application-security-testing"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "HTML", "JSON"]
+      detect_methods: ["OWASP Mobile Top 10"]
+      OSS: "false"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "GuardSquare"
+      lic: "SaaS, freemium"
+  - name: Edgescan Mobile
+    meta:
+      description: "Компонент платформы Edgescan, расширяющий возможности оценки уязвимостей и пен‑тестинга на мобильные приложения iOS и Android, совмещающий автоматизированное сканирование, ручное тестирование и форензику устройств с централизованной отчётностью."
+      link_URL: "https://www.edgescan.com/the-platform/mobile/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "PDF", "CSV"]
+      detect_methods: ["CVSS", "CISA KEV", "EPSS"]
+      OSS: "false"
+      division: "AppSec"
+      type: "MAST"
+      class: "Анализатор MobApp"
+      vendor: "Edgescan"
+      lic: "SaaS, Enterprise"

@@ -16,4 +16,68 @@ Tools:
       type: "DAST"
       class: "WhiteBox Fuzzing"
       vendor: 'ИСП РАН'
-      lic: ''
+      lic: 'Информация не найдена'
+  - name: CI Fuzz
+    meta:
+      description: "Платформа white‑box fuzz‑тестирования от Code Intelligence, использующая покрытие и обратную связь из кода для генерации тестов, автоматического поиска уязвимостей и интеграции фаззинга в CI/CD и IDE."
+      link_URL: "https://www.code-intelligence.com/ci-fuzz"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "HTML", "JSON"]
+      detect_metods: ["Coverage-guided fuzzing", "White-box fuzzing"]
+      OSS: "false"
+      division: "AppSec"
+      type: "DAST"
+      class: "WhiteBox Fuzzing"
+      vendor: "Code Intelligence"
+      lic: "Enterprise"
+  - name: Peach Fuzzer
+    meta:
+      description: "Коммерческий протокольный фаззер, поддерживающий генерацию тестов на основе моделей протоколов и форматов данных, с функциями coverage‑guided и white‑box тестирования для поиска логических и эксплуатационных уязвимостей."
+      link_URL: "https://www.peach.tech/products/peach-fuzzer/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["HTML", "XML", "TXT"]
+      detect_metods: ["Model-based fuzzing", "Coverage-guided fuzzing"]
+      OSS: "false"
+      division: "AppSec"
+      type: "DAST"
+      class: "WhiteBox Fuzzing"
+      vendor: "Peach Tech (Synopsys)"
+      lic: "Enterprise"
+  - name: Synopsys Defensics
+    meta:
+      description: "Платформа для протокольного фаззинга, предоставляющая более 300 готовых тестовых наборов и возможность моделирования новых протоколов, применяющая генеративный и coverage‑guided подход для поиска ошибок в реализации."
+      link_URL: "https://www.synopsys.com/software-integrity/security-testing/fuzz-testing.html"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["HTML", "XML", "CSV"]
+      detect_metods: ["Model-based fuzzing", "Coverage-guided fuzzing"]
+      OSS: "false"
+      division: "AppSec"
+      type: "DAST"
+      class: "WhiteBox Fuzzing"
+      vendor: "Synopsys"
+      lic: "Enterprise"
+  - name: Fortra Enterprise Fuzzing
+    meta:
+      description: "Решение корпоративного уровня для фаззинг‑тестирования приложений, файловых форматов и протоколов, использующее приоритизацию входов и комбинирующее white‑box и black‑box техники для масштабного поиска уязвимостей."
+      link_URL: "https://www.fortra.com/resources/guides/enterprise-fuzzing"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["HTML", "PDF"]
+      detect_metods: ["Coverage-guided fuzzing", "Model-based fuzzing"]
+      OSS: "false"
+      division: "AppSec"
+      type: "DAST"
+      class: "WhiteBox Fuzzing"
+      vendor: "Fortra"
+      lic: "Enterprise"

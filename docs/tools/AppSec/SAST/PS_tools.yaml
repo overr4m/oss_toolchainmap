@@ -24,21 +24,21 @@ Tools:
       FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Доступен"
-      report_formats: ["Информация не найдена"]
+      report_formats: ["Веб-интерфейс"]
       detect_methods: ["Информация не найдена"]
       OSS: "false"
       division: "AppSec"
       type: "SAST"
       class: "Статический анализатор"
       vendor: 'ООО "ПАЙНАП"'
-      lic: ""
+      lic: "Enterprise"
 
   - name: Solar appScreener (SAST)
     meta:
       description: "Комплексное решение, сочетающее возможности статического (SAST), динамического (DAST) анализа, анализа состава ПО (SCA) и анализа цепочки поставок (SCS). Помогает найти уязвимости и недекларированные возможности в исходном коде мобильных и веб-приложений на раннем этапе разработки. Технологии анализа исполняемых файлов позволяют применять SAST, даже когда разработка закончена и нет возможности проанализировать исходный код проекта. Поддерживает следующие языки: Java, JavaScript, Java for Android, Solidity, Ruby, VBScript, Rust, Dart, TypeScript, Groovy, ABAP, Perl, Scala, Apex, PL/SQL, HTML5, Python, T/SQL, C/C++, Objective-C, COBOL, Pascal, Go, JSP, Kotlin, Visual Basic 6.0, VBA, PHP, Delphi, 1С, C#, LotusScript, Swift, Vyper."
       link_URL: "https://rt-solar.ru/products/solar_appscreener/"
-      ver_edition: "3.15.0"
-      FSTEK_cert: "Сертификат № 4825 от 3.06.2024"
+      ver_edition: "3.15.5"
+      FSTEK_cert: "Есть, сертификат ФСТЭК России №4825 от 3.06.2024"
       redaction: []
       RUS_access: "Доступен"
       report_formats: ["HTML", "PDF", "CSV", "DOCX", "SARIF", "JSON", "отправка по почте"]
@@ -48,7 +48,7 @@ Tools:
       type: "SAST"
       class: "Статический анализатор"
       vendor: "АО «СОЛАР СЕКЬЮРИТИ»"
-      lic: ""
+      lic: "Enterprise"
 
   - name: PT Application Inspector
     meta:
@@ -65,7 +65,7 @@ Tools:
       type: "SAST"
       class: "Статический анализатор"
       vendor: "Positive Technologies"
-      lic: ""
+      lic: "Подписка"
 
   - name: CheckMarx
     meta:
@@ -82,14 +82,14 @@ Tools:
       type: "SAST"
       class: "Статический анализатор"
       vendor: "Checkmarx"
-      lic: ""
+      lic: "Информация не найдена"
 
   - name: Klockwork
     meta:
       description: "Klocwork — промышленный статический анализатор для C, C++, C#, Java. Оптимизирован для работы с монорепозиториями и масштабируемых проектов. Предлагает инкрементальный анализ, быстрый отклик при работе с большими кодовыми базами и интеграцию с IDE, CI/CD и issue-трекингами."
       link_URL: "https://www.perforce.com/products/klocwork"
       ver_edition: ""
-      FSTEK_cert: ""
+      FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Недоступен"
       report_formats: []
@@ -117,7 +117,7 @@ Tools:
       type: "SAST"
       class: "Статический анализатор"
       vendor: "SonarSource"
-      lic: "Enterprise Edition"
+      lic: "Trial, Enterprise"
 
   - name: ИСП РАН Svace
     meta:
@@ -140,7 +140,7 @@ Tools:
     meta:
       description: "Анализатор для C, C++, C#, Java. Поддерживает IDE и CI/CD. Ориентирован на производительность и точность диагностики."
       link_URL: "https://pvs-studio.ru/"
-      ver_edition: "7.37"
+      ver_edition: "7.39"
       FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Доступен"
@@ -170,12 +170,29 @@ Tools:
       vendor: "GitLab"
       lic: "Подписка"
 
+  - name: AppSec.Wave
+    meta:
+      description: "Скоростной аудит безопасности кода с помощью искусственного интеллекта"
+      link_URL: "https://appsec-wave.ru/"
+      ver_edition: "25.4.5"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Да"
+      report_formats: ["HTML", "PDF", "JSON", "SARIF"]
+      detect_metods: ["CWE", "OWASP Top 10"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: 'ООО "АппСек Солюшенс"'
+      lic: 'Trial, Подписка'
+
   - name: Microfocus Fortify
     meta:
       description: ""
       link_URL: "https://www.microfocus.com/ru-ru/products/static-code-analysis-sast/overview"
-      ver_edition: ""
-      FSTEK_cert: ""
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
       redaction: []
       RUS_access: "Недоступен"
       report_formats: []
@@ -184,8 +201,8 @@ Tools:
       division: "AppSec"
       type: "SAST"
       class: "Статический анализатор"
-      vendor: ""
-      lic: ""
+      vendor: "Microfocus"
+      lic: "Информация не найдена"
 
   - name: Coverity
     meta:
@@ -202,4 +219,198 @@ Tools:
       type: "SAST"
       class: "Статический анализатор"
       vendor: "Black Duck"
-      lic: ""
+      lic: "Enterprise"
+  - name: Veracode Static Analysis
+    meta:
+      description: "Облачное SAST‑решение для анализа исходного и бинарного кода, ориентированное на корпоративные команды: поддерживает множество языков, интеграцию с IDE и CI/CD, а также детальные отчёты для соответствия требованиям регуляторов."
+      link_URL: "https://www.veracode.com/products/static-analysis-sast"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Скорее всего нет"
+      report_formats: ["Dashboard", "PDF", "HTML", "CSV", "JSON"]
+      detect_methods: ["OWASP Top 10", "CWE", "PCI DSS", "ISO/SOC 2 отчётность"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Veracode"
+      lic: "SaaS, Enterprise"
+  - name: Snyk Code
+    meta:
+      description: "Компонент платформы Snyk для статического анализа, предоставляющий разработчикам мгновенную обратную связь в IDE и CI/CD по уязвимостям в Java, JavaScript, TypeScript, C#, Python, Go и других языках."
+      link_URL: "https://snyk.io/product/snyk-code/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "SARIF"]
+      detect_methods: ["CWE", "OWASP Top 10"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Snyk"
+      lic: "Подписка (SaaS)"
+  - name: Cycode SAST
+    meta:
+      description: "Enterprise‑решение SAST в составе платформы Cycode, использующее Risk Intelligence Graph и ИИ‑модели для снижения ложноположительных срабатываний, трассировки от кода до облака и приоритизации уязвимостей."
+      link_URL: "https://cycode.com/blog/top-13-enterprise-sast-tools-for-2026/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "CSV", "SARIF"]
+      detect_methods: ["CWE", "OWASP Top 10", "CVSS‑based risk"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Cycode"
+      lic: "SaaS, Enterprise"
+  - name: HCL AppScan Source
+    meta:
+      description: "Компонент HCL AppScan для статического анализа исходного кода, поддерживающий широкий набор языков и предоставляющий отчёты для соответствия стандартам и регуляторным требованиям."
+      link_URL: "https://www.hcl-software.com/appscan"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["PDF", "HTML", "XML", "CSV"]
+      detect_methods: ["CWE", "OWASP Top 10", "PCI DSS", "HIPAA"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "HCL Software"
+      lic: "Enterprise"
+  - name: Spectral SAST
+    meta:
+      description: "Коммерческий SAST‑сканер в составе SpectralOps, ориентированный на cloud‑native‑разработку: обнаруживает уязвимости, секреты и misconfig в исходном коде и конфигурациях, интегрируясь в Git и CI/CD."
+      link_URL: "https://spectralops.io/blog/top-10-static-application-security-testing-sast-tools-in-2025/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "SARIF"]
+      detect_methods: ["CWE", "OWASP Top 10", "Secrets detection"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "SpectralOps (CloudGuard/Snyk экосистема)"
+      lic: "SaaS, подписка"
+  - name: AccuKnox SAST
+    meta:
+      description: "SAST‑модуль платформы AccuKnox, предоставляющий статический анализ исходного кода и IaC с интеграцией в CI/CD и возможностью работы в air‑gapped‑средах для соответствия SOC2 и NIST."
+      link_URL: "https://accuknox.com/blog/best-sast-tools"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "SARIF"]
+      detect_methods: ["CWE", "NIST", "PCI DSS"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "AccuKnox"
+      lic: "Enterprise"
+  - name: Aikido Static Analysis
+    meta:
+      description: "SAST‑функциональность платформы Aikido Security, выполняющая статический анализ кода и кода‑инфраструктуры с акцентом на простоту развёртывания и интеграцию с Git‑платформами."
+      link_URL: "https://www.aikido.dev/blog/static-code-analysis-tools"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON"]
+      detect_methods: ["CWE", "OWASP Top 10 (частично)"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Aikido Security"
+      lic: "SaaS, подписка"
+  - name: Codacy Security
+    meta:
+      description: "Коммерческая платформа для анализа качества и безопасности кода с поддержкой десятков языков, интеграций с GitHub, GitLab и Bitbucket и централизованными отчётами по техническому долгу и уязвимостям."
+      link_URL: "https://www.codacy.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "CSV"]
+      detect_methods: ["CWE (через движки)", "OWASP Top 10 (частично)"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Codacy"
+      lic: "SaaS, Team/Enterprise"
+  - name: DeepSource Static Analysis
+    meta:
+      description: "AI‑усиленный статический анализатор, поддерживающий популярные языки (Python, Go, Java, JavaScript и др.), автоматически предлагающий исправления и снижая шум за счёт приоритизации проблем."
+      link_URL: "https://deepsource.com/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON"]
+      detect_methods: ["CWE (частично)", "Code quality + security rules"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "DeepSource Inc."
+      lic: "SaaS, подписка"
+  - name: Mend SAST
+    meta:
+      description: "Коммерческое SAST‑решение в составе платформы Mend.io (ранее WhiteSource), объединяющее статический анализ кода с SCA и контейнерной безопасностью в единой модели лицензирования."
+      link_URL: "https://www.mend.io/blog/best-sast-solutions-how-to-choose-between-the-top-11-tools-in-2025/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON", "CSV"]
+      detect_methods: ["CWE", "OWASP Top 10", "PCI DSS"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Mend.io"
+      lic: "SaaS, Enterprise"
+
+  - name: Xygeni SAST
+    meta:
+      description: "Выявление уязвимостей в коде"
+      link_URL: "https://xygeni.io/ru/xygeni-code-security/"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Ограничен (проверить у вендора соответствие санкциям)"
+      report_formats: ["table"]
+      detect_metods: ["CWE", "OWASP Top 10", "Secrets detection"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: 'Xygeni'
+      lic: 'Trial, Подписка'
+      
+  - name: Wiz SAST
+    meta:
+      description: "Встроенный SAST‑сканер в облачной платформе Wiz, использующий Security Graph и AI‑агента для анализа уязвимостей в исходном коде в связке с инфраструктурой, контейнерами и облачными конфигурациями."
+      link_URL: "https://www.wiz.io/academy/application-security/top-open-source-sast-tools"
+      ver_edition: "Информация не найдена"
+      FSTEK_cert: "Нет"
+      redaction: []
+      RUS_access: "Недоступен"
+      report_formats: ["Dashboard", "JSON"]
+      detect_methods: ["CWE", "OWASP Top 10", "Cloud context enrichment"]
+      OSS: "false"
+      division: "AppSec"
+      type: "SAST"
+      class: "Статический анализатор"
+      vendor: "Wiz"
+      lic: "SaaS, Enterprise"

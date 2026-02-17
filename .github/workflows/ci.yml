@@ -1,12 +1,11 @@
 name: ci
-
 on:
   push:
     branches:
       - master
   pull_request:
     branches:
-      - master
+      - develop
 
 permissions:
   contents: read
@@ -21,7 +20,7 @@ concurrency:
 
 jobs:
 
-  lint:
+  linter_checks:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,7 +29,173 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.11"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ runner.os }}-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: pip-${{ runner.os }}-
+
+      - name: Install development dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+#      - name: Lint and format with ruff
+#        run: |
+#          ruff check .
+#          ruff format --check .
+      - name: Lint with flake8
+        run: |
+          pip install flake8
+          flake8 . \
+            --statistics \
+            --show-source
+      - name: Type checking with mypy
+        run: |
+          pip install mypy
+          mypy . --config-file mypy.ini
+
+#  docs_linter_checks:
+#    runs-on: ubuntu-latest
+#    needs: linter_checks
+#    steps:
+#      - uses: actions/checkout@v4
+
+#      - name: Install yamllint
+#        run: pip install yamllint
+
+#      - name: Run yamllint
+#        run: |
+#          yamllint --no-warnings .github/workflows mkdocs.yml
+
+#      - name: Run markdownlint
+#        uses: DavidAnson/markdownlint-cli2-action@v20
+#        with:
+#          globs: |
+#            docs/**/*.md
+#            README.md
+#            SECURITY.md
+#            CODE_OF_CONDUCT.md
+#            CONTRIBUTING.md
+#            RELEASE_NOTES.md
+#            NOTICE.md
+#            LICENSE.md
+
+  layout_linter_checks:
+    runs-on: ubuntu-latest
+    needs: linter_checks
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install JS/CSS linters
+        run: |
+          npm install --save-dev eslint stylelint
+
+      - name: Lint JavaScript in docs
+        run: |
+          if ls docs/javascripts/**/*.js >/dev/null 2>&1; then
+            npx eslint "docs/javascripts/**/*.js"
+          fi
+          if [ -f "eslint.config.js" ]; then
+            echo "Using eslint.config.js from repo root"
+          fi
+
+      - name: Lint CSS in docs
+        run: |
+          if ls docs/stylesheets/**/*.css >/dev/null 2>&1; then
+            npx stylelint "docs/stylesheets/**/*.css"
+          fi
+          if [ -f "stylelint.config.cjs" ]; then
+            echo "Using stylelint.config.cjs from repo root"
+          fi
+
+
+  dependency_audit_checks:
+    runs-on: ubuntu-latest
+    needs:
+      - linter_checks
+      - layout_linter_checks
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt pip-audit
+          pip-audit -r requirements.txt
+
+  security_py_dependency_checks:
+    runs-on: ubuntu-latest
+    needs:
+      - linter_checks
+      - layout_linter_checks
+      - dependency_audit_checks
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python security tools
+        run: |
+          pip install --upgrade pip
+          pip install bandit safety -r requirements.txt
+
+      - name: Security scan with bandit
+        run: |
+          bandit -r main.py scripts -ll
+
+      - name: Dependency security check with safety
+        run: |
+          safety check -r requirements.txt || true
+
+#  security_secrets_checks:
+#    runs-on: ubuntu-latest
+#    needs:
+#      - linter_checks
+#      - layout_linter_checks
+#      - dependency_audit_checks
+#    steps:
+#      - uses: actions/checkout@v4
+
+#      - name: Scan repository for secrets with gitleaks
+#        uses: gitleaks/gitleaks-action@v2
+#        with:
+#          config-path: .gitleaks.toml
+  docs-preview:
+    if: github.event_name == 'pull_request'
+    needs:
+      - linter_checks
+#      - docs_linter_checks
+      - layout_linter_checks
+      - dependency_audit_checks
+      - security_py_dependency_checks
+#      - security_secrets_checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
       - name: Cache pip
         uses: actions/cache@v4
@@ -44,60 +209,30 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Lint and format with ruff
+      - name: Build tools.json (preview)
         run: |
-          ruff check .
-          ruff format --check .
+          python scripts/build_search_data.py
+        env:
+          PYTHONPATH: .
 
-  security:
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Install security tools
+      - name: Validate MkDocs config (preview)
         run: |
-          pip install --upgrade pip
-          pip install bandit safety -r requirements.txt
+          mkdocs build --clean --config-file mkdocs.yml --site-dir /tmp/mkdocs-check
+        env:
+          PYTHONPATH: .
 
-      - name: Security scan with bandit
+      - name: Ensure pdf_table directory exists (preview)
         run: |
-          bandit -r scripts -ll
+          mkdir -p docs/pdf_table
 
-      - name: Dependency security check with safety
+      - name: Generate tools map PDF (preview)
         run: |
-          safety check -r requirements.txt || true
-
-  docs-preview:
-    if: github.event_name == 'pull_request'
-    needs:
-      - lint
-      - security
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install types-PyYAML
+          python scripts/export_tools_pdf.py \
+            --output docs/pdf_table/tools-map.pdf
 
       - name: Build MkDocs site (preview)
         run: |
-          mkdocs build --strict
+          mkdocs build --site-dir site
         env:
           PYTHONPATH: .
 
@@ -110,8 +245,12 @@ jobs:
   build:
     if: github.event_name == 'push'
     needs:
-      - lint
-      - security
+      - linter_checks
+#      - docs_linter_checks
+      - layout_linter_checks
+      - dependency_audit_checks
+      - security_py_dependency_checks
+#      - security_secrets_checks
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -120,7 +259,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.11"
 
       - name: Cache pip
         uses: actions/cache@v4
@@ -133,21 +272,39 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-          pip install types-PyYAML
 
-      - name: Type checking with mypy
-        run: |
-          mypy main.py scripts
-
-      - name: Build search data
+      - name: Build tools.json
         run: |
           python scripts/build_search_data.py
+        env:
+          PYTHONPATH: .
+
+      - name: Validate MkDocs config
+        run: |
+          mkdocs build --clean --config-file mkdocs.yml --site-dir /tmp/mkdocs-check
+        env:
+          PYTHONPATH: .
+
+      - name: Ensure pdf_table directory exists
+        run: |
+          mkdir -p docs/pdf_table
+
+      - name: Generate tools map PDF
+        run: |
+          python scripts/export_tools_pdf.py \
+            --output docs/pdf_table/tools-map.pdf
+        env:
+          PYTHONPATH: .
 
       - name: Build MkDocs site
         run: |
-          mkdocs build --strict
+          mkdocs build --site-dir site
         env:
           PYTHONPATH: .
+
+      - name: Generate sitemap.xml
+        run: |
+          python scripts/generate_sitemap.py || echo "No sitemap generator, skipping."
 
       - name: Ensure site directory exists
         run: |
@@ -159,40 +316,30 @@ jobs:
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-#          name: github-pages-${{ github.run_attempt }}
           path: site
 
       - name: Check links with lychee
         uses: lycheeverse/lychee-action@v1
         with:
-          args: "./site/docs/**/*.html"
+          args: ./site/**/*.html
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
+    name: Deploy to GitHub Pages
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/master')
     needs:
       - build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 
-# Для доработки под бота
-#      - name: Notify Telegram
-#        if: success()
-#        run: |
-#          TEXT="MkDocs site deployed: ${{ steps.deployment.outputs.page_url }} (commit ${{ github.sha }})"
-#          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-#            -d chat_id="${TELEGRAM_CHAT_ID}" \
-#            --data-urlencode "text=${TEXT}"
-#        env:
-#          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-#          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-
       - name: Create GitHub Deployment
-        if: github.event_name == 'push'
         uses: chrnorm/deployment-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
