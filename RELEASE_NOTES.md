@@ -18,7 +18,7 @@
 * SAST
   * Shellcheck
   * Shell CGI Static code analysis
-  * Xygeni SAST 
+  * Xygeni SAST
 
 * MAST
   * Appsec.Cryptex
